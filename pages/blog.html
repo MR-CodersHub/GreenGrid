@@ -64,30 +64,178 @@
   <main id="main-content">
 
     <!-- ════════════════════════════════════════════════════
-         SECTION 1 — BLOG HERO
+         SECTION 1 — BLOG HERO (REDESIGNED)
     ════════════════════════════════════════════════════ -->
-    <section class="blog-hero" aria-label="Blog hero">
+    <section class="blog-hero" id="blog-hero" aria-label="Blog hero">
       <div class="blog-hero-bg" style="background-image: url('https://i.pinimg.com/736x/3e/80/4d/3e804d60544c10a60f6d5a116dac9fb5.jpg'), url('https://i.pinimg.com/236x/3e/80/4d/3e804d60544c10a60f6d5a116dac9fb5.jpg'), url('../images/hero-blog.jpg');" role="img" aria-label="Solar blog hero background"></div>
       <div class="blog-hero-overlay"></div>
-      <div class="container">
-        <h1>Solar Energy Insights &amp; Sustainable Living</h1>
-        <p>Expert guides, installation tips, industry news, and sustainability stories from the GreenGrid team.</p>
+      <div class="blog-ambient-glow blog-glow-left" aria-hidden="true"></div>
+      <div class="blog-ambient-glow blog-glow-right" aria-hidden="true"></div>
 
-        <!-- Search bar -->
-        <form class="blog-search" role="search" aria-label="Search articles" onsubmit="return false;">
-          <input type="search" placeholder="Search articles, topics, guides…" aria-label="Search articles">
-          <button type="submit">Search</button>
-        </form>
+      <div class="container blog-hero-container">
 
-        <!-- Category filter pills -->
-        <nav class="category-filters" aria-label="Filter by category">
-          <button class="category-pill active" aria-pressed="true">All</button>
-          <button class="category-pill" aria-pressed="false">Installation</button>
-          <button class="category-pill" aria-pressed="false">Maintenance</button>
-          <button class="category-pill" aria-pressed="false">Technology</button>
-          <button class="category-pill" aria-pressed="false">Sustainability</button>
-          <button class="category-pill" aria-pressed="false">Industry News</button>
-        </nav>
+        <!-- Top Breadcrumbs & Knowledge Badge -->
+        <div class="blog-hero-top">
+          <nav class="breadcrumb blog-breadcrumb" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a>
+            <span class="breadcrumb-sep" aria-hidden="true">›</span>
+            <span aria-current="page">Blog &amp; Knowledge Hub</span>
+          </nav>
+
+          <div class="blog-badge-wrap">
+            <span class="blog-hero-badge">
+              <span class="badge-pulse-dot" aria-hidden="true"></span>
+              <span>Engineering Insights</span>
+              <span class="badge-divider" aria-hidden="true">•</span>
+              <span class="badge-highlight">40+ Solar Research &amp; Field Guides</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- 2-Column Split Content Layout -->
+        <div class="blog-hero-grid">
+
+          <!-- Left Column: Title, Intro, Search & Filter Categories -->
+          <div class="blog-hero-main reveal">
+            <h1 class="blog-hero-title">
+              Solar Intelligence &amp; <br>
+              <span class="blog-gradient-text">Sustainable Energy Living</span>
+            </h1>
+
+            <p class="blog-hero-lead">
+              Demystifying photovoltaic engineering, battery storage ROI, tax rebates, and panel longevity with hands-on research from NABCEP-certified solar specialists.
+            </p>
+
+            <!-- Modern Glass Search Bar -->
+            <form class="blog-search-glass" role="search" aria-label="Search articles" onsubmit="return false;">
+              <div class="search-input-wrap">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="search" id="blogSearchInput" placeholder="Search guides, battery storage, ROI calculators…" aria-label="Search solar articles">
+              </div>
+              <button type="submit" class="search-submit-btn">
+                <span>Find Guides</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </form>
+
+            <!-- Curated Topic Pills -->
+            <div class="blog-topics-wrap">
+              <span class="topics-label">Explore by Topic:</span>
+              <nav class="category-filters" aria-label="Filter by category">
+                <button class="category-pill active" aria-pressed="true">
+                  <span class="pill-dot"></span>All Guides
+                </button>
+                <button class="category-pill" aria-pressed="false">Installation</button>
+                <button class="category-pill" aria-pressed="false">Battery Storage</button>
+                <button class="category-pill" aria-pressed="false">System Sizing</button>
+                <button class="category-pill" aria-pressed="false">Maintenance</button>
+                <button class="category-pill" aria-pressed="false">Incentives &amp; ROI</button>
+              </nav>
+            </div>
+
+            <!-- Quick Metrics / Trust Row -->
+            <div class="blog-hero-metrics">
+              <div class="metric-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                <span><strong>40+</strong> In-Depth Articles</span>
+              </div>
+              <div class="metric-divider" aria-hidden="true"></div>
+              <div class="metric-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span><strong>Weekly</strong> Field Updates</span>
+              </div>
+              <div class="metric-divider" aria-hidden="true"></div>
+              <div class="metric-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span><strong>100%</strong> Engineer Verified</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Featured Spotlight Dispatch Card -->
+          <div class="blog-hero-spotlight reveal">
+            <div class="spotlight-card">
+              <div class="spotlight-card-header">
+                <span class="spotlight-badge">
+                  <span class="fire-icon">🔥</span>
+                  <span>Trending Editorial Dispatch</span>
+                </span>
+                <span class="spotlight-read-time">8 min read</span>
+              </div>
+
+              <div class="spotlight-media">
+                <img
+                  src="https://i.pinimg.com/1200x/20/52/30/20523000260126a702e60537e3a98f8e.jpg"
+                  alt="Solar engineers conducting field inspection"
+                  width="480"
+                  height="260"
+                  loading="eager"
+                  referrerpolicy="no-referrer"
+                  onerror="this.onerror=null; this.src='../images/complete-guide-residential-solar-2026.jpg';"
+                >
+                <div class="spotlight-overlay-tag">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/></svg>
+                  <span>Comprehensive 2026 Edition</span>
+                </div>
+              </div>
+
+              <div class="spotlight-body">
+                <div class="spotlight-tags">
+                  <span class="spotlight-tag">Federal ITC 30%</span>
+                  <span class="spotlight-tag">Net Metering 3.0</span>
+                </div>
+
+                <h3 class="spotlight-title">
+                  <a href="blog-details.html?id=residential-guide">The Complete Guide to Residential Solar Panel Installation in 2026</a>
+                </h3>
+
+                <p class="spotlight-summary">
+                  Key rooftop structural requirements, battery storage pairings, permitting blueprints, and utility connection timelines explained step-by-step.
+                </p>
+
+                <div class="spotlight-footer">
+                  <div class="spotlight-author">
+                    <div class="author-avatar">EG</div>
+                    <div class="author-info">
+                      <span class="author-name">Editorial Team</span>
+                      <span class="author-role">Certified Solar Engineers</span>
+                    </div>
+                  </div>
+                  <a href="blog-details.html?id=residential-guide" class="btn btn-spotlight" aria-label="Read featured article: The Complete Guide to Residential Solar Panel Installation in 2026">
+                    <span>Read Article</span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Floating mini glass tag -->
+              <div class="spotlight-floating-tag">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#F4A300" stroke="#F4A300" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <span>Editor's Top Pick • 4.9 / 5</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Bottom Curated Topic Strip -->
+        <div class="blog-hero-topics-strip reveal">
+          <div class="topics-strip-lead">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            <span>Hot Topics:</span>
+          </div>
+          <div class="topics-strip-items">
+            <a href="blog-details.html?id=system-sizing" class="topic-chip">Solar Sizing Formula</a>
+            <a href="blog-details.html?id=battery-storage" class="topic-chip">LiFePO4 Storage ROI</a>
+            <a href="blog-details.html?id=panel-cleaning" class="topic-chip">Panel Cleaning Guide</a>
+            <a href="blog-details.html?id=service-check" class="topic-chip">Inverter Fault Diagnostics</a>
+            <a href="blog-details.html?id=adoption-trends" class="topic-chip">Renewable Trends 2026</a>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -103,15 +251,17 @@
 
         <article class="featured-article-card">
           <div class="featured-img-wrap">
-            <img src="https://i.pinimg.com/1200x/20/52/30/20523000260126a702e60537e3a98f8e.jpg"
-                 alt="The Complete Guide to Residential Solar Panel Installation in 2026"
-                 loading="eager"
-                 referrerpolicy="no-referrer"
-                 onerror="this.onerror=null; this.src='../images/complete-guide-residential-solar-2026.jpg';">
+            <a href="blog-details.html?id=residential-guide" aria-label="Read full article on residential solar panel installation">
+              <img src="https://i.pinimg.com/1200x/20/52/30/20523000260126a702e60537e3a98f8e.jpg"
+                   alt="The Complete Guide to Residential Solar Panel Installation in 2026"
+                   loading="eager"
+                   referrerpolicy="no-referrer"
+                   onerror="this.onerror=null; this.src='../images/complete-guide-residential-solar-2026.jpg';">
+            </a>
           </div>
           <div class="featured-content">
             <span class="category-badge featured">Featured Guide</span>
-            <h2>The Complete Guide to Residential Solar Panel Installation in 2026</h2>
+            <h2><a href="blog-details.html?id=residential-guide" style="color: inherit; text-decoration: none;">The Complete Guide to Residential Solar Panel Installation in 2026</a></h2>
             <div class="featured-meta">
               <span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
@@ -123,7 +273,7 @@
               <span>12 min read</span>
             </div>
             <p class="featured-excerpt">A comprehensive look at everything homeowners need to know before going solar — from initial consultation through final grid connection. We cover system types, sizing, the installation journey, what to expect on the day, and how to get the most from your new solar investment. Whether you're just starting to explore solar or ready to commit, this guide covers it all.</p>
-            <a href="blog-details.html" class="btn btn-primary">Read Full Article</a>
+            <a href="blog-details.html?id=residential-guide" class="btn btn-primary">Read Full Article</a>
             <p class="author-line"><svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4z"/></svg> By GreenGrid Editorial Team — Solar energy specialists and certified installers</p>
           </div>
         </article>
@@ -145,11 +295,13 @@
           <!-- Card 1 -->
           <article class="article-card">
             <div class="article-img-wrap">
-              <img src="https://i.pinimg.com/1200x/ac/3b/bb/ac3bbb55972fab96d20594eda5c68fc8.jpg"
-                   alt="How Solar Panels Convert Sunlight into Electricity"
-                   loading="lazy"
-                   referrerpolicy="no-referrer"
-                   onerror="this.onerror=null; this.src='../images/how-solar-panels-convert-sunlight.jpg';">
+              <a href="blog-details.html?id=how-solar-works" aria-label="Read article: How Solar Panels Convert Sunlight into Electricity">
+                <img src="https://i.pinimg.com/1200x/ac/3b/bb/ac3bbb55972fab96d20594eda5c68fc8.jpg"
+                     alt="How Solar Panels Convert Sunlight into Electricity"
+                     loading="lazy"
+                     referrerpolicy="no-referrer"
+                     onerror="this.onerror=null; this.src='../images/how-solar-panels-convert-sunlight.jpg';">
+              </a>
             </div>
             <div class="article-body">
               <span class="category-badge">How Solar Works</span>
@@ -157,20 +309,22 @@
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                 October 28, 2026
               </p>
-              <h3>How Solar Panels Convert Sunlight into Electricity</h3>
+              <h3><a href="blog-details.html?id=how-solar-works" style="color: inherit; text-decoration: none;">How Solar Panels Convert Sunlight into Electricity</a></h3>
               <p class="article-excerpt">Discover the science behind photovoltaic technology and how solar panels generate clean energy for your home — from photon to power outlet, explained simply.</p>
-              <a href="blog-details.html" class="read-more-link" aria-label="Read more about how solar panels convert sunlight into electricity">Read More <svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+              <a href="blog-details.html?id=how-solar-works" class="read-more-link" aria-label="Read more about how solar panels convert sunlight into electricity">Read More <svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
             </div>
           </article>
 
           <!-- Card 2 -->
           <article class="article-card">
             <div class="article-img-wrap">
-              <img src="https://i.pinimg.com/1200x/68/9f/1e/689f1e1ae3fa09ddbdff6e0ecb9be7cb.jpg"
-                   alt="How to Choose the Right Solar System Size for Your Home"
-                   loading="lazy"
-                   referrerpolicy="no-referrer"
-                   onerror="this.onerror=null; this.src='../images/choose-right-solar-system-size.jpg';">
+              <a href="blog-details.html?id=system-sizing" aria-label="Read article: How to Choose the Right Solar System Size for Your Home">
+                <img src="https://i.pinimg.com/1200x/68/9f/1e/689f1e1ae3fa09ddbdff6e0ecb9be7cb.jpg"
+                     alt="How to Choose the Right Solar System Size for Your Home"
+                     loading="lazy"
+                     referrerpolicy="no-referrer"
+                     onerror="this.onerror=null; this.src='../images/choose-right-solar-system-size.jpg';">
+              </a>
             </div>
             <div class="article-body">
               <span class="category-badge">System Sizing</span>
@@ -178,20 +332,22 @@
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                 October 15, 2026
               </p>
-              <h3>How to Choose the Right Solar System Size for Your Home</h3>
+              <h3><a href="blog-details.html?id=system-sizing" style="color: inherit; text-decoration: none;">How to Choose the Right Solar System Size for Your Home</a></h3>
               <p class="article-excerpt">System sizing is one of the most critical decisions in going solar. Here's how to determine the right capacity based on your energy usage and roof space.</p>
-              <a href="blog-details.html" class="read-more-link" aria-label="Read more about choosing the right solar system size">Read More <svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+              <a href="blog-details.html?id=system-sizing" class="read-more-link" aria-label="Read more about choosing the right solar system size">Read More <svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
             </div>
           </article>
 
           <!-- Card 3 -->
           <article class="article-card">
             <div class="article-img-wrap">
-              <img src="https://i.pinimg.com/1200x/4e/d1/72/4ed1729f28d2bb93760aa2e962d64ff7.jpg"
-                   alt="Solar Battery Storage: Is It Worth the Investment?"
-                   loading="lazy"
-                   referrerpolicy="no-referrer"
-                   onerror="this.onerror=null; this.src='../images/solar-battery-storage-investment.jpg';">
+              <a href="blog-details.html?id=battery-storage" aria-label="Read article: Solar Battery Storage: Is It Worth the Investment?">
+                <img src="https://i.pinimg.com/1200x/4e/d1/72/4ed1729f28d2bb93760aa2e962d64ff7.jpg"
+                     alt="Solar Battery Storage: Is It Worth the Investment?"
+                     loading="lazy"
+                     referrerpolicy="no-referrer"
+                     onerror="this.onerror=null; this.src='../images/solar-battery-storage-investment.jpg';">
+              </a>
             </div>
             <div class="article-body">
               <span class="category-badge">Battery Storage</span>
@@ -199,9 +355,9 @@
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                 October 5, 2026
               </p>
-              <h3>Solar Battery Storage: Is It Worth the Investment?</h3>
+              <h3><a href="blog-details.html?id=battery-storage" style="color: inherit; text-decoration: none;">Solar Battery Storage: Is It Worth the Investment?</a></h3>
               <p class="article-excerpt">Battery storage adds energy independence but comes at a cost. We break down the considerations — economics, use cases, and when it makes the most sense.</p>
-              <a href="blog-details.html" class="read-more-link" aria-label="Read more about solar battery storage">Read More <svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+              <a href="blog-details.html?id=battery-storage" class="read-more-link" aria-label="Read more about solar battery storage">Read More <svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
             </div>
           </article>
         </div>
@@ -223,11 +379,13 @@
           <!-- Card 1 -->
           <article class="article-card">
             <div class="article-img-wrap">
-              <img src="https://i.pinimg.com/1200x/1e/d2/7a/1ed27ada7a32df7c994819be95f9ecd6.jpg"
-                   alt="How Often Should You Clean Your Solar Panels?"
-                   loading="lazy"
-                   referrerpolicy="no-referrer"
-                   onerror="this.onerror=null; this.src='../images/how-often-clean-solar-panels.jpg';">
+              <a href="blog-details.html?id=panel-cleaning" aria-label="Read article: How Often Should You Clean Your Solar Panels?">
+                <img src="https://i.pinimg.com/1200x/1e/d2/7a/1ed27ada7a32df7c994819be95f9ecd6.jpg"
+                     alt="How Often Should You Clean Your Solar Panels?"
+                     loading="lazy"
+                     referrerpolicy="no-referrer"
+                     onerror="this.onerror=null; this.src='../images/how-often-clean-solar-panels.jpg';">
+              </a>
             </div>
             <div class="article-body">
               <span class="category-badge">Maintenance</span>
@@ -235,20 +393,22 @@
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                 September 22, 2026
               </p>
-              <h3>How Often Should You Clean Your Solar Panels?</h3>
+              <h3><a href="blog-details.html?id=panel-cleaning" style="color: inherit; text-decoration: none;">How Often Should You Clean Your Solar Panels?</a></h3>
               <p class="article-excerpt">Dirty panels can reduce energy output significantly. Learn the recommended cleaning frequency, the best methods, and when to call a professional.</p>
-              <a href="blog-details.html" class="read-more-link" aria-label="Read more about cleaning solar panels">Read More <svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+              <a href="blog-details.html?id=panel-cleaning" class="read-more-link" aria-label="Read more about cleaning solar panels">Read More <svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
             </div>
           </article>
 
           <!-- Card 2 -->
           <article class="article-card">
             <div class="article-img-wrap">
-              <img src="https://i.pinimg.com/1200x/32/8f/7c/328f7ca93eac17eaf9e2f85d9bda4c59.jpg"
-                   alt="5 Signs Your Solar System May Need a Service Check"
-                   loading="lazy"
-                   referrerpolicy="no-referrer"
-                   onerror="this.onerror=null; this.src='../images/5-signs-solar-service-check.jpg';">
+              <a href="blog-details.html?id=service-check" aria-label="Read article: 5 Signs Your Solar System May Need a Service Check">
+                <img src="https://i.pinimg.com/1200x/32/8f/7c/328f7ca93eac17eaf9e2f85d9bda4c59.jpg"
+                     alt="5 Signs Your Solar System May Need a Service Check"
+                     loading="lazy"
+                     referrerpolicy="no-referrer"
+                     onerror="this.onerror=null; this.src='../images/5-signs-solar-service-check.jpg';">
+              </a>
             </div>
             <div class="article-body">
               <span class="category-badge">Performance</span>
@@ -256,20 +416,22 @@
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                 September 10, 2026
               </p>
-              <h3>5 Signs Your Solar System May Need a Service Check</h3>
+              <h3><a href="blog-details.html?id=service-check" style="color: inherit; text-decoration: none;">5 Signs Your Solar System May Need a Service Check</a></h3>
               <p class="article-excerpt">Watch for these warning signs that indicate your solar system may need professional attention — from unexpected bill increases to inverter error codes.</p>
-              <a href="blog-details.html" class="read-more-link" aria-label="Read more about solar service check signs">Read More <svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+              <a href="blog-details.html?id=service-check" class="read-more-link" aria-label="Read more about solar service check signs">Read More <svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
             </div>
           </article>
 
           <!-- Card 3 -->
           <article class="article-card">
             <div class="article-img-wrap">
-              <img src="https://i.pinimg.com/736x/38/d2/e4/38d2e4fc3893a5c2155f81cb01d52cee.jpg"
-                   alt="Maximising Your Solar Panel Output: Practical Tips"
-                   loading="lazy"
-                   referrerpolicy="no-referrer"
-                   onerror="this.onerror=null; this.src='../images/maximising-solar-panel-output.jpg';">
+              <a href="blog-details.html?id=max-output" aria-label="Read article: Maximising Your Solar Panel Output: Practical Tips">
+                <img src="https://i.pinimg.com/736x/38/d2/e4/38d2e4fc3893a5c2155f81cb01d52cee.jpg"
+                     alt="Maximising Your Solar Panel Output: Practical Tips"
+                     loading="lazy"
+                     referrerpolicy="no-referrer"
+                     onerror="this.onerror=null; this.src='../images/maximising-solar-panel-output.jpg';">
+              </a>
             </div>
             <div class="article-body">
               <span class="category-badge">Optimisation</span>
@@ -277,9 +439,9 @@
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                 August 28, 2026
               </p>
-              <h3>Maximising Your Solar Panel Output: Practical Tips</h3>
+              <h3><a href="blog-details.html?id=max-output" style="color: inherit; text-decoration: none;">Maximising Your Solar Panel Output: Practical Tips</a></h3>
               <p class="article-excerpt">Simple adjustments — from shade management to load-shifting — can make a meaningful difference in your solar system's daily energy production.</p>
-              <a href="blog-details.html" class="read-more-link" aria-label="Read more about maximising solar output">Read More <svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+              <a href="blog-details.html?id=max-output" class="read-more-link" aria-label="Read more about maximising solar output">Read More <svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
             </div>
           </article>
         </div>
@@ -301,11 +463,13 @@
           <!-- Card 1 -->
           <article class="article-card">
             <div class="article-img-wrap">
-              <img src="https://i.pinimg.com/736x/9e/8a/5a/9e8a5ac9c1f1036daa4df75df9d21777.jpg"
-                   alt="Renewable Energy Adoption Trends to Watch in 2026"
-                   loading="lazy"
-                   referrerpolicy="no-referrer"
-                   onerror="this.onerror=null; this.src='../images/renewable-energy-adoption-trends-2026.jpg';">
+              <a href="blog-details.html?id=adoption-trends" aria-label="Read article: Renewable Energy Adoption Trends to Watch in 2026">
+                <img src="https://i.pinimg.com/736x/9e/8a/5a/9e8a5ac9c1f1036daa4df75df9d21777.jpg"
+                     alt="Renewable Energy Adoption Trends to Watch in 2026"
+                     loading="lazy"
+                     referrerpolicy="no-referrer"
+                     onerror="this.onerror=null; this.src='../images/renewable-energy-adoption-trends-2026.jpg';">
+              </a>
             </div>
             <div class="article-body">
               <span class="category-badge">Industry News</span>
@@ -313,20 +477,22 @@
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                 August 15, 2026
               </p>
-              <h3>Renewable Energy Adoption Trends to Watch in 2026</h3>
+              <h3><a href="blog-details.html?id=adoption-trends" style="color: inherit; text-decoration: none;">Renewable Energy Adoption Trends to Watch in 2026</a></h3>
               <p class="article-excerpt">The solar industry continues to evolve rapidly. Here are the key trends shaping clean energy adoption globally — from new panel efficiencies to emerging markets.</p>
-              <a href="blog-details.html" class="read-more-link" aria-label="Read more about renewable energy trends">Read More <svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+              <a href="blog-details.html?id=adoption-trends" class="read-more-link" aria-label="Read more about renewable energy trends">Read More <svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
             </div>
           </article>
 
           <!-- Card 2 -->
           <article class="article-card">
             <div class="article-img-wrap">
-              <img src="https://i.pinimg.com/736x/c8/cb/12/c8cb12ad5e90ded4d80a103d18a5d9f6.jpg"
-                   alt="How Switching to Solar Reduces Your Carbon Footprint"
-                   loading="lazy"
-                   referrerpolicy="no-referrer"
-                   onerror="this.onerror=null; this.src='../images/switching-solar-reduces-carbon-footprint.jpg';">
+              <a href="blog-details.html?id=carbon-footprint" aria-label="Read article: How Switching to Solar Reduces Your Carbon Footprint">
+                <img src="https://i.pinimg.com/736x/c8/cb/12/c8cb12ad5e90ded4d80a103d18a5d9f6.jpg"
+                     alt="How Switching to Solar Reduces Your Carbon Footprint"
+                     loading="lazy"
+                     referrerpolicy="no-referrer"
+                     onerror="this.onerror=null; this.src='../images/switching-solar-reduces-carbon-footprint.jpg';">
+              </a>
             </div>
             <div class="article-body">
               <span class="category-badge">Sustainability</span>
@@ -334,20 +500,22 @@
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                 August 2, 2026
               </p>
-              <h3>How Switching to Solar Reduces Your Carbon Footprint</h3>
+              <h3><a href="blog-details.html?id=carbon-footprint" style="color: inherit; text-decoration: none;">How Switching to Solar Reduces Your Carbon Footprint</a></h3>
               <p class="article-excerpt">Quantifying the environmental impact of residential solar — what the numbers mean for the planet and how your decision connects to global emissions reductions.</p>
-              <a href="blog-details.html" class="read-more-link" aria-label="Read more about solar and carbon footprint">Read More <svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+              <a href="blog-details.html?id=carbon-footprint" class="read-more-link" aria-label="Read more about solar and carbon footprint">Read More <svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
             </div>
           </article>
 
           <!-- Card 3 -->
           <article class="article-card">
             <div class="article-img-wrap">
-              <img src="https://i.pinimg.com/736x/05/ff/cc/05ffcc537f9d4a56b1a800d7a465c300.jpg"
-                   alt="The Role of Solar Energy in Building Sustainable Communities"
-                   loading="lazy"
-                   referrerpolicy="no-referrer"
-                   onerror="this.onerror=null; this.src='../images/role-solar-energy-sustainable-communities.jpg';">
+              <a href="blog-details.html?id=sustainable-communities" aria-label="Read article: The Role of Solar Energy in Building Sustainable Communities">
+                <img src="https://i.pinimg.com/736x/05/ff/cc/05ffcc537f9d4a56b1a800d7a465c300.jpg"
+                     alt="The Role of Solar Energy in Building Sustainable Communities"
+                     loading="lazy"
+                     referrerpolicy="no-referrer"
+                     onerror="this.onerror=null; this.src='../images/role-solar-energy-sustainable-communities.jpg';">
+              </a>
             </div>
             <div class="article-body">
               <span class="category-badge">Clean Energy</span>
@@ -355,9 +523,9 @@
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                 July 20, 2026
               </p>
-              <h3>The Role of Solar Energy in Building Sustainable Communities</h3>
+              <h3><a href="blog-details.html?id=sustainable-communities" style="color: inherit; text-decoration: none;">The Role of Solar Energy in Building Sustainable Communities</a></h3>
               <p class="article-excerpt">Solar is more than a household decision — it's a community and infrastructure choice with far-reaching impact on local grids, jobs, and environmental outcomes.</p>
-              <a href="blog-details.html" class="read-more-link" aria-label="Read more about solar in sustainable communities">Read More <svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+              <a href="blog-details.html?id=sustainable-communities" class="read-more-link" aria-label="Read more about solar in sustainable communities">Read More <svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
             </div>
           </article>
         </div>
@@ -418,20 +586,30 @@
           India's premier solar energy solutions provider, delivering custom rooftop installations, industrial solar arrays, smart battery storage, and proactive maintenance.
         </p>
         <div class="footer-social-row">
-          <a href="#" class="social-circle-btn" aria-label="Instagram">
+          <a href="https://www.instagram.com/greengridsolar/" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Instagram">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
           </a>
-          <a href="#" class="social-circle-btn" aria-label="Facebook">
+          <a href="https://www.facebook.com/greengridsolar" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Facebook">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
           </a>
-          <a href="#" class="social-circle-btn" aria-label="X (Twitter)">
+          <a href="https://x.com/greengridsolar" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="X (Twitter)">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
           </a>
-          <a href="#" class="social-circle-btn" aria-label="YouTube">
+          <a href="https://www.youtube.com/@greengridsolar" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="YouTube">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
           </a>
-          <a href="#" class="social-circle-btn" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/company/greengrid-solar" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="LinkedIn">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+        <div class="footer-contact-row">
+          <a href="tel:+15551234567" class="footer-contact-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.5a16 16 0 0 0 6.59 6.59l1.06-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 17.92z"/></svg>
+            <span>+1 (555) 123-4567</span>
+          </a>
+          <a href="mailto:info@greengrid.com" class="footer-contact-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>info@greengrid.com</span>
           </a>
         </div>
       </div>

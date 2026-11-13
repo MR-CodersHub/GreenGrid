@@ -107,6 +107,33 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
+.footer-contact-row {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  font-size: 0.86rem;
+}
+
+.footer-contact-link {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  transition: all var(--transition-fast, 150ms ease);
+}
+
+.footer-contact-link:hover {
+  color: var(--color-solar-yellow, #F4A300);
+  transform: translateX(2px);
+}
+
+.footer-contact-link svg {
+  color: var(--color-solar-yellow, #F4A300);
+  flex-shrink: 0;
+}
+
 /* ── Columns 2 & 3: Services & Company Links ──────────────── */
 .footer-col-title {
   font-size: 0.82rem;

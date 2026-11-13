@@ -306,6 +306,104 @@
   window.GreenGrid.animateCounter = animateCounter;
 
   /* ════════════════════════════════════════════
+     UNIVERSAL FORM SUBMIT HANDLER
+     Handles all forms (newsletter, subscribe, quote, consultation, search, notify, etc.)
+     Prevents full page reload, validates fields, resets only input columns, and shows success toast.
+  ════════════════════════════════════════════ */
+  function initUniversalForms() {
+    var forms = document.querySelectorAll('form');
+    forms.forEach(function (form) {
+      if (form.getAttribute('data-universal-handled')) return;
+      form.setAttribute('data-universal-handled', 'true');
+
+      // Strip legacy inline onsubmit to let this clean handler manage it
+      if (form.hasAttribute('onsubmit')) {
+        form.removeAttribute('onsubmit');
+      }
+
+      form.addEventListener('submit', function (e) {
+        // ALWAYS prevent default full page reload
+        e.preventDefault();
+
+        // If it's a contact, login or register form with its own dedicated controller, don't duplicate
+        if (form.id === 'contactForm' || form.id === 'loginForm' || form.id === 'registerForm') {
+          return;
+        }
+
+        var inputs = form.querySelectorAll('input:not([type="hidden"]):not([type="submit"]):not([type="button"]), textarea, select');
+        var isValid = true;
+        var firstInvalid = null;
+        var errorMessage = '';
+
+        inputs.forEach(function (input) {
+          var val = input.value.trim();
+          var isEmail = input.type === 'email';
+          var isReq = input.hasAttribute('required') || form.classList.contains('footer-subscribe-group') || form.id === 'newsletterForm';
+
+          if (isReq && !val) {
+            isValid = false;
+            input.classList.add('error');
+            if (!firstInvalid) {
+              firstInvalid = input;
+              errorMessage = isEmail ? 'Please enter your email address.' : 'Please fill in this required field.';
+            }
+          } else if (isEmail && val && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) {
+            isValid = false;
+            input.classList.add('error');
+            if (!firstInvalid) {
+              firstInvalid = input;
+              errorMessage = 'Please enter a valid email address (e.g. name@example.com).';
+            }
+          } else {
+            input.classList.remove('error');
+          }
+        });
+
+        if (!isValid) {
+          if (firstInvalid) {
+            firstInvalid.focus();
+          }
+          showToast(errorMessage || 'Please fill in all required fields.', 'error', 4000);
+          return;
+        }
+
+        // Determine customized success message based on form type
+        var msg = 'Thank you! Your submission was successful.';
+        var formClass = form.className || '';
+        var formId = form.id || '';
+
+        if (formId === 'newsletterForm' || formClass.indexOf('newsletter') !== -1) {
+          msg = '🎉 Thank you for subscribing! Your monthly solar newsletter is confirmed.';
+        } else if (formClass.indexOf('subscribe') !== -1 || formClass.indexOf('footer-subscribe') !== -1) {
+          msg = '🎉 Thank you for subscribing to GreenGrid updates!';
+        } else if (formClass.indexOf('cs-form') !== -1) {
+          msg = '🔔 Thank you! You will be notified on launch day.';
+        } else if (formClass.indexOf('search') !== -1 || form.getAttribute('role') === 'search') {
+          msg = '🔍 Showing matching results for your search query.';
+        } else if (formClass.indexOf('quote') !== -1) {
+          msg = '✅ Your quote request has been received! An engineer will contact you shortly.';
+        } else {
+          msg = '✅ Thank you! Your information has been received.';
+        }
+
+        // Clear/refresh ONLY the input columns of this form (does NOT reload the page)
+        form.reset();
+
+        // Clear any error or touched styling
+        inputs.forEach(function (input) {
+          input.classList.remove('error');
+          input.classList.remove('success');
+        });
+
+        // Display success toast notification
+        showToast(msg, 'success', 5000);
+      });
+    });
+  }
+
+  window.GreenGrid.initUniversalForms = initUniversalForms;
+
+  /* ════════════════════════════════════════════
      INITIALISE ALL
   ════════════════════════════════════════════ */
   document.addEventListener('DOMContentLoaded', function () {
@@ -315,5 +413,6 @@
     initFAQ();
     initCounters();
     initFormValidation();
+    initUniversalForms();
   });
 })();

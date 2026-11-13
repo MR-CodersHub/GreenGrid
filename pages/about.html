@@ -63,44 +63,165 @@
 
   <main id="main-content">
 
-    <!-- SECTION 1: OUR STORY -->
-    <section class="section about-story" id="story" aria-label="Our Story">
+    <!-- SECTION 1: ABOUT HERO & OUR STORY (REDESIGNED) -->
+    <section class="section about-hero-section" id="story" aria-label="Our Story">
       <div class="about-hero-bg" style="background-image: url('https://i.pinimg.com/1200x/d8/9f/6d/d89f6da55a5b139fdcc3f60f710e2b30.jpg'), url('../images/hero-about.jpg');" role="img" aria-label="About GreenGrid solar energy background"></div>
       <div class="about-hero-overlay"></div>
-      <div class="container">
-        <div class="story-layout">
-          <div class="story-content reveal">
-            <div class="section-label">Who We Are</div>
-            <h1 class="section-title">Building a Cleaner Energy Future Since 2010</h1>
-            <p>GreenGrid Solar Energy was founded in 2010 by a small group of engineers and clean-energy advocates who believed that renewable power should be accessible to every home and business — not just early adopters with deep pockets. Starting from a single workshop in California, we set out to bring honest, high-quality solar installations to our community at a fair price.</p>
-            <p>Over the past fifteen years, we have grown from that original team of five into a full-service solar company with more than 120 engineers, installers, and customer success specialists. We have completed over 500 residential and commercial installations across California and the Pacific Northwest, generating a combined capacity of more than 10 megawatts of clean, renewable power.</p>
-            <p>Our growth has never come at the cost of our values. We continue to maintain the same hands-on approach we practised on day one — listening carefully to each customer's energy goals, designing systems that precisely match their needs, and standing behind every installation with rigorous post-installation support. We do not believe in one-size-fits-all solar; we believe in solar that fits your life.</p>
-            <p>As utility rates rise and climate urgency grows, GreenGrid remains focused on what matters most: delivering proven, long-lasting solar solutions that make financial and environmental sense for the people and businesses we serve.</p>
+      <div class="about-ambient-glow glow-left" aria-hidden="true"></div>
+      <div class="about-ambient-glow glow-right" aria-hidden="true"></div>
+
+      <div class="container about-hero-container">
+
+        <!-- Top Header & Breadcrumb -->
+        <div class="about-hero-top">
+          <nav class="breadcrumb about-breadcrumb" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a>
+            <span class="breadcrumb-sep" aria-hidden="true">›</span>
+            <span aria-current="page">About Us</span>
+          </nav>
+
+          <div class="about-badge-wrap">
+            <span class="about-hero-badge">
+              <span class="badge-pulse-dot" aria-hidden="true"></span>
+              <span>Founded 2010</span>
+              <span class="badge-divider" aria-hidden="true">•</span>
+              <span class="badge-highlight">15+ Years of Solar Leadership</span>
+            </span>
           </div>
-          <div class="story-image reveal">
-            <img src="https://i.pinimg.com/1200x/d8/9f/6d/d89f6da55a5b139fdcc3f60f710e2b30.jpg" alt="Solar panels and clean energy representing GreenGrid's mission" loading="lazy" class="rounded-img" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='../images/hero-about.jpg';">
+
+          <h1 class="about-hero-title">
+            Pioneering Clean Energy for <br>
+            <span class="about-gradient-text">A Sustainable Tomorrow</span>
+          </h1>
+
+          <p class="about-hero-lead">
+            Founded by passionate clean-energy engineers in California, GreenGrid has spent over a decade and a half delivering honest, high-efficiency solar installations for communities, homeowners, and enterprises across the Pacific Northwest.
+          </p>
+        </div>
+
+        <!-- Two-Column Story Showcase -->
+        <div class="about-story-grid">
+
+          <!-- Left: Narrative & Values -->
+          <div class="about-story-narrative reveal">
+            <div class="narrative-tag">Our Founding Purpose</div>
+            <h2 class="narrative-heading">Democratizing Renewable Power With Engineering Integrity</h2>
+            <p>What started in a modest workshop with a tight-knit crew of five engineers has grown into a premier solar company with over 120 certified technicians, solar architects, and client specialists.</p>
+            <p>From day one, we rejected one-size-fits-all sales tactics. Every home roof and commercial facility is an intricate micro-ecosystem requiring bespoke engineering, precision LIDAR shading analysis, and equipment built to withstand decades of weather.</p>
+
+            <!-- 3 Core Pillars -->
+            <div class="about-pillars-grid">
+              <div class="about-pillar-item">
+                <div class="pillar-icon-box green">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div class="pillar-content">
+                  <strong>Tier-1 Equipment Only</strong>
+                  <span>Monocrystalline cell purity with 25-yr warranties.</span>
+                </div>
+              </div>
+
+              <div class="about-pillar-item">
+                <div class="pillar-icon-box yellow">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>
+                </div>
+                <div class="pillar-content">
+                  <strong>NABCEP Certified Teams</strong>
+                  <span>Zero sub-contracting; master electricians on every roof.</span>
+                </div>
+              </div>
+
+              <div class="about-pillar-item">
+                <div class="pillar-icon-box teal">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                </div>
+                <div class="pillar-content">
+                  <strong>24/7 Smart Telemetry</strong>
+                  <span>Real-time cloud monitoring &amp; preventative upkeep.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action CTAs -->
+            <div class="about-hero-actions">
+              <a href="#team" class="btn btn-hero-about-primary">
+                <span>Meet Our Team</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+              <a href="#mission" class="btn btn-hero-about-glass">Our Mission &amp; Values</a>
+            </div>
+          </div>
+
+          <!-- Right: Visual Media Showcase with Floating Badges -->
+          <div class="about-story-visual reveal">
+            <div class="about-visual-frame">
+              <img
+                src="https://i.pinimg.com/1200x/d8/9f/6d/d89f6da55a5b139fdcc3f60f710e2b30.jpg"
+                alt="Solar panels and clean energy representing GreenGrid's mission"
+                width="960"
+                height="640"
+                loading="lazy"
+                class="about-showcase-img"
+                referrerpolicy="no-referrer"
+                onerror="this.onerror=null;this.src='../images/hero-about.jpg';"
+              >
+
+              <!-- Floating Glass Widget 1 (Top Right) -->
+              <div class="about-glass-badge top-right">
+                <span class="badge-icon green">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                <div>
+                  <strong>Est. 2010</strong>
+                  <span>15+ Yrs Innovation</span>
+                </div>
+              </div>
+
+              <!-- Floating Glass Widget 2 (Bottom Left) -->
+              <div class="about-glass-badge bottom-left">
+                <span class="badge-icon yellow">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/></svg>
+                </span>
+                <div>
+                  <strong>10 MW+ Installed</strong>
+                  <span>500+ Active Sites</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mini Trust Strip below visual -->
+            <div class="about-trust-strip">
+              <span class="about-trust-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> California Founded</span>
+              <span class="about-trust-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 120+ Solar Engineers</span>
+              <span class="about-trust-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 98% Satisfaction</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Integrated Milestone Stats Strip -->
+        <div class="about-stats-strip reveal">
+          <div class="about-stat-tile">
+            <div class="stat-number">500+</div>
+            <div class="stat-caption">Completed Installations</div>
+          </div>
+          <div class="about-stat-divider" aria-hidden="true"></div>
+          <div class="about-stat-tile">
+            <div class="stat-number">15+</div>
+            <div class="stat-caption">Years of Excellence</div>
+          </div>
+          <div class="about-stat-divider" aria-hidden="true"></div>
+          <div class="about-stat-tile">
+            <div class="stat-number">10 MW+</div>
+            <div class="stat-caption">Total Clean Capacity</div>
+          </div>
+          <div class="about-stat-divider" aria-hidden="true"></div>
+          <div class="about-stat-tile">
+            <div class="stat-number">98%</div>
+            <div class="stat-caption">Client Satisfaction Rate</div>
           </div>
         </div>
 
-        <!-- Stats Bar -->
-        <div class="stats-bar">
-          <div class="stat-item reveal">
-            <div class="stat-value">500+</div>
-            <div class="stat-label">Installations Completed</div>
-          </div>
-          <div class="stat-item reveal">
-            <div class="stat-value">15+</div>
-            <div class="stat-label">Years of Experience</div>
-          </div>
-          <div class="stat-item reveal">
-            <div class="stat-value">10 MW+</div>
-            <div class="stat-label">Total Capacity Installed</div>
-          </div>
-          <div class="stat-item reveal">
-            <div class="stat-value">98%</div>
-            <div class="stat-label">Customer Satisfaction</div>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -233,7 +354,7 @@
             <h3 class="team-name">James Mitchell</h3>
             <p class="team-role">Lead Solar Engineer</p>
             <p class="team-bio">With 12 years in photovoltaic system design, James leads our engineering team to deliver precision-engineered solar solutions that perform reliably for decades.</p>
-            <a href="#" class="team-linkedin" aria-label="James Mitchell on LinkedIn">
+            <a href="https://www.linkedin.com/company/greengrid-solar" target="_blank" rel="noopener noreferrer" class="team-linkedin" aria-label="James Mitchell on LinkedIn">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
               LinkedIn
             </a>
@@ -245,7 +366,7 @@
             <h3 class="team-name">Sarah Chen</h3>
             <p class="team-role">Installation Manager</p>
             <p class="team-bio">Sarah oversees every installation project from kick-off to handover, ensuring our teams meet the highest safety standards while keeping projects on time and on budget.</p>
-            <a href="#" class="team-linkedin" aria-label="Sarah Chen on LinkedIn">
+            <a href="https://www.linkedin.com/company/greengrid-solar" target="_blank" rel="noopener noreferrer" class="team-linkedin" aria-label="Sarah Chen on LinkedIn">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
               LinkedIn
             </a>
@@ -257,7 +378,7 @@
             <h3 class="team-name">David Okafor</h3>
             <p class="team-role">Technical Specialist</p>
             <p class="team-bio">David specialises in inverter technology, battery storage integration, and smart monitoring systems — bringing cutting-edge technical knowledge to every project he touches.</p>
-            <a href="#" class="team-linkedin" aria-label="David Okafor on LinkedIn">
+            <a href="https://www.linkedin.com/company/greengrid-solar" target="_blank" rel="noopener noreferrer" class="team-linkedin" aria-label="David Okafor on LinkedIn">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
               LinkedIn
             </a>
@@ -269,7 +390,7 @@
             <h3 class="team-name">Maria Santos</h3>
             <p class="team-role">Customer Success Lead</p>
             <p class="team-bio">Maria is the voice of our customers within GreenGrid, ensuring every client receives clear communication, responsive support, and an outstanding experience throughout their solar journey.</p>
-            <a href="#" class="team-linkedin" aria-label="Maria Santos on LinkedIn">
+            <a href="https://www.linkedin.com/company/greengrid-solar" target="_blank" rel="noopener noreferrer" class="team-linkedin" aria-label="Maria Santos on LinkedIn">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
               LinkedIn
             </a>
@@ -399,20 +520,30 @@
           India's premier solar energy solutions provider, delivering custom rooftop installations, industrial solar arrays, smart battery storage, and proactive maintenance.
         </p>
         <div class="footer-social-row">
-          <a href="#" class="social-circle-btn" aria-label="Instagram">
+          <a href="https://www.instagram.com/greengridsolar/" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Instagram">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
           </a>
-          <a href="#" class="social-circle-btn" aria-label="Facebook">
+          <a href="https://www.facebook.com/greengridsolar" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Facebook">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
           </a>
-          <a href="#" class="social-circle-btn" aria-label="X (Twitter)">
+          <a href="https://x.com/greengridsolar" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="X (Twitter)">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
           </a>
-          <a href="#" class="social-circle-btn" aria-label="YouTube">
+          <a href="https://www.youtube.com/@greengridsolar" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="YouTube">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
           </a>
-          <a href="#" class="social-circle-btn" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/company/greengrid-solar" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="LinkedIn">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+        <div class="footer-contact-row">
+          <a href="tel:+15551234567" class="footer-contact-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.5a16 16 0 0 0 6.59 6.59l1.06-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 17.92z"/></svg>
+            <span>+1 (555) 123-4567</span>
+          </a>
+          <a href="mailto:info@greengrid.com" class="footer-contact-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>info@greengrid.com</span>
           </a>
         </div>
       </div>
