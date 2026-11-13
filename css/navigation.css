@@ -90,6 +90,18 @@
   white-space: nowrap;
 }
 
+/* Desktop default states for mobile-only menu items */
+.mobile-menu-header,
+.mobile-menu-card,
+.nav-link-icon,
+.nav-link-arrow {
+  display: none;
+}
+
+.mobile-menu-links {
+  display: contents;
+}
+
 /* ── Menu ── */
 .navbar-menu {
   display: flex;
@@ -356,13 +368,13 @@ body.nav-menu-open {
     top: var(--navbar-height);
     left: 0;
     right: 0;
-    background: var(--color-surface);
+    background: var(--color-surface, #ffffff);
     border-bottom: 1px solid var(--color-border);
     flex-direction: column;
     align-items: stretch;
-    padding: 1.25rem 1rem;
+    padding: 1.15rem 1.15rem 1.6rem;
     gap: 0.5rem;
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
     justify-content: flex-start;
     max-height: calc(100vh - var(--navbar-height));
     max-height: calc(100dvh - var(--navbar-height));
@@ -373,36 +385,244 @@ body.nav-menu-open {
   }
 
   [data-theme="dark"] .navbar-menu {
-    background: var(--color-deep-navy);
+    background: var(--color-deep-navy, #0D1B2A);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
   }
 
   .navbar-menu.open {
     display: flex;
-    animation: menuSlideDown 0.25s ease;
+    animation: menuSlideDown 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   @keyframes menuSlideDown {
-    from { opacity: 0; transform: translateY(-8px); }
+    from { opacity: 0; transform: translateY(-10px); }
     to   { opacity: 1; transform: translateY(0); }
   }
 
+  /* ── Redesigned Mobile Menu Header Badge ── */
+  .mobile-menu-header {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0.65rem;
+    margin-bottom: 0.25rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .mobile-menu-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.28rem 0.75rem;
+    background: var(--color-fresh-mint, rgba(183, 228, 199, 0.25));
+    color: var(--color-forest-green, #1B4D3E);
+    border-radius: 9999px;
+    font-size: 0.725rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  [data-theme="dark"] .mobile-menu-pill {
+    background: rgba(82, 183, 136, 0.2);
+    color: #74C69D;
+  }
+
+  .mobile-menu-links {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0.35rem;
+    width: 100%;
+  }
+
+  /* ── Redesigned Mobile Nav Links ── */
   .nav-link {
     width: 100%;
-    padding: 0.75rem 1.25rem;
-    border-radius: var(--radius-sm);
-    font-size: 1rem;
+    display: flex !important;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.65rem 0.85rem;
+    border-radius: var(--radius-md, 10px);
+    font-size: 0.975rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    background: transparent;
   }
 
-  .navbar-menu .btn-nav {
-    margin-top: 0.5rem;
+  .nav-link-icon {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: var(--color-fresh-mint, rgba(183, 228, 199, 0.3));
+    color: var(--color-forest-green, #1B4D3E);
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+  }
+
+  [data-theme="dark"] .nav-link-icon {
+    background: rgba(255, 255, 255, 0.08);
+    color: #52B788;
+  }
+
+  .nav-link-text {
+    flex: 1;
+    text-align: start;
+  }
+
+  .nav-link-arrow {
+    display: flex !important;
+    align-items: center;
+    color: var(--color-text-secondary);
+    opacity: 0.5;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  .nav-link:hover,
+  .nav-link:active {
+    background: var(--color-fresh-mint, rgba(183, 228, 199, 0.25));
+    color: var(--color-forest-green, #1B4D3E);
+    transform: translateX(3px);
+  }
+
+  .nav-link:hover .nav-link-arrow {
+    opacity: 1;
+    transform: translateX(3px);
+    color: var(--color-forest-green);
+  }
+
+  [dir="rtl"] .nav-link:hover,
+  [dir="rtl"] .nav-link:active {
+    transform: translateX(-3px);
+  }
+
+  [dir="rtl"] .nav-link:hover .nav-link-arrow {
+    transform: translateX(-3px);
+  }
+
+  .nav-link.active {
+    background: var(--color-forest-green, #1B4D3E) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(27, 77, 62, 0.3);
+  }
+
+  .nav-link.active .nav-link-icon {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+  }
+
+  .nav-link.active .nav-link-arrow {
+    color: #ffffff;
+    opacity: 1;
+  }
+
+  /* ── Redesigned Mobile Action Card (Book Now & Assistance) ── */
+  .mobile-menu-card {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0.85rem;
+    margin-top: 0.75rem;
+    padding: 1rem 1.15rem;
+    border-radius: var(--radius-lg, 14px);
+    background: linear-gradient(135deg, rgba(27, 77, 62, 0.05) 0%, rgba(244, 163, 0, 0.08) 100%);
+    border: 1px solid var(--color-border);
+  }
+
+  [data-theme="dark"] .mobile-menu-card {
+    background: linear-gradient(135deg, rgba(45, 106, 79, 0.2) 0%, rgba(244, 163, 0, 0.08) 100%);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .mobile-menu-cta-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .mobile-menu-cta-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .mobile-menu-cta-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+  }
+
+  .mobile-menu-cta-sub {
+    font-size: 0.785rem;
+    color: var(--color-text-secondary);
+  }
+
+  .mobile-menu-cta-btn {
     width: 100%;
-    text-align: center;
-  }
-
-  .nav-cta-mobile {
     display: inline-flex;
-    width: 100%;
-    margin-top: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.925rem;
+    font-weight: 700;
+    border-radius: 9999px;
+    box-shadow: 0 4px 14px rgba(45, 106, 79, 0.3);
+  }
+
+  .mobile-menu-contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+
+  .mobile-contact-pill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.5rem 0.6rem;
+    border-radius: 8px;
+    background: var(--color-surface, #ffffff);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-primary);
+    font-size: 0.785rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  [data-theme="dark"] .mobile-contact-pill {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .mobile-contact-pill:hover {
+    background: var(--color-fresh-mint);
+    color: var(--color-forest-green);
+    border-color: var(--color-forest-green);
+  }
+
+  .mobile-menu-hours {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    font-size: 0.725rem;
+    color: var(--color-text-secondary);
+    font-weight: 500;
+  }
+
+  .hours-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #52B788;
+    box-shadow: 0 0 6px rgba(82, 183, 136, 0.6);
   }
 }
 
@@ -432,9 +652,39 @@ body.nav-menu-open {
    RESPONSIVE ADJUSTMENTS
    ═══════════════════════════════════════ */
 
-@media (max-width: 640px) {
+/* Always keep Book Now CTA visible in navbar controls across desktop, tablet, and mobile */
+.navbar-controls .nav-cta {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .navbar-controls {
+    gap: 0.45rem;
+  }
   .navbar-controls .nav-cta {
-    display: none;
+    padding: 0.45rem 0.85rem;
+    font-size: 0.85rem;
+    gap: 0.35rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .navbar-controls {
+    gap: 0.35rem;
+  }
+  .navbar-controls .nav-cta {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.8125rem;
+    gap: 0.3rem;
+  }
+  .navbar-controls .nav-cta svg {
+    width: 14px;
+    height: 14px;
   }
 }
 
@@ -444,13 +694,22 @@ body.nav-menu-open {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 380px) {
   .navbar-controls .rtl-toggle {
     display: none;
   }
+  .navbar-controls .nav-cta span {
+    display: inline;
+  }
+}
 
-  .logo-text {
-    font-size: 1.125rem;
+@media (max-width: 340px) {
+  .navbar-controls .nav-cta span {
+    display: none; /* Icon-only on ultra-narrow screens */
+  }
+  .navbar-controls .nav-cta {
+    padding: 0.45rem;
+    border-radius: 50%;
   }
 }
 
