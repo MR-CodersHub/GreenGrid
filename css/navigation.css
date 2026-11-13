@@ -733,7 +733,9 @@ body.nav-menu-open {
   }
 
   .logo-tagline {
-    display: none;
+    display: block;
+    font-size: 0.5625rem;
+    letter-spacing: 0.06em;
   }
 
   .navbar-menu {
@@ -839,7 +841,12 @@ body.nav-menu-open {
   }
 
   .logo-text {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
+  }
+
+  .logo-tagline {
+    font-size: 0.5rem;
+    letter-spacing: 0.04em;
   }
 
   .navbar-menu {
