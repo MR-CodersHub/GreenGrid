@@ -655,9 +655,9 @@ body.nav-menu-open {
    RESPONSIVE ADJUSTMENTS
    ═══════════════════════════════════════ */
 
-/* Always keep Book Now CTA visible in navbar controls across desktop, tablet, and mobile */
+/* Desktop & Tablet: Book Now CTA in navbar controls */
 .navbar-controls .nav-cta {
-  display: inline-flex !important;
+  display: inline-flex;
   align-items: center;
   gap: 0.4rem;
   font-weight: 600;
@@ -667,7 +667,7 @@ body.nav-menu-open {
 
 @media (max-width: 768px) {
   .navbar-controls {
-    gap: 0.45rem;
+    gap: 0.5rem;
   }
   .navbar-controls .nav-cta {
     padding: 0.45rem 0.85rem;
@@ -676,22 +676,13 @@ body.nav-menu-open {
   }
 }
 
-@media (max-width: 540px) {
-  .navbar-controls {
-    gap: 0.35rem;
-  }
-  .navbar-controls .nav-cta {
-    padding: 0.4rem 0.7rem;
-    font-size: 0.8125rem;
-    gap: 0.3rem;
-  }
-  .navbar-controls .nav-cta svg {
-    width: 14px;
-    height: 14px;
-  }
-}
-
+/* Mobile Viewports (480px, 425px, 375px, 320px):
+   Hide Book Now in navbar header (it resides inside hamburger menu contents) */
 @media (max-width: 480px) {
+  .navbar-controls .nav-cta {
+    display: none !important;
+  }
+
   .logo-tagline {
     display: none;
   }
@@ -700,19 +691,6 @@ body.nav-menu-open {
 @media (max-width: 380px) {
   .navbar-controls .rtl-toggle {
     display: none;
-  }
-  .navbar-controls .nav-cta span {
-    display: inline;
-  }
-}
-
-@media (max-width: 340px) {
-  .navbar-controls .nav-cta span {
-    display: none; /* Icon-only on ultra-narrow screens */
-  }
-  .navbar-controls .nav-cta {
-    padding: 0.45rem;
-    border-radius: 50%;
   }
 }
 
