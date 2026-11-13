@@ -6,11 +6,11 @@
 /* ── HERO ─────────────────────────────────────────────────── */
 .hero2 {
   position: relative;
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding-top: calc(var(--navbar-height) + 1.5rem);
+  padding-top: 2rem;
   padding-bottom: 3rem;
   background-color: #0B1724;
 }
@@ -540,8 +540,8 @@
 @media (max-width: 768px) {
   .hero2 {
     min-height: auto;
-    padding-top: calc(var(--navbar-height) + 1.5rem);
-    padding-bottom: 3.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
   }
   .hero2-headline {
     font-size: clamp(1.65rem, 1.3rem + 2vw, 2.2rem);
@@ -570,6 +570,10 @@
 }
 
 @media (max-width: 480px) {
+  .hero2 {
+    padding-top: 1.25rem;
+    padding-bottom: 2rem;
+  }
   .hero2-headline {
     font-size: clamp(1.4rem, 1.15rem + 1.8vw, 1.85rem);
   }

@@ -9,9 +9,21 @@
   position: relative;
   background-color: var(--color-deep-navy, #0D1B2A);
   color: #ffffff;
-  padding: 5rem 0 5.5rem;
+  padding: 2.25rem 0 3.5rem;
   overflow: hidden;
   isolation: isolate;
+}
+
+@media (max-width: 768px) {
+  .legal-hero {
+    padding: 1.5rem 0 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .legal-hero {
+    padding: 1.25rem 0 2rem;
+  }
 }
 
 .legal-hero-bg {

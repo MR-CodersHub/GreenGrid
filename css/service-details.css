@@ -6,7 +6,7 @@
 /* ── 1. SERVICE HERO ───────────────────────────────────────── */
 .service-hero {
   position: relative;
-  min-height: 70vh;
+  min-height: auto;
   display: flex;
   align-items: center;
   background-image: url('https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=1200');
@@ -32,7 +32,7 @@
 
 .service-hero-inner {
   max-width: 760px;
-  padding: 6rem 0 5rem;
+  padding: 2.25rem 0 3.5rem;
 }
 
 /* Breadcrumb */
@@ -617,8 +617,8 @@
 }
 
 @media (max-width: 640px) {
-  .service-hero { background-attachment: scroll; min-height: 60vh; }
-  .service-hero-inner { padding: 5rem 0 3rem; }
+  .service-hero { background-attachment: scroll; min-height: auto; }
+  .service-hero-inner { padding: 1.5rem 0 2.5rem; }
   .service-highlights { flex-direction: column; gap: 0.5rem; }
   .system-overview-grid { grid-template-columns: 1fr; }
   .capacity-grid { grid-template-columns: repeat(2, 1fr); }

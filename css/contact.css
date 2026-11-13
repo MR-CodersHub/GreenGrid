@@ -8,7 +8,7 @@
   position: relative;
   background-color: var(--color-deep-navy, #0D1B2A);
   color: #ffffff;
-  padding: 4.5rem 0 5.5rem;
+  padding: 2.25rem 0 4rem;
   overflow: hidden;
   isolation: isolate;
 }
@@ -446,7 +446,7 @@
 /* Contact Hero Media Queries */
 @media (max-width: 991px) {
   .contact-hero {
-    padding: 3.5rem 0 4.5rem;
+    padding: 1.5rem 0 3rem;
   }
   .contact-hero-grid {
     grid-template-columns: 1fr;
@@ -471,6 +471,9 @@
 }
 
 @media (max-width: 640px) {
+  .contact-hero {
+    padding: 1.25rem 0 2rem;
+  }
   .contact-hero-actions {
     flex-direction: column;
     width: 100%;

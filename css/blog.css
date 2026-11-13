@@ -6,7 +6,7 @@
 /* ── 1. BLOG HERO (REDESIGNED) ────────────────────────────────── */
 .blog-hero {
   position: relative;
-  padding: 6.5rem 0 4.5rem;
+  padding: 2.25rem 0 4rem;
   background-color: #0B1724;
   color: #fff;
   overflow: hidden;
@@ -627,7 +627,7 @@
 /* ── RESPONSIVE DESIGN FOR BLOG HERO ─────────────────────────── */
 @media (max-width: 1024px) {
   .blog-hero {
-    padding: 5.5rem 0 3.5rem;
+    padding: 1.75rem 0 3.5rem;
   }
   .blog-hero-grid {
     grid-template-columns: 1fr;
@@ -641,7 +641,7 @@
 
 @media (max-width: 768px) {
   .blog-hero {
-    padding: 4.5rem 0 3rem;
+    padding: 1.5rem 0 2.5rem;
   }
   .blog-hero-top {
     flex-direction: column;
@@ -679,6 +679,9 @@
 }
 
 @media (max-width: 480px) {
+  .blog-hero {
+    padding: 1.25rem 0 2rem;
+  }
   .blog-hero-title {
     font-size: 1.8rem;
   }

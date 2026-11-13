@@ -8,9 +8,21 @@
   position: relative;
   background: linear-gradient(135deg, var(--color-forest-green-dark) 0%, var(--color-deep-navy) 100%);
   color: #ffffff;
-  padding: 6rem 0 4.5rem;
+  padding: 2.25rem 0 3.5rem;
   text-align: center;
   overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .cs-hero {
+    padding: 1.5rem 0 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cs-hero {
+    padding: 1.25rem 0 2rem;
+  }
 }
 
 .cs-hero-inner {

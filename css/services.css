@@ -32,6 +32,22 @@
   overflow: hidden;
 }
 
+.service-section:first-of-type {
+  padding-top: 2.25rem;
+}
+
+@media (max-width: 768px) {
+  .service-section:first-of-type {
+    padding-top: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-section:first-of-type {
+    padding-top: 1.25rem;
+  }
+}
+
 .services-hero-bg {
   position: absolute;
   inset: 0;
