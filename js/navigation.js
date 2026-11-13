@@ -103,10 +103,13 @@
         });
       });
 
-      /* Close menu when resized to desktop */
+      /* Close menu when resized to desktop, or update position on mobile resize/orientation change */
       window.addEventListener('resize', function () {
         if (window.innerWidth > 1024 && menu.classList.contains('open')) {
           closeMenu();
+        } else if (menu.classList.contains('open') && navbar) {
+          var navBottom = navbar.getBoundingClientRect().bottom;
+          menu.style.top = Math.max(0, navBottom) + 'px';
         }
       });
 
