@@ -1,0 +1,433 @@
+/* ============================================================
+   LEGAL & SITEMAP STYLES — css/legal.css
+   GreenGrid Solar Energy
+   Covers: privacy-policy.html, terms-conditions.html, sitemap.html
+   ============================================================ */
+
+/* ── 1. LEGAL HERO ─────────────────────────────────────────── */
+.legal-hero {
+  position: relative;
+  background-color: var(--color-deep-navy, #0D1B2A);
+  color: #ffffff;
+  padding: 5rem 0 5.5rem;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.legal-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.25;
+  transform: scale(1.02);
+  transition: transform 6s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 0;
+}
+
+.legal-hero:hover .legal-hero-bg {
+  transform: scale(1);
+}
+
+.legal-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 18% 25%, rgba(45, 106, 79, 0.45) 0%, transparent 55%),
+              radial-gradient(circle at 82% 75%, rgba(244, 163, 0, 0.2) 0%, transparent 50%),
+              linear-gradient(135deg, rgba(13, 27, 42, 0.94) 0%, rgba(13, 40, 24, 0.9) 50%, rgba(13, 27, 42, 0.96) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.legal-hero-container {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.legal-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.4rem 1.1rem;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  margin-bottom: 1.5rem;
+}
+
+.legal-breadcrumb a {
+  color: var(--color-solar-yellow, #F4A300);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.legal-breadcrumb a:hover {
+  opacity: 0.85;
+}
+
+.legal-hero-title {
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+}
+
+.legal-hero-sub {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 680px;
+  margin: 0 auto 2rem;
+}
+
+.legal-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.legal-meta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* ── 2. LEGAL CONTENT SECTIONS ─────────────────────────────── */
+.legal-section {
+  padding: 5rem 0;
+  background: var(--color-surface, #ffffff);
+}
+
+.legal-section.section-alt {
+  background: var(--color-surface-alt, #f8faf8);
+}
+
+[data-theme="dark"] .legal-section.section-alt {
+  background: #0c1824;
+}
+
+.legal-container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.legal-card {
+  background: var(--color-surface, #ffffff);
+  border: 1.5px solid var(--color-border, #e2e8f0);
+  border-radius: 16px;
+  padding: 2.75rem 2.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="dark"] .legal-card {
+  background: #132233;
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+}
+
+.legal-tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-forest-green, #1b4332);
+  background: rgba(45, 106, 79, 0.12);
+  padding: 0.3rem 0.85rem;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+}
+
+[data-theme="dark"] .legal-tag {
+  color: #74c69d;
+  background: rgba(82, 183, 136, 0.18);
+}
+
+.legal-heading {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--color-text-primary, #0D1B2A);
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+}
+
+[data-theme="dark"] .legal-heading {
+  color: #ffffff;
+}
+
+.legal-lead {
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: var(--color-text-primary, #0D1B2A);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+[data-theme="dark"] .legal-lead {
+  color: #e2e8f0;
+}
+
+.legal-text {
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: var(--color-text-secondary, #475569);
+  margin-bottom: 1.5rem;
+}
+
+[data-theme="dark"] .legal-text {
+  color: #cbd5e1;
+}
+
+.legal-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.legal-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-primary, #0D1B2A);
+}
+
+[data-theme="dark"] .legal-list li {
+  color: #f1f5f9;
+}
+
+.legal-list-icon {
+  width: 22px;
+  height: 22px;
+  color: var(--color-forest-green, #1b4332);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+[data-theme="dark"] .legal-list-icon {
+  color: #52b788;
+}
+
+.legal-notice-box {
+  background: rgba(244, 163, 0, 0.1);
+  border-left: 4px solid var(--color-solar-yellow, #F4A300);
+  border-radius: 0 12px 12px 0;
+  padding: 1.25rem 1.5rem;
+  margin: 1.75rem 0;
+}
+
+.legal-notice-box strong {
+  color: var(--color-text-primary, #0D1B2A);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+[data-theme="dark"] .legal-notice-box strong {
+  color: #ffffff;
+}
+
+.legal-notice-box p {
+  color: var(--color-text-secondary, #475569);
+  font-size: 0.92rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+[data-theme="dark"] .legal-notice-box p {
+  color: #cbd5e1;
+}
+
+/* ── 3. SITEMAP DIRECTORY ──────────────────────────────────── */
+.sitemap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 991px) {
+  .sitemap-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .sitemap-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sitemap-card {
+  background: var(--color-surface, #ffffff);
+  border: 1.5px solid var(--color-border, #e2e8f0);
+  border-radius: 16px;
+  padding: 2rem 1.75rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+[data-theme="dark"] .sitemap-card {
+  background: #132233;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.sitemap-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  border-color: rgba(45, 106, 79, 0.35);
+}
+
+[data-theme="dark"] .sitemap-card:hover {
+  border-color: rgba(82, 183, 136, 0.45);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.sitemap-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border, #e2e8f0);
+}
+
+[data-theme="dark"] .sitemap-card-header {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.sitemap-card-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(45, 106, 79, 0.12);
+  color: var(--color-forest-green, #1b4332);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+[data-theme="dark"] .sitemap-card-icon {
+  background: rgba(82, 183, 136, 0.2);
+  color: var(--color-solar-yellow, #F4A300);
+}
+
+.sitemap-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text-primary, #0D1B2A);
+  margin: 0;
+}
+
+[data-theme="dark"] .sitemap-card-title {
+  color: #ffffff;
+}
+
+.sitemap-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.sitemap-link-item a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 0.85rem;
+  border-radius: 8px;
+  color: var(--color-text-primary, #0D1B2A);
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+
+[data-theme="dark"] .sitemap-link-item a {
+  color: #e2e8f0;
+}
+
+.sitemap-link-item a:hover {
+  background: rgba(45, 106, 79, 0.08);
+  color: var(--color-forest-green, #1b4332);
+  transform: translateX(4px);
+}
+
+[data-theme="dark"] .sitemap-link-item a:hover {
+  background: rgba(82, 183, 136, 0.16);
+  color: var(--color-solar-yellow, #F4A300);
+}
+
+.sitemap-link-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--color-text-secondary, #64748b);
+}
+
+[data-theme="dark"] .sitemap-link-badge {
+  background: rgba(255, 255, 255, 0.1);
+  color: #cbd5e1;
+}
+
+/* ── 4. CTA BANNER ─────────────────────────────────────────── */
+.legal-cta-box {
+  background: linear-gradient(135deg, #0d2818 0%, #1b4332 55%, #2d6a4f 100%);
+  border-radius: 20px;
+  padding: 3.5rem 2.5rem;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 0 16px 40px rgba(13, 40, 24, 0.35);
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+}
+
+.legal-cta-title {
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.legal-cta-sub {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 2rem;
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.65;
+}
+
+.legal-cta-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
