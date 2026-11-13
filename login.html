@@ -1,0 +1,504 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Access your GreenGrid Solar Energy portal to view consultation updates and solar installation details.">
+  <title>Login &amp; Register | GreenGrid Solar Energy</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <!-- Standard Navbar -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container navbar-inner">
+      <a href="index.html" class="navbar-logo" aria-label="GreenGrid Home">
+        <div class="navbar-logo-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <circle cx="16" cy="16" r="8" fill="#F4A300"/>
+            <line x1="16" y1="2" x2="16" y2="6" stroke="#F4A300" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="16" y1="26" x2="16" y2="30" stroke="#F4A300" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="2" y1="16" x2="6" y2="16" stroke="#F4A300" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="26" y1="16" x2="30" y2="16" stroke="#F4A300" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="6.1" y1="6.1" x2="9" y2="9" stroke="#F4A300" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="23" y1="23" x2="25.9" y2="25.9" stroke="#F4A300" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="25.9" y1="6.1" x2="23" y2="9" stroke="#F4A300" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="9" y1="23" x2="6.1" y2="25.9" stroke="#F4A300" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="logo-text-wrap">
+          <span class="logo-text">GreenGrid</span>
+          <span class="logo-tagline">Powering Tomorrow</span>
+        </div>
+      </a>
+      <div class="navbar-menu" id="navbarMenu" role="menu">
+        <a href="index.html" class="nav-link" role="menuitem">Home</a>
+        <a href="home2.html" class="nav-link" role="menuitem">Home 2</a>
+        <a href="about.html" class="nav-link" role="menuitem">About</a>
+        <a href="services.html" class="nav-link" role="menuitem">Services</a>
+        <a href="blog.html" class="nav-link" role="menuitem">Blog</a>
+        <a href="pricing.html" class="nav-link" role="menuitem">Pricing</a>
+        <a href="contact.html" class="nav-link" role="menuitem">Contact</a>
+      </div>
+      <div class="navbar-controls">
+        <button class="btn-icon theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <button class="btn-icon rtl-toggle" id="rtlToggle" aria-label="Switch to RTL layout" title="Switch to RTL layout"><span class="rtl-toggle-text">RTL</span></button>
+        <a href="contact.html" class="btn btn-primary btn-sm nav-cta">Book Now</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbarMenu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- Section 1: Authentication Hero -->
+    <section class="auth-hero" aria-label="Authentication portal overview">
+      <div class="container auth-hero-inner">
+        <span class="badge" style="margin-bottom: 1rem;">Client Access</span>
+        <h1>Access Your GreenGrid Account</h1>
+        <p>Sign in to stay informed regarding your solar consultation, project schedules, and service requests.</p>
+      </div>
+    </section>
+
+    <!-- Section 2: Login Form -->
+    <section class="auth-section" id="login-section" aria-label="Sign in form">
+      <div class="container">
+        <div class="auth-card">
+          <div class="auth-card-header">
+            <h2 class="auth-card-title">Sign In</h2>
+            <p class="auth-card-subtitle">Enter your credentials to manage your consultation request</p>
+          </div>
+          <form id="loginForm" novalidate>
+            <div class="form-group" style="margin-bottom: 1.25rem;">
+              <label for="loginEmail" class="form-label">Email Address *</label>
+              <input type="email" id="loginEmail" class="form-input" placeholder="name@example.com" required>
+              <span class="form-error"></span>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 1rem;">
+              <label for="loginPassword" class="form-label">Password *</label>
+              <div class="password-input-group">
+                <input type="password" id="loginPassword" class="form-input" placeholder="••••••••" required>
+                <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility">Show</button>
+              </div>
+              <span class="form-error"></span>
+            </div>
+
+            <div class="form-help-row">
+              <label class="form-check">
+                <input type="checkbox" id="rememberMe">
+                <span>Remember me</span>
+              </label>
+              <a href="#" class="forgot-link" style="color: var(--color-forest-green); text-decoration: none; font-size: 0.85rem;" onclick="event.preventDefault(); window.GreenGrid && window.GreenGrid.showToast && window.GreenGrid.showToast('Password recovery is sent via email verification.', 'info');">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" style="margin-top: 1.25rem;">Sign In</button>
+
+            <div class="form-switch-link">
+              Don't have an account? <a href="#register-section" id="goToRegister">Register here &rarr;</a>
+            </div>
+
+            <p class="demo-disclaimer">
+              <svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> <strong>Informational Portal:</strong> This is a frontend demonstration interface. No authentication sessions or private dashboards are initiated.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Registration Form -->
+    <section class="auth-section" id="register-section" aria-label="Account registration form" style="background: var(--color-surface);">
+      <div class="container">
+        <div class="auth-card">
+          <div class="auth-card-header">
+            <h2 class="auth-card-title">Create an Account</h2>
+            <p class="auth-card-subtitle">Register to track consultation milestones and system design proposals</p>
+          </div>
+          <form id="registerForm" novalidate>
+            <div class="form-group" style="margin-bottom: 1.25rem;">
+              <label for="regName" class="form-label">Full Name *</label>
+              <input type="text" id="regName" class="form-input" placeholder="Sarah Jenkins" required>
+              <span class="form-error"></span>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 1.25rem;">
+              <label for="regEmail" class="form-label">Email Address *</label>
+              <input type="email" id="regEmail" class="form-input" placeholder="sarah@example.com" required>
+              <span class="form-error"></span>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 1.25rem;">
+              <label for="regPhone" class="form-label">Phone Number *</label>
+              <input type="tel" id="regPhone" class="form-input" placeholder="+1 (555) 000-0000" required>
+              <span class="form-error"></span>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 1.25rem;">
+              <label for="accountType" class="form-label">Account Type *</label>
+              <select id="accountType" class="form-select" required>
+                <option value="">Select customer type...</option>
+                <option value="residential">Residential Homeowner</option>
+                <option value="commercial">Commercial Property Owner</option>
+                <option value="industrial">Industrial Facility Operator</option>
+              </select>
+              <span class="form-error"></span>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 1.25rem;">
+              <label for="regPassword" class="form-label">Password * (min. 8 characters)</label>
+              <div class="password-input-group">
+                <input type="password" id="regPassword" class="form-input" minlength="8" placeholder="••••••••" required>
+                <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility">Show</button>
+              </div>
+              <span class="form-error"></span>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 1.25rem;">
+              <label for="regConfirmPassword" class="form-label">Confirm Password *</label>
+              <input type="password" id="regConfirmPassword" class="form-input" placeholder="••••••••" required>
+              <span class="form-error"></span>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 1.5rem;">
+              <label class="form-check" style="align-items: flex-start;">
+                <input type="checkbox" id="agreeTerms" required style="margin-top: 3px;">
+                <span style="font-size: 0.85rem; line-height: 1.5;">I agree to GreenGrid's Privacy Policy and consultation terms of service.</span>
+              </label>
+              <span class="form-error"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+
+            <div class="form-switch-link">
+              Already have an account? <a href="#login-section" id="goToLogin">&larr; Sign in here</a>
+            </div>
+
+            <p class="demo-disclaimer">
+              <svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> <strong>Informational Portal:</strong> This demo does not store personal passwords or generate user dashboards.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Customer Account Benefits -->
+    <section class="benefits-section section" aria-label="Customer account advantages">
+      <div class="container">
+        <div class="section-header text-center mb-lg">
+          <span class="section-label">Why Register</span>
+          <h2 class="section-title">Customer Account Benefits</h2>
+          <p class="section-subtitle">Simplified communication and project transparency for your solar transition.</p>
+        </div>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon"><svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg></div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem;">Consultation Tracking</h3>
+            <p style="font-size: 0.925rem; color: var(--color-text-secondary); line-height: 1.6;">Follow your enquiry status in real time, from first discovery call through on-site rooftop audit.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon"><svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem;">Customized Proposals</h3>
+            <p style="font-size: 0.925rem; color: var(--color-text-secondary); line-height: 1.6;">Review detailed engineering schematics, irradiance estimates, and equipment specifications safely.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon"><svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem;">Maintenance Reminders</h3>
+            <p style="font-size: 0.925rem; color: var(--color-text-secondary); line-height: 1.6;">Receive scheduled reminders for annual inspections, inverter firmware checks, and cleaning services.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Account Access Information -->
+    <section class="access-info-section section" aria-label="Security and access information">
+      <div class="container">
+        <div class="access-info-grid">
+          <div>
+            <span class="section-label">Account Policies</span>
+            <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 1rem;">What You Can Manage</h2>
+            <p style="font-size: 1.05rem; color: var(--color-text-secondary); line-height: 1.7;">
+              GreenGrid accounts are dedicated communication hubs for homeowners and enterprise facilities undergoing solar evaluation or routine service maintenance.
+            </p>
+            <ul class="access-checklist">
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Project Milestone Notifications:</strong> Instant alerts regarding permit approvals and installation dates.</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Direct Engineering Contact:</strong> Access direct correspondence with your assigned lead solar engineer.</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Maintenance Logs &amp; Inspection Reports:</strong> Archive past diagnostic reports and performance checks.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="security-box">
+            <span class="security-badge"><svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Data Privacy Standards</span>
+            <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.75rem;">Our Privacy Promise</h3>
+            <p style="font-size: 0.925rem; color: var(--color-text-secondary); line-height: 1.65; margin-bottom: 1rem;">
+              GreenGrid adheres to strict data minimization standards. Your roof schematics, electric utility bills, and personal contact info are never rented or shared with third-party advertisers.
+            </p>
+            <p style="font-size: 0.85rem; color: var(--color-text-muted); line-height: 1.5;">
+              For inquiries regarding personal data records or to request account deletion, please contact our compliance desk at <strong>privacy@greengrid.com</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Support CTA -->
+    <section class="support-cta-section" aria-label="Customer support options">
+      <div class="container">
+        <h2 style="font-size: 2.2rem; font-weight: 800; color: #fff; margin-bottom: 0.85rem;">Need Assistance with Your Account?</h2>
+        <p style="font-size: 1.05rem; color: rgba(255,255,255,0.8); max-width: 580px; margin: 0 auto;">Our dedicated customer support and scheduling specialists are here to assist you during business hours.</p>
+
+        <div class="support-options">
+          <a href="mailto:info@greengrid.com" class="support-option">
+            <span><svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span> info@greengrid.com
+          </a>
+          <a href="tel:+15551234567" class="support-option">
+            <span><svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.5a16 16 0 0 0 6.59 6.59l1.06-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 17.92z"/></svg></span> +1 (555) 123-4567
+          </a>
+          <a href="contact.html" class="support-option">
+            <span><svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span> Submit Online Enquiry
+          </a>
+        </div>
+
+        <div>
+          <a href="index.html" class="btn btn-solar">Return to Homepage</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Standard Footer -->
+    <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-grid">
+      <!-- Col 1: Brand & Socials -->
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo-wrap" aria-label="GreenGrid Home">
+          <div class="footer-logo-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <circle cx="16" cy="16" r="8" fill="#F4A300"/>
+              <line x1="16" y1="2" x2="16" y2="6" stroke="#F4A300" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="16" y1="26" x2="16" y2="30" stroke="#F4A300" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="2" y1="16" x2="6" y2="16" stroke="#F4A300" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="26" y1="16" x2="30" y2="16" stroke="#F4A300" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="6.1" y1="6.1" x2="9" y2="9" stroke="#F4A300" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="23" y1="23" x2="25.9" y2="25.9" stroke="#F4A300" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="25.9" y1="6.1" x2="23" y2="9" stroke="#F4A300" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="9" y1="23" x2="6.1" y2="25.9" stroke="#F4A300" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="footer-logo-text">
+            <span class="footer-brand-name">GreenGrid</span>
+            <span class="footer-brand-sub">Powering Tomorrow</span>
+          </div>
+        </a>
+        <p class="footer-tagline">
+          India's premier solar energy solutions provider, delivering custom rooftop installations, industrial solar arrays, smart battery storage, and proactive maintenance.
+        </p>
+        <div class="footer-social-row">
+          <a href="#" class="social-circle-btn" aria-label="Instagram">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="social-circle-btn" aria-label="Facebook">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="social-circle-btn" aria-label="X (Twitter)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" class="social-circle-btn" aria-label="YouTube">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+          <a href="#" class="social-circle-btn" aria-label="LinkedIn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Col 2: Services -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">SERVICES</h4>
+        <ul class="footer-nav-list">
+          <li><a href="services.html" class="footer-nav-link">Residential Solar</a></li>
+          <li><a href="services.html" class="footer-nav-link">Commercial Solar</a></li>
+          <li><a href="services.html" class="footer-nav-link">Solar Maintenance</a></li>
+          <li><a href="services.html" class="footer-nav-link">Battery Storage</a></li>
+          <li><a href="services.html" class="footer-nav-link">System Upgrades</a></li>
+          <li><a href="contact.html" class="footer-nav-link">Consultation &amp; Audit</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Company -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">COMPANY</h4>
+        <ul class="footer-nav-list">
+          <li><a href="index.html" class="footer-nav-link">Home</a></li>
+          <li><a href="home2.html" class="footer-nav-link">Home 2</a></li>
+          <li><a href="about.html" class="footer-nav-link">About Us</a></li>
+          <li><a href="services.html" class="footer-nav-link">Services</a></li>
+          <li><a href="pricing.html" class="footer-nav-link">Pricing</a></li>
+          <li><a href="blog.html" class="footer-nav-link">Blog</a></li>
+          <li><a href="contact.html" class="footer-nav-link">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Stay Connected -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">STAY CONNECTED</h4>
+        <p class="footer-desc-text">
+          Receive seasonal solar energy guides, maintenance checklists, and commercial clean energy optimization insights before anyone else.
+        </p>
+        <form class="footer-subscribe-group" onsubmit="event.preventDefault(); var em = this.querySelector('input'); if(em && em.value) { window.GreenGrid && window.GreenGrid.showToast && window.GreenGrid.showToast('Thank you for subscribing to GreenGrid updates!', 'success'); this.reset(); }">
+          <input type="email" placeholder="Your work email..." required class="footer-email-field" aria-label="Your work email">
+          <button type="submit" class="footer-join-btn">JOIN</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom-bar">
+      <div class="container footer-bottom-flex">
+        <p class="footer-copy-text">
+          &copy; 2026 GreenGrid Solar Energy Solutions Pvt. Ltd. All rights reserved. Powering clean energy transitions.
+        </p>
+        <div class="footer-legal-links">
+          <a href="404.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="404.html" class="footer-legal-link">Terms &amp; Conditions</a>
+          <a href="404.html" class="footer-legal-link">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></button>
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+  <div class="lightbox-overlay" id="lightbox" role="dialog" aria-modal="true"><button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button><img class="lightbox-img" id="lightboxImg" src="" alt=""></div>
+
+  <script src="js/theme.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Smooth jump between login and register
+      var goToRegister = document.getElementById('goToRegister');
+      var goToLogin = document.getElementById('goToLogin');
+      if (goToRegister) {
+        goToRegister.addEventListener('click', function(e) {
+          e.preventDefault();
+          var reg = document.getElementById('register-section');
+          if (reg) reg.scrollIntoView({ behavior: 'smooth' });
+        });
+      }
+      if (goToLogin) {
+        goToLogin.addEventListener('click', function(e) {
+          e.preventDefault();
+          var log = document.getElementById('login-section');
+          if (log) log.scrollIntoView({ behavior: 'smooth' });
+        });
+      }
+
+      // Password visibility toggles
+      document.querySelectorAll('.password-toggle-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var input = btn.previousElementSibling;
+          if (!input) return;
+          var isPass = input.type === 'password';
+          input.type = isPass ? 'text' : 'password';
+          btn.textContent = isPass ? 'Hide' : 'Show';
+        });
+      });
+
+      // Login form demo submission
+      var loginForm = document.getElementById('loginForm');
+      if (loginForm) {
+        loginForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          var email = document.getElementById('loginEmail');
+          var pass = document.getElementById('loginPassword');
+          var valid = true;
+          if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+            email.classList.add('error');
+            email.parentElement.querySelector('.form-error').textContent = 'Please enter a valid email address.';
+            valid = false;
+          } else {
+            email.classList.remove('error');
+            email.parentElement.querySelector('.form-error').textContent = '';
+          }
+          if (!pass.value.trim()) {
+            pass.classList.add('error');
+            pass.closest('.form-group').querySelector('.form-error').textContent = 'Please enter your password.';
+            valid = false;
+          } else {
+            pass.classList.remove('error');
+            pass.closest('.form-group').querySelector('.form-error').textContent = '';
+          }
+          if (valid) {
+            window.GreenGrid && window.GreenGrid.showToast && window.GreenGrid.showToast('Demo sign-in verified! (No dashboard redirected)', 'success');
+            loginForm.reset();
+          }
+        });
+      }
+
+      // Register form demo submission
+      var regForm = document.getElementById('registerForm');
+      if (regForm) {
+        regForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          var name = document.getElementById('regName');
+          var email = document.getElementById('regEmail');
+          var phone = document.getElementById('regPhone');
+          var type = document.getElementById('accountType');
+          var pass = document.getElementById('regPassword');
+          var confirm = document.getElementById('regConfirmPassword');
+          var agree = document.getElementById('agreeTerms');
+          var valid = true;
+
+          function check(el, cond, msg) {
+            var err = el.closest('.form-group').querySelector('.form-error');
+            if (!cond) {
+              el.classList.add('error');
+              if (err) err.textContent = msg;
+              valid = false;
+            } else {
+              el.classList.remove('error');
+              if (err) err.textContent = '';
+            }
+          }
+
+          check(name, name.value.trim().length > 1, 'Please enter your full name.');
+          check(email, /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value), 'Valid email required.');
+          check(phone, phone.value.trim().length >= 7, 'Valid phone number required.');
+          check(type, type.value !== '', 'Please select an account type.');
+          check(pass, pass.value.length >= 8, 'Password must be at least 8 characters.');
+          check(confirm, confirm.value === pass.value && confirm.value.length > 0, 'Passwords must match.');
+          check(agree, agree.checked, 'You must agree to the terms.');
+
+          if (valid) {
+            window.GreenGrid && window.GreenGrid.showToast && window.GreenGrid.showToast('Account registered successfully! (Demo mode)', 'success');
+            regForm.reset();
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

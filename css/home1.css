@@ -92,9 +92,49 @@
 .hero-buttons {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.25rem;
   flex-wrap: wrap;
   margin-bottom: 3rem;
+}
+
+.hero-buttons .btn {
+  border-radius: 9999px;
+  padding: 0.95rem 2.15rem;
+  font-weight: 600;
+  transition: all var(--transition-base);
+}
+
+.hero-buttons .btn-primary {
+  background: linear-gradient(135deg, #F4A300 0%, #E76F51 100%);
+  border-color: transparent;
+  color: #ffffff;
+  box-shadow: 0 4px 18px rgba(244, 163, 0, 0.35);
+}
+
+.hero-buttons .btn-primary:hover {
+  background: linear-gradient(135deg, #e09400 0%, #d95d3f 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(244, 163, 0, 0.45);
+  color: #ffffff;
+}
+
+.hero-buttons .btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgba(27, 77, 62, 0.4);
+  color: var(--color-forest-green);
+  backdrop-filter: blur(8px);
+}
+
+[data-theme="dark"] .hero-buttons .btn-secondary {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+.hero-buttons .btn-secondary:hover {
+  background: var(--color-forest-green);
+  border-color: var(--color-forest-green);
+  color: #ffffff;
+  transform: translateY(-2px);
 }
 
 /* Stats row */

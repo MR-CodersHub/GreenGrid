@@ -81,7 +81,40 @@
 .hero2-ctas {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.25rem;
+}
+
+.hero2-ctas .btn {
+  border-radius: 9999px;
+  padding: 0.95rem 2.15rem;
+  font-weight: 600;
+  transition: all var(--transition-base);
+}
+
+.hero2-ctas .btn-primary {
+  background: linear-gradient(135deg, #F4A300 0%, #E76F51 100%);
+  border-color: transparent;
+  color: #ffffff;
+  box-shadow: 0 4px 18px rgba(244, 163, 0, 0.35);
+}
+
+.hero2-ctas .btn-primary:hover {
+  background: linear-gradient(135deg, #e09400 0%, #d95d3f 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(244, 163, 0, 0.45);
+}
+
+.hero2-ctas .btn-outline-light {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  backdrop-filter: blur(8px);
+}
+
+.hero2-ctas .btn-outline-light:hover {
+  background: #ffffff;
+  color: var(--color-forest-green, #1B4D3E);
+  transform: translateY(-2px);
 }
 
 /* ── SECTION HELPERS ── */
