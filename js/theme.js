@@ -45,7 +45,7 @@
         /* Toast feedback (needs GreenGrid.showToast from components.js) */
         if (window.GreenGrid && window.GreenGrid.showToast) {
           window.GreenGrid.showToast(
-            next === 'dark' ? '🌙 Dark mode enabled' : '☀️ Light mode enabled',
+            next === 'dark' ? 'Dark mode enabled' : 'Light mode enabled',
             'info'
           );
         }
@@ -82,7 +82,7 @@
 
         if (window.GreenGrid && window.GreenGrid.showToast) {
           window.GreenGrid.showToast(
-            next === 'rtl' ? '→ RTL layout enabled' : '← LTR layout enabled',
+            next === 'rtl' ? 'RTL layout enabled' : 'LTR layout enabled',
             'info'
           );
         }

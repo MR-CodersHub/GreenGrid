@@ -30,9 +30,9 @@
         submitBtn.disabled = true;
         setTimeout(function() {
           if (window.GreenGrid && window.GreenGrid.showToast) {
-            window.GreenGrid.showToast('\u2705 Your enquiry has been submitted! We\'ll contact you within 1 business day.', 'success', 5000);
+            window.GreenGrid.showToast('Your enquiry has been submitted! We\'ll contact you within 1 business day.', 'success', 5000);
           } else {
-            showToastFallback('\u2705 Your enquiry has been submitted! We\'ll contact you within 1 business day.', 'success');
+            showToastFallback('Your enquiry has been submitted! We\'ll contact you within 1 business day.', 'success');
           }
           form.reset();
           // Clear error states
@@ -47,9 +47,9 @@
         }, 1200);
       } else {
         if (window.GreenGrid && window.GreenGrid.showToast) {
-          window.GreenGrid.showToast('\u274C Please fill in all required fields correctly.', 'error');
+          window.GreenGrid.showToast('Please fill in all required fields correctly.', 'error');
         } else {
-          showToastFallback('\u274C Please fill in all required fields correctly.', 'error');
+          showToastFallback('Please fill in all required fields correctly.', 'error');
         }
         // Scroll to first error
         var firstError = form.querySelector('.form-input.error, .form-select.error, .form-textarea.error');

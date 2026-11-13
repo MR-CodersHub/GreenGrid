@@ -1020,6 +1020,33 @@
   flex-shrink: 0;
 }
 
+.toast.success .toast-icon { color: var(--color-forest-green); }
+.toast.error   .toast-icon { color: var(--color-error); }
+.toast.info    .toast-icon { color: var(--color-solar-yellow); }
+.toast.warning .toast-icon { color: #FF9800; }
+
+/* ══════════════════════════════════════════════
+   INLINE ICONS (replace former emoji glyphs)
+   ══════════════════════════════════════════════ */
+
+.emoji-icon {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: -0.125em;
+  flex-shrink: 0;
+}
+
+.status-dot {
+  width: 0.6em;
+  height: 0.6em;
+  display: inline-block;
+  border-radius: 50%;
+  background: #22c55e;
+  vertical-align: 0.05em;
+  flex-shrink: 0;
+}
+
 .toast-message {
   font-size: var(--font-size-base);
   color: var(--color-text-primary);
