@@ -9,7 +9,7 @@
   min-height: 70vh;
   display: flex;
   align-items: flex-end;
-  background-image: url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1200');
+  background-image: url('https://i.pinimg.com/736x/c9/35/cb/c935cb67216eb9f13b3419bde038837a.jpg'), url('../images/blog-details-hero.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
