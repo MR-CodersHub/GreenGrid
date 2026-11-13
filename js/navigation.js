@@ -40,6 +40,10 @@
 
     function openMenu() {
       if (!hamburger || !menu) return;
+      if (navbar) {
+        var navBottom = navbar.getBoundingClientRect().bottom;
+        menu.style.top = Math.max(0, navBottom) + 'px';
+      }
       hamburger.setAttribute('aria-expanded', 'true');
       hamburger.classList.add('open');
       menu.classList.add('open');
@@ -53,6 +57,7 @@
       hamburger.setAttribute('aria-expanded', 'false');
       hamburger.classList.remove('open');
       menu.classList.remove('open');
+      menu.style.top = '';
       if (backdrop) backdrop.classList.remove('active');
       document.documentElement.classList.remove('nav-menu-open');
       document.body.classList.remove('nav-menu-open');

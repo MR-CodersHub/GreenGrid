@@ -19,6 +19,10 @@ html {
   text-size-adjust: 100%;
 }
 
+html {
+  overflow-x: clip;
+}
+
 /* ── Body ── */
 body {
   font-family: var(--font-family);
@@ -29,7 +33,7 @@ body {
   background-color: var(--color-warm-white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
   transition: background-color var(--transition-base), color var(--transition-base);
 }
 

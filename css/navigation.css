@@ -364,10 +364,12 @@ body.nav-menu-open {
 
   .navbar-menu {
     display: none;
-    position: absolute;
-    top: var(--navbar-height);
-    left: 0;
-    right: 0;
+    position: fixed !important;
+    top: var(--navbar-height, 72px) !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100vw !important;
+    z-index: 10001 !important;
     background: var(--color-surface, #ffffff);
     border-bottom: 1px solid var(--color-border);
     flex-direction: column;
@@ -635,7 +637,8 @@ body.nav-menu-open {
 }
 
 [dir="rtl"] .navbar-menu {
-  left: auto;
+  left: 0;
+  right: 0;
 }
 
 [dir="rtl"] .dropdown-menu {
