@@ -311,8 +311,39 @@
 }
 
 /* ═══════════════════════════════════════
-   MOBILE MENU
+   MOBILE MENU & BACKDROP
    ═══════════════════════════════════════ */
+
+/* ── Mobile Navbar Backdrop ── */
+.navbar-backdrop {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background: rgba(13, 27, 42, 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.navbar-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* ── Prevent Background Scrolling when Menu Open ── */
+html.nav-menu-open,
+body.nav-menu-open {
+  overflow: hidden !important;
+  touch-action: none;
+  -webkit-overflow-scrolling: auto;
+}
 
 @media (max-width: 1024px) {
   .hamburger {
@@ -333,6 +364,12 @@
     gap: 0.5rem;
     box-shadow: var(--shadow-lg);
     justify-content: flex-start;
+    max-height: calc(100vh - var(--navbar-height));
+    max-height: calc(100dvh - var(--navbar-height));
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    touch-action: pan-y;
   }
 
   [data-theme="dark"] .navbar-menu {

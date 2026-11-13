@@ -28,19 +28,34 @@
     handleScroll(); // Run once immediately
 
     /* ════════════════════════════════════════════
-       Hamburger / Mobile Menu
+       Hamburger / Mobile Menu & Scroll Lock
     ════════════════════════════════════════════ */
+    var backdrop = document.querySelector('.navbar-backdrop');
+    if (!backdrop && navbar) {
+      backdrop = document.createElement('div');
+      backdrop.className = 'navbar-backdrop';
+      backdrop.setAttribute('aria-hidden', 'true');
+      document.body.appendChild(backdrop);
+    }
+
     function openMenu() {
       if (!hamburger || !menu) return;
       hamburger.setAttribute('aria-expanded', 'true');
+      hamburger.classList.add('open');
       menu.classList.add('open');
-      document.body.style.overflow = '';  // don't lock scroll for menu
+      if (backdrop) backdrop.classList.add('active');
+      document.documentElement.classList.add('nav-menu-open');
+      document.body.classList.add('nav-menu-open');
     }
 
     function closeMenu() {
       if (!hamburger || !menu) return;
       hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.classList.remove('open');
       menu.classList.remove('open');
+      if (backdrop) backdrop.classList.remove('active');
+      document.documentElement.classList.remove('nav-menu-open');
+      document.body.classList.remove('nav-menu-open');
     }
 
     if (hamburger && menu) {
@@ -53,6 +68,13 @@
           openMenu();
         }
       });
+
+      /* Close on backdrop click */
+      if (backdrop) {
+        backdrop.addEventListener('click', function () {
+          closeMenu();
+        });
+      }
 
       /* Close on click outside navbar */
       document.addEventListener('click', function (e) {
@@ -70,11 +92,30 @@
       });
 
       /* Close when a nav link is clicked (mobile UX) */
-      menu.querySelectorAll('.nav-link').forEach(function (link) {
+      menu.querySelectorAll('.nav-link, .nav-cta-mobile, a').forEach(function (link) {
         link.addEventListener('click', function () {
           closeMenu();
         });
       });
+
+      /* Close menu when resized to desktop */
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 1024 && menu.classList.contains('open')) {
+          closeMenu();
+        }
+      });
+
+      /* Prevent background scroll when mobile menu is open */
+      function preventBgScroll(e) {
+        if (menu && menu.classList.contains('open')) {
+          if (!menu.contains(e.target)) {
+            e.preventDefault();
+          }
+        }
+      }
+
+      document.addEventListener('touchmove', preventBgScroll, { passive: false });
+      document.addEventListener('wheel', preventBgScroll, { passive: false });
     }
 
     /* ════════════════════════════════════════════
