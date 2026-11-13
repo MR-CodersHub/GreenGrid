@@ -1,0 +1,316 @@
+/* ============================================
+   services.css — Services Page Styles
+   GreenGrid Solar Energy
+   ============================================ */
+
+/* ── SECTION HELPERS ── */
+.section {
+  padding: 5rem 0;
+}
+
+.section-alt {
+  background: var(--color-surface-alt);
+}
+
+.section-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-forest-green);
+  margin-bottom: 0.6rem;
+  display: block;
+}
+
+.label-light {
+  color: var(--color-solar-yellow);
+}
+
+/* ── SERVICE CARD LAYOUT (alternating) ── */
+.service-section {
+  position: relative;
+}
+
+.service-card-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .service-card-layout,
+  .service-reverse {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  /* On mobile, always show image first */
+  .service-reverse .service-content {
+    order: 2;
+  }
+
+  .service-reverse .service-image {
+    order: 1;
+  }
+}
+
+/* ── SERVICE IMAGE ── */
+.service-image {
+  position: relative;
+}
+
+.service-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  display: block;
+  box-shadow: var(--shadow-lg);
+  cursor: pointer;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.service-img:hover,
+.service-img:focus {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-xl);
+  outline: none;
+}
+
+.service-img:focus-visible {
+  outline: 3px solid var(--color-forest-green);
+  outline-offset: 4px;
+}
+
+/* Service number badge */
+.service-number {
+  position: absolute;
+  bottom: -1rem;
+  right: 1.5rem;
+  font-size: 5rem;
+  font-weight: 900;
+  color: var(--color-forest-green);
+  opacity: 0.08;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ── SERVICE CONTENT ── */
+.service-title {
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.service-desc {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+/* ── SERVICE BENEFITS ── */
+.service-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.service-benefits li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.service-benefits li svg {
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+  color: var(--color-forest-green);
+}
+
+/* Light variant (for dark section) */
+.service-benefits-light li {
+  color: rgba(255,255,255,0.85);
+}
+
+.service-benefits-light li svg {
+  color: var(--color-solar-yellow);
+}
+
+/* ── CTA BUTTON ── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-forest-green);
+  color: #fff;
+  border: 2px solid var(--color-forest-green);
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--color-forest-green-dark);
+  border-color: var(--color-forest-green-dark);
+}
+
+.btn-lg {
+  padding: 1rem 2.25rem;
+  font-size: 1rem;
+}
+
+.btn-solar {
+  background: var(--color-solar-yellow);
+  color: var(--color-deep-navy);
+  border: 2px solid var(--color-solar-yellow);
+  font-weight: 700;
+}
+
+.btn-solar:hover {
+  background: var(--color-solar-yellow-light);
+  border-color: var(--color-solar-yellow-light);
+  color: var(--color-deep-navy);
+}
+
+.btn-outline-light {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.65);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2.25rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.btn-outline-light:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: #fff;
+  color: #fff;
+}
+
+/* ── SECTION 6: CONSULTATION ── */
+.consultation-section {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+}
+
+.consultation-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    var(--color-forest-green-dark) 0%,
+    var(--color-forest-green) 55%,
+    var(--color-deep-navy-light) 100%
+  );
+}
+
+.consultation-inner {
+  position: relative;
+  z-index: 2;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.consultation-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .consultation-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.consultation-content .section-label {
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.consultation-title {
+  font-size: clamp(1.75rem, 3.5vw, 3rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 1.1rem;
+}
+
+.consultation-desc {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+.consultation-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Service number inline (for consultation) */
+.service-number-inline {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: rgba(255,255,255,0.1);
+  line-height: 1;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.consultation-image {
+  position: relative;
+}
+
+.consultation-image .service-img {
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+/* ── REVEAL ANIMATION ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── UTILITY ── */
+.text-center { text-align: center; }
+.mt-4 { margin-top: 1.5rem; }
+
+/* Lightbox trigger cursor */
+.lightbox-trigger {
+  cursor: zoom-in;
+}

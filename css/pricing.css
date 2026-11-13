@@ -1,0 +1,443 @@
+/* ============================================================
+   PRICING PAGE — css/pricing.css
+   GreenGrid Solar Energy
+   ============================================================ */
+
+/* ── 1. PRICING HERO ───────────────────────────────────────── */
+.pricing-hero {
+  position: relative;
+  background: linear-gradient(135deg, var(--color-forest-green-dark) 0%, var(--color-forest-green) 50%, var(--color-deep-navy) 100%);
+  color: #ffffff;
+  padding: 5rem 0 4rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.pricing-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.pricing-hero-title {
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.pricing-hero-sub {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 2rem;
+}
+
+.pricing-disclaimer {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: rgba(244, 163, 0, 0.15);
+  border: 1px solid var(--color-solar-yellow);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0 auto 2.5rem;
+  backdrop-filter: blur(8px);
+}
+
+[dir="rtl"] .pricing-disclaimer {
+  text-align: right;
+}
+
+.disclaimer-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.pricing-toggle-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.pricing-toggle {
+  display: inline-flex;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 6px;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+}
+
+.pricing-toggle-btn {
+  padding: 0.75rem 1.75rem;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.pricing-toggle-btn.active {
+  background: #ffffff;
+  color: var(--color-forest-green-dark);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .pricing-toggle-btn.active {
+  background: var(--color-solar-yellow);
+  color: var(--color-deep-navy);
+}
+
+/* ── 2. PRICING CARDS (RESIDENTIAL & COMMERCIAL) ───────────── */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: stretch;
+  margin-top: 2rem;
+}
+
+.pricing-card {
+  position: relative;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--color-forest-green-light);
+}
+
+.pricing-card.featured {
+  border: 2px solid var(--color-solar-yellow);
+  box-shadow: 0 8px 30px rgba(244, 163, 0, 0.18);
+  transform: scale(1.02);
+}
+
+.pricing-card.featured:hover {
+  transform: scale(1.02) translateY(-8px);
+}
+
+.pricing-card.selected {
+  outline: 3px solid var(--color-forest-green);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-solar-yellow);
+  color: var(--color-deep-navy);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 1.25rem;
+  border-radius: 100px;
+  box-shadow: var(--shadow-md);
+  white-space: nowrap;
+}
+
+.pricing-card-header {
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.pricing-card-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.pricing-card-system {
+  display: inline-block;
+  background: var(--color-fresh-mint);
+  color: var(--color-forest-green-dark);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+  margin-bottom: 0.75rem;
+}
+
+[data-theme="dark"] .pricing-card-system {
+  background: rgba(45, 106, 79, 0.4);
+  color: var(--color-fresh-mint);
+}
+
+.pricing-card-panels {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+}
+
+.pricing-card-price {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--color-forest-green);
+  letter-spacing: -0.01em;
+}
+
+[data-theme="dark"] .pricing-card-price {
+  color: var(--color-solar-yellow);
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.features-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.925rem;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
+.features-list li.feature-yes::before {
+  content: "✓";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(45, 106, 79, 0.15);
+  color: var(--color-forest-green);
+  font-weight: 700;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+.features-list li.feature-no {
+  color: var(--color-text-muted);
+  opacity: 0.6;
+}
+
+.features-list li.feature-no::before {
+  content: "✕";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(229, 57, 53, 0.1);
+  color: #E53935;
+  font-weight: 700;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+.btn-block {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+.pricing-note {
+  font-size: 0.825rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  margin-top: 1.75rem;
+  line-height: 1.5;
+}
+
+/* ── 3. MAINTENANCE PLANS ──────────────────────────────────── */
+.maintenance-section {
+  background: var(--color-surface-alt);
+  padding: 5rem 0;
+}
+
+.maintenance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.maintenance-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-base);
+}
+
+.maintenance-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-forest-green-light);
+}
+
+.maintenance-freq {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-forest-green);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.maintenance-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+}
+
+/* ── 4. PACKAGE COMPARISON TABLE ───────────────────────────── */
+.comparison-section {
+  padding: 5rem 0;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+  margin-top: 2rem;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+[dir="rtl"] .comparison-table {
+  text-align: right;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 1.1rem 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.comparison-table th {
+  background: var(--color-surface-alt);
+  color: var(--color-text-primary);
+  font-weight: 700;
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table tr:hover td {
+  background: rgba(45, 106, 79, 0.03);
+}
+
+.check-icon {
+  color: var(--color-forest-green);
+  font-weight: bold;
+}
+
+.cross-icon {
+  color: var(--color-text-muted);
+}
+
+/* ── 5. PRICING FAQ + CTA ──────────────────────────────────── */
+.pricing-faq-section {
+  padding: 5rem 0;
+  background: var(--color-surface-alt);
+}
+
+.faq-wrapper {
+  max-width: 800px;
+  margin: 0 auto 3.5rem;
+}
+
+.pricing-final-cta {
+  background: linear-gradient(135deg, var(--color-deep-navy) 0%, var(--color-forest-green-dark) 100%);
+  color: #ffffff;
+  border-radius: var(--radius-xl);
+  padding: 3.5rem 2.5rem;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-xl);
+}
+
+.pricing-final-cta h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.pricing-final-cta p {
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  font-size: 1.05rem;
+}
+
+.pricing-final-cta .cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+/* ── RESPONSIVE STYLES ─────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .pricing-grid,
+  .maintenance-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .pricing-card.featured {
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-grid,
+  .maintenance-grid {
+    grid-template-columns: 1fr;
+  }
+  .pricing-hero {
+    padding: 3.5rem 0 3rem;
+  }
+  .pricing-disclaimer {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+

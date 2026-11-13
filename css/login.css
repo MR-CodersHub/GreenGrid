@@ -1,0 +1,297 @@
+/* ============================================================
+   LOGIN & REGISTER PAGE — css/login.css
+   GreenGrid Solar Energy
+   ============================================================ */
+
+/* ── 1. AUTH HERO ─────────────────────────────────────────── */
+.auth-hero {
+  position: relative;
+  background: linear-gradient(135deg, var(--color-deep-navy) 0%, var(--color-forest-green-dark) 100%);
+  color: #ffffff;
+  padding: 4.5rem 0 3.5rem;
+  text-align: center;
+}
+
+.auth-hero-inner {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.auth-hero h1 {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  margin-bottom: 0.85rem;
+  color: #ffffff;
+}
+
+.auth-hero p {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+/* ── 2 & 3. AUTH FORMS ─────────────────────────────────────── */
+.auth-section {
+  padding: 4.5rem 0;
+  background: var(--color-surface-alt);
+}
+
+.auth-card {
+  max-width: 520px;
+  margin: 0 auto;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2.75rem 2.5rem;
+  box-shadow: var(--shadow-md);
+  transition: box-shadow var(--transition-base);
+}
+
+.auth-card:hover {
+  box-shadow: var(--shadow-xl);
+}
+
+.auth-card-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.auth-card-title {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.auth-card-subtitle {
+  font-size: 0.925rem;
+  color: var(--color-text-secondary);
+}
+
+.password-input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-group .form-input {
+  width: 100%;
+  padding-right: 3rem;
+}
+
+[dir="rtl"] .password-input-group .form-input {
+  padding-right: 1rem;
+  padding-left: 3rem;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 0.85rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast);
+}
+
+[dir="rtl"] .password-toggle-btn {
+  right: auto;
+  left: 0.85rem;
+}
+
+.password-toggle-btn:hover {
+  color: var(--color-forest-green);
+}
+
+.form-help-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+  margin-top: -0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+}
+
+.form-switch-link {
+  text-align: center;
+  margin-top: 1.75rem;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.form-switch-link a {
+  color: var(--color-forest-green);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.form-switch-link a:hover {
+  text-decoration: underline;
+}
+
+.demo-disclaimer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px dashed var(--color-border);
+}
+
+/* ── 4. CUSTOMER BENEFITS ──────────────────────────────────── */
+.benefits-section {
+  padding: 5rem 0;
+  background: var(--color-surface);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.benefit-card {
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2rem;
+  text-align: center;
+  transition: transform var(--transition-base);
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-forest-green-light);
+}
+
+.benefit-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-md);
+  background: rgba(45, 106, 79, 0.12);
+  color: var(--color-forest-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  margin: 0 auto 1.25rem;
+}
+
+[data-theme="dark"] .benefit-icon {
+  background: rgba(244, 163, 0, 0.15);
+  color: var(--color-solar-yellow);
+}
+
+/* ── 5. ACCOUNT ACCESS INFO ────────────────────────────────── */
+.access-info-section {
+  padding: 5rem 0;
+  background: var(--color-surface-alt);
+}
+
+.access-info-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.access-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.access-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+}
+
+.access-checklist li svg {
+  color: var(--color-forest-green);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.security-box {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.security-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(45, 106, 79, 0.1);
+  color: var(--color-forest-green);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 100px;
+  margin-bottom: 1rem;
+}
+
+/* ── 6. SUPPORT CTA ────────────────────────────────────────── */
+.support-cta-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, var(--color-deep-navy) 0%, var(--color-forest-green-dark) 100%);
+  color: #ffffff;
+  text-align: center;
+}
+
+.support-options {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2.5rem 0;
+  flex-wrap: wrap;
+}
+
+.support-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  transition: all var(--transition-fast);
+}
+
+.support-option:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .benefits-grid,
+  .access-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

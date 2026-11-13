@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GreenGrid Solar Energy — Premium solar installation, maintenance, and energy solutions for homes and businesses. Start your journey to energy independence today.">
+  <meta name="keywords" content="solar energy, solar installation, residential solar, commercial solar, renewable energy, GreenGrid">
+  <meta name="author" content="GreenGrid Solar Energy">
+  <meta property="og:title" content="GreenGrid Solar Energy — Power Your Future">
+  <meta property="og:description" content="Premium solar installation and energy solutions for homes and businesses.">
+  <meta property="og:type" content="website">
+  <title>Home | GreenGrid Solar Energy</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/home1.css">
+</head>
+<body>
+
+  <!-- Skip Navigation -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ═══════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════ -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container navbar-inner">
+      <a href="index.html" class="navbar-logo" aria-label="GreenGrid Home">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="16" r="8" fill="#F4A300"/>
+          <line x1="16" y1="2" x2="16" y2="6" stroke="#F4A300" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="16" y1="26" x2="16" y2="30" stroke="#F4A300" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="2" y1="16" x2="6" y2="16" stroke="#F4A300" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="26" y1="16" x2="30" y2="16" stroke="#F4A300" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="6.1" y1="6.1" x2="9" y2="9" stroke="#F4A300" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="23" y1="23" x2="25.9" y2="25.9" stroke="#F4A300" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="25.9" y1="6.1" x2="23" y2="9" stroke="#F4A300" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="9" y1="23" x2="6.1" y2="25.9" stroke="#F4A300" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-text-wrap">
+          <span class="logo-text">GreenGrid</span>
+          <span class="logo-tagline">Powering Tomorrow</span>
+        </span>
+      </a>
+
+      <div class="navbar-menu" id="navbarMenu" role="menu">
+        <a href="index.html" class="nav-link" role="menuitem">Home</a>
+        <a href="pages/home2.html" class="nav-link" role="menuitem">Home 2</a>
+        <a href="pages/about.html" class="nav-link" role="menuitem">About</a>
+        <a href="pages/services.html" class="nav-link" role="menuitem">Services</a>
+        <a href="pages/blog.html" class="nav-link" role="menuitem">Blog</a>
+        <a href="pages/pricing.html" class="nav-link" role="menuitem">Pricing</a>
+        <a href="pages/contact.html" class="nav-link" role="menuitem">Contact</a>
+        <a href="pages/contact.html" class="btn btn-primary btn-sm nav-cta-mobile" role="menuitem">Book Now</a>
+      </div>
+
+      <div class="navbar-controls">
+        <button class="btn-icon theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <button class="btn-icon rtl-toggle" id="rtlToggle" aria-label="Switch to RTL layout" title="Switch to RTL layout"><span class="rtl-toggle-text">RTL</span></button>
+        <a href="pages/contact.html" class="btn btn-primary btn-sm nav-cta">Book Now</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbarMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       MAIN CONTENT
+  ═══════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- ───────────────────────────────────────
+         SECTION 1 — HERO
+    ─────────────────────────────────────── -->
+    <section class="section hero-section" aria-label="Hero">
+      <div class="container">
+        <div class="hero-inner">
+
+          <!-- Left: Content -->
+          <div class="hero-content">
+            <div class="hero-badge-wrap reveal">
+              <span class="badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                🌱 Trusted Solar Energy Partner
+              </span>
+            </div>
+
+            <h1 class="hero-title reveal">
+              Power Your Future with
+              <span class="accent accent-line">Clean Solar Energy</span>
+            </h1>
+
+            <p class="hero-description reveal">
+              GreenGrid delivers premium solar installation, maintenance, and energy solutions for homes and businesses across the country. Start your journey to energy independence today.
+            </p>
+
+            <div class="hero-buttons reveal">
+              <a href="pages/contact.html" class="btn btn-primary btn-lg">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.5a16 16 0 0 0 6.59 6.59l1.06-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 17.92z"/></svg>
+                Get a Free Consultation
+              </a>
+              <a href="pages/services.html" class="btn btn-secondary btn-lg">
+                Explore Solar Solutions
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+
+            <!-- Stats -->
+            <div class="hero-stats-row">
+              <div class="hero-stat">
+                <span class="hero-stat-value" data-target="500" data-suffix="+" data-duration="1800">500+</span>
+                <span class="hero-stat-label">Installations<br>Completed</span>
+              </div>
+              <div class="hero-stat">
+                <span class="hero-stat-value" data-target="15" data-suffix="+" data-duration="1500">15+</span>
+                <span class="hero-stat-label">Years of<br>Experience</span>
+              </div>
+              <div class="hero-stat">
+                <span class="hero-stat-value" data-target="98" data-suffix="%" data-duration="1600">98%</span>
+                <span class="hero-stat-label">Customer<br>Satisfaction</span>
+              </div>
+              <div class="hero-stat">
+                <span class="hero-stat-value" data-target="10" data-suffix="MW+" data-duration="1700">10MW+</span>
+                <span class="hero-stat-label">Total Solar<br>Capacity</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Image -->
+          <div class="hero-image-col reveal-right">
+            <div class="hero-deco-circle" aria-hidden="true"></div>
+            <div class="hero-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200&auto=format&fit=crop"
+                alt="Solar panels installed on a modern rooftop generating clean energy"
+                width="1200"
+                height="900"
+                loading="eager"
+                fetchpriority="high"
+              >
+              <!-- Floating info badge -->
+              <div class="hero-float-badge" aria-hidden="true">
+                <div class="hero-float-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                  </svg>
+                </div>
+                <div class="hero-float-text">
+                  <strong>100% Clean Energy</strong>
+                  <span>Zero carbon emissions</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────────────────────
+         SECTION 2 — OUR SOLAR SOLUTIONS
+    ─────────────────────────────────────── -->
+    <section class="section solutions-section" id="solutions" aria-labelledby="solutions-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">What We Offer</span>
+          <h2 id="solutions-heading">Our Solar Solutions</h2>
+          <p>Comprehensive clean energy services for every need — from residential rooftops to large-scale commercial installations.</p>
+        </div>
+
+        <div class="solutions-grid">
+          <!-- Card 1: Residential Solar -->
+          <article class="solution-card reveal">
+            <div class="solution-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </div>
+            <h3 class="solution-title">Residential Solar</h3>
+            <p class="solution-desc">Transform your home with a custom solar panel system designed to maximize energy production and reduce your monthly electricity bills significantly.</p>
+            <a href="pages/services.html" class="solution-link" aria-label="Learn more about Residential Solar">
+              Learn More
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </article>
+
+          <!-- Card 2: Commercial Solar -->
+          <article class="solution-card reveal">
+            <div class="solution-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+              </svg>
+            </div>
+            <h3 class="solution-title">Commercial Solar</h3>
+            <p class="solution-desc">Scale your business energy strategy with enterprise-grade solar solutions. Reduce operating costs while demonstrating your commitment to sustainability.</p>
+            <a href="pages/services.html" class="solution-link" aria-label="Learn more about Commercial Solar">
+              Learn More
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </article>
+
+          <!-- Card 3: Rooftop Installation -->
+          <article class="solution-card reveal">
+            <div class="solution-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+              </svg>
+            </div>
+            <h3 class="solution-title">Rooftop Installation</h3>
+            <p class="solution-desc">Expert rooftop solar installations with minimal disruption. Our certified installers ensure your system is fitted safely and built to last 25+ years.</p>
+            <a href="pages/services.html" class="solution-link" aria-label="Learn more about Rooftop Installation">
+              Learn More
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </article>
+
+          <!-- Card 4: Panel Upgrades -->
+          <article class="solution-card reveal">
+            <div class="solution-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="17 11 21 7 17 3"/>
+                <line x1="21" y1="7" x2="9" y2="7"/>
+                <polyline points="7 21 3 17 7 13"/>
+                <line x1="15" y1="17" x2="3" y2="17"/>
+              </svg>
+            </div>
+            <h3 class="solution-title">Panel Upgrades</h3>
+            <p class="solution-desc">Upgrade your existing solar system with the latest high-efficiency panels and inverters to boost power output and extend the life of your investment.</p>
+            <a href="pages/services.html" class="solution-link" aria-label="Learn more about Panel Upgrades">
+              Learn More
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </article>
+
+          <!-- Card 5: Battery Storage -->
+          <article class="solution-card reveal">
+            <div class="solution-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="6" width="18" height="12" rx="2" ry="2"/>
+                <line x1="23" y1="13" x2="23" y2="11"/>
+                <polyline points="8 13 10 11 12 13"/>
+                <line x1="10" y1="11" x2="10" y2="17"/>
+              </svg>
+            </div>
+            <h3 class="solution-title">Battery Storage</h3>
+            <p class="solution-desc">Store excess solar energy for use at night or during outages. Our smart battery storage systems give you true energy independence around the clock.</p>
+            <a href="pages/services.html" class="solution-link" aria-label="Learn more about Battery Storage">
+              Learn More
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </article>
+
+          <!-- Card 6: Solar Maintenance -->
+          <article class="solution-card reveal">
+            <div class="solution-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/>
+              </svg>
+            </div>
+            <h3 class="solution-title">Solar Maintenance</h3>
+            <p class="solution-desc">Keep your solar system performing at its best with our comprehensive maintenance packages — inspections, cleaning, monitoring, and rapid repair services.</p>
+            <a href="pages/services.html" class="solution-link" aria-label="Learn more about Solar Maintenance">
+              Learn More
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────────────────────
+         SECTION 3 — WHY CHOOSE GREENGRID
+    ─────────────────────────────────────── -->
+    <section class="section why-choose-section" id="why-us" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="section-header section-header-white reveal">
+          <span class="section-label section-label-white">Our Advantage</span>
+          <h2 id="why-heading" style="color:#ffffff;">Why Choose GreenGrid?</h2>
+          <p style="color:rgba(255,255,255,0.75);">We combine industry expertise, premium equipment, and unwavering customer support to deliver solar solutions you can trust for decades.</p>
+        </div>
+
+        <div class="why-features-grid">
+          <!-- Feature 1 -->
+          <div class="why-feature reveal">
+            <div class="why-feature-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="why-feature-title">Experienced Team</h3>
+              <p class="why-feature-desc">Our certified solar engineers and installers bring 15+ years of combined expertise to every project, ensuring flawless execution from design to activation.</p>
+            </div>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="why-feature reveal">
+            <div class="why-feature-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="why-feature-title">Premium Equipment</h3>
+              <p class="why-feature-desc">We source only Tier-1 solar panels and inverters from leading manufacturers, backed by comprehensive warranties of up to 25 years on panels.</p>
+            </div>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="why-feature reveal">
+            <div class="why-feature-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="why-feature-title">Custom Design</h3>
+              <p class="why-feature-desc">Every solar system is uniquely designed around your property's roof layout, energy usage patterns, local climate, and financial goals for maximum ROI.</p>
+            </div>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="why-feature reveal">
+            <div class="why-feature-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="1" x2="12" y2="23"/>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="why-feature-title">Transparent Pricing</h3>
+              <p class="why-feature-desc">No hidden fees, no surprises. We provide detailed upfront quotes and help you navigate available government incentives, tax credits, and financing options.</p>
+            </div>
+          </div>
+
+          <!-- Feature 5 -->
+          <div class="why-feature reveal">
+            <div class="why-feature-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.5a16 16 0 0 0 6.59 6.59l1.06-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 17.92z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="why-feature-title">Reliable Support</h3>
+              <p class="why-feature-desc">Our dedicated after-sales support team is available 6 days a week. We monitor your system remotely and respond to issues swiftly to minimize downtime.</p>
+            </div>
+          </div>
+
+          <!-- Feature 6 -->
+          <div class="why-feature reveal">
+            <div class="why-feature-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="why-feature-title">Energy Efficiency</h3>
+              <p class="why-feature-desc">Our systems achieve industry-leading conversion efficiencies of up to 22%, combined with smart energy management software to optimize every watt generated.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────────────────────
+         SECTION 4 — SOLAR INSTALLATION PROCESS
+    ─────────────────────────────────────── -->
+    <section class="section process-section" id="process" aria-labelledby="process-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Simple Steps</span>
+          <h2 id="process-heading">How Solar Installation Works</h2>
+          <p>Getting started with solar is easier than you think. Our streamlined 6-step process takes you from first enquiry to energy independence.</p>
+        </div>
+
+        <div class="process-steps-wrap">
+          <div class="process-steps" role="list">
+
+            <!-- Step 1 -->
+            <div class="process-step" role="listitem">
+              <div class="step-circle" aria-hidden="true">1</div>
+              <div class="step-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <div class="step-content">
+                <h3 class="step-title">Initial Consultation</h3>
+                <p class="step-desc">We discuss your energy goals, current bills, and any specific requirements to understand what you need.</p>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="process-step" role="listitem">
+              <div class="step-circle" aria-hidden="true">2</div>
+              <div class="step-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                  <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+              </div>
+              <div class="step-content">
+                <h3 class="step-title">Site Assessment</h3>
+                <p class="step-desc">Our engineers conduct a thorough on-site survey of your roof, sun exposure, and electrical infrastructure.</p>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="process-step" role="listitem">
+              <div class="step-circle" aria-hidden="true">3</div>
+              <div class="step-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="3"/>
+                  <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+                </svg>
+              </div>
+              <div class="step-content">
+                <h3 class="step-title">System Design</h3>
+                <p class="step-desc">We create a custom solar system design optimised for your property, maximising energy yield and ROI.</p>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="process-step" role="listitem">
+              <div class="step-circle" aria-hidden="true">4</div>
+              <div class="step-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                </svg>
+              </div>
+              <div class="step-content">
+                <h3 class="step-title">Installation</h3>
+                <p class="step-desc">Our trained installers fit your solar panels and electrical systems safely and efficiently, usually within 1–2 days.</p>
+              </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="process-step" role="listitem">
+              <div class="step-circle" aria-hidden="true">5</div>
+              <div class="step-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                </svg>
+              </div>
+              <div class="step-content">
+                <h3 class="step-title">Testing &amp; Activation</h3>
+                <p class="step-desc">We rigorously test every component and commission your system, connecting it to the grid and your monitoring app.</p>
+              </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="process-step" role="listitem">
+              <div class="step-circle" aria-hidden="true">6</div>
+              <div class="step-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.5a16 16 0 0 0 6.59 6.59l1.06-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 17.92z"/>
+                </svg>
+              </div>
+              <div class="step-content">
+                <h3 class="step-title">Ongoing Support</h3>
+                <p class="step-desc">We stay with you after installation — remote monitoring, annual check-ups, and prompt support whenever you need us.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────────────────────
+         SECTION 5 — ENERGY SAVINGS & IMPACT
+    ─────────────────────────────────────── -->
+    <section class="section impact-section" id="impact" aria-labelledby="impact-heading">
+      <div class="container">
+        <div class="impact-inner">
+
+          <!-- Left: Stats -->
+          <div>
+            <div class="section-header section-header-left reveal" style="margin-left:0; text-align:left;">
+              <span class="section-label">Real Numbers</span>
+              <h2 id="impact-heading">Energy Savings &amp; Environmental Impact</h2>
+              <p>The numbers speak for themselves. GreenGrid customers enjoy dramatic energy savings while making a positive impact on our planet.</p>
+            </div>
+
+            <div class="impact-stats">
+              <div class="impact-stat reveal">
+                <div class="impact-stat-value counter" data-target="90" data-suffix="%" data-prefix="Up to ">Up to 90%</div>
+                <div class="impact-stat-label">Reduction in electricity bills</div>
+              </div>
+              <div class="impact-stat reveal">
+                <div class="impact-stat-value" style="font-size:clamp(1.75rem,3vw,2.75rem); font-weight:900; color:var(--color-forest-green); line-height:1; margin-bottom:0.5rem;">25 Years</div>
+                <div class="impact-stat-label">Average solar panel lifespan</div>
+              </div>
+              <div class="impact-stat reveal">
+                <div class="impact-stat-value counter" data-target="0" data-suffix=" kg" data-prefix="">0 kg</div>
+                <div class="impact-stat-label">CO₂ emissions from solar power</div>
+              </div>
+              <div class="impact-stat reveal">
+                <div class="impact-stat-value" style="font-size:clamp(1.75rem,3vw,2.75rem); font-weight:900; color:var(--color-forest-green); line-height:1; margin-bottom:0.5rem;">100%</div>
+                <div class="impact-stat-label">Clean, renewable energy source</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Image + text -->
+          <div class="impact-image-col reveal-right">
+            <div class="impact-img-wrap">
+              <img
+                src="https://i.pinimg.com/736x/2e/48/00/2e4800c0b9a473678310e050eb9fa14a.jpg"
+                alt="Green field with large solar panel farm generating clean renewable energy"
+                width="736"
+                height="736"
+                loading="lazy"
+                data-lightbox="https://i.pinimg.com/736x/2e/48/00/2e4800c0b9a473678310e050eb9fa14a.jpg"
+                data-alt="Large solar farm generating clean renewable energy"
+              >
+            </div>
+            <div class="impact-text">
+              <h3>A Greener Future Starts Here</h3>
+              <p>Every solar system installed by GreenGrid displaces tonnes of CO₂ that would otherwise be produced by fossil fuel power plants. Over the typical 25-year lifespan of a residential system, you can offset the equivalent of planting hundreds of trees — all while saving thousands on your energy bills.</p>
+              <p>Solar energy is the fastest-growing renewable source worldwide, and with GreenGrid you can be part of this clean energy revolution from day one.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────────────────────
+         SECTION 6 — FINAL CTA
+    ─────────────────────────────────────── -->
+    <section class="section cta-final-section" id="cta" aria-labelledby="cta-heading">
+      <!-- Background image with overlay -->
+      <div class="cta-bg-image" aria-hidden="true">
+        <img
+          src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1600&auto=format&fit=crop"
+          alt=""
+          loading="lazy"
+        >
+      </div>
+      <div class="cta-bg-overlay" aria-hidden="true"></div>
+
+      <!-- Decorative dots -->
+      <div class="cta-dots" aria-hidden="true"></div>
+      <div class="cta-dots-right" aria-hidden="true"></div>
+
+      <div class="container" style="position:relative;z-index:2;">
+        <div class="cta-content reveal">
+          <div class="cta-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>
+            Start Your Solar Journey
+          </div>
+
+          <h2 id="cta-heading" class="cta-title">
+            Ready to Switch to
+            <span class="accent"> Solar Energy?</span>
+          </h2>
+
+          <p class="cta-subtext">
+            Join 500+ satisfied customers who are already saving on energy bills and reducing their carbon footprint. Get your free, no-obligation solar assessment today.
+          </p>
+
+          <div class="cta-buttons">
+            <a href="pages/contact.html" class="btn btn-solar btn-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.5a16 16 0 0 0 6.59 6.59l1.06-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 17.92z"/></svg>
+              Request a Free Consultation
+            </a>
+            <a href="pages/pricing.html" class="btn btn-outline-white btn-lg">
+              View Pricing Packages
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+    <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-grid">
+      <!-- Col 1: Brand & Socials -->
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo-wrap" aria-label="GreenGrid Home">
+          <div class="footer-logo-icon">
+            <svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <circle cx="16" cy="16" r="8" fill="#F4A300"/>
+              <line x1="16" y1="2" x2="16" y2="6" stroke="#F4A300" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="16" y1="26" x2="16" y2="30" stroke="#F4A300" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="2" y1="16" x2="6" y2="16" stroke="#F4A300" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="26" y1="16" x2="30" y2="16" stroke="#F4A300" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="footer-logo-text">
+            <span class="footer-brand-name">GreenGrid</span>
+            <span class="footer-brand-sub">Powering Tomorrow</span>
+          </div>
+        </a>
+        <p class="footer-tagline">
+          India's premier solar energy solutions provider, delivering custom rooftop installations, industrial solar arrays, smart battery storage, and proactive maintenance.
+        </p>
+        <div class="footer-social-row">
+          <a href="#" class="social-circle-btn" aria-label="Instagram">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="social-circle-btn" aria-label="Facebook">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="social-circle-btn" aria-label="X (Twitter)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" class="social-circle-btn" aria-label="YouTube">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+          <a href="#" class="social-circle-btn" aria-label="LinkedIn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Col 2: Services -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">SERVICES</h4>
+        <ul class="footer-nav-list">
+          <li><a href="pages/services.html" class="footer-nav-link">Residential Solar</a></li>
+          <li><a href="pages/services.html" class="footer-nav-link">Commercial Solar</a></li>
+          <li><a href="pages/services.html" class="footer-nav-link">Solar Maintenance</a></li>
+          <li><a href="pages/services.html" class="footer-nav-link">Battery Storage</a></li>
+          <li><a href="pages/services.html" class="footer-nav-link">System Upgrades</a></li>
+          <li><a href="pages/contact.html" class="footer-nav-link">Consultation &amp; Audit</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Company -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">COMPANY</h4>
+        <ul class="footer-nav-list">
+          <li><a href="index.html" class="footer-nav-link">Home</a></li>
+          <li><a href="pages/home2.html" class="footer-nav-link">Home 2</a></li>
+          <li><a href="pages/about.html" class="footer-nav-link">About Us</a></li>
+          <li><a href="pages/services.html" class="footer-nav-link">Services</a></li>
+          <li><a href="pages/pricing.html" class="footer-nav-link">Pricing</a></li>
+          <li><a href="pages/blog.html" class="footer-nav-link">Blog</a></li>
+          <li><a href="pages/contact.html" class="footer-nav-link">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Stay Connected -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">STAY CONNECTED</h4>
+        <p class="footer-desc-text">
+          Receive seasonal solar energy guides, maintenance checklists, and commercial clean energy optimization insights before anyone else.
+        </p>
+        <form class="footer-subscribe-group" onsubmit="event.preventDefault(); var em = this.querySelector('input'); if(em && em.value) { window.GreenGrid && window.GreenGrid.showToast && window.GreenGrid.showToast('✅ Thank you for subscribing to GreenGrid updates!', 'success'); this.reset(); }">
+          <input type="email" placeholder="Your work email..." required class="footer-email-field" aria-label="Your work email">
+          <button type="submit" class="footer-join-btn">JOIN</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom-bar">
+      <div class="container footer-bottom-flex">
+        <p class="footer-copy-text">
+          &copy; 2026 GreenGrid Solar Energy Solutions Pvt. Ltd. All rights reserved. Powering clean energy transitions.
+        </p>
+        <div class="footer-legal-links">
+          <a href="pages/404.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="pages/404.html" class="footer-legal-link">Terms &amp; Conditions</a>
+          <a href="pages/404.html" class="footer-legal-link">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Lightbox Overlay -->
+  <div class="lightbox-overlay" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image viewer">&times;</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/theme.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/home1.js"></script>
+</body>
+</html>

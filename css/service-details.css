@@ -1,0 +1,627 @@
+/* ============================================================
+   SERVICE DETAILS — css/service-details.css
+   GreenGrid Solar Energy
+   ============================================================ */
+
+/* ── 1. SERVICE HERO ───────────────────────────────────────── */
+.service-hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  background-image: url('https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=1200');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  overflow: hidden;
+}
+
+.service-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(13,27,42,0.82) 0%, rgba(45,106,79,0.6) 100%);
+  z-index: 1;
+}
+
+.service-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.service-hero-inner {
+  max-width: 760px;
+  padding: 6rem 0 5rem;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.breadcrumb a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.breadcrumb a:hover { color: var(--color-solar-yellow); }
+
+.breadcrumb-sep {
+  display: inline-block;
+  color: rgba(255,255,255,0.4);
+  font-size: 0.75rem;
+}
+
+.breadcrumb-current {
+  color: var(--color-solar-yellow);
+}
+
+.service-hero h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.service-hero p {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.88);
+  margin-bottom: 2rem;
+  max-width: 580px;
+  line-height: 1.6;
+}
+
+/* Service highlights strip */
+.service-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  margin-top: 2.5rem;
+  padding: 1.25rem 1.5rem;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: var(--radius-md);
+  width: fit-content;
+}
+
+.service-highlights-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.service-highlights-item .hl-check {
+  color: var(--color-solar-yellow);
+  font-size: 1rem;
+}
+
+/* ── 2. SYSTEM OVERVIEW ────────────────────────────────────── */
+.system-overview {
+  padding: 5rem 0;
+  background: var(--color-surface-alt);
+}
+
+.system-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.system-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.system-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.system-card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-fresh-mint), var(--color-forest-green-light, #40916C));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  font-size: 1.5rem;
+}
+
+.system-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.system-card p {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+}
+
+/* Capacity grid */
+.capacity-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.capacity-card {
+  background: var(--color-surface);
+  border: 2px solid var(--color-forest-green);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.capacity-kw {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-forest-green);
+  line-height: 1;
+}
+
+.capacity-label {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  margin-top: 0.35rem;
+}
+
+/* ── 3. INSTALLATION PROCESS ───────────────────────────────── */
+.installation-process {
+  padding: 5rem 0;
+  background: var(--color-surface);
+}
+
+.installation-layout {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 4rem;
+  align-items: start;
+  margin-top: 3rem;
+}
+
+/* Timeline */
+.installation-timeline {
+  position: relative;
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin-bottom: 2.25rem;
+  position: relative;
+}
+
+.timeline-item:last-child { margin-bottom: 0; }
+
+.timeline-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.timeline-num {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-forest-green);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 4px rgba(45,106,79,0.15);
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-line {
+  width: 2px;
+  flex: 1;
+  min-height: 36px;
+  background: linear-gradient(to bottom, var(--color-forest-green), var(--color-fresh-mint));
+  margin-top: 4px;
+}
+
+.timeline-item:last-child .timeline-line { display: none; }
+
+.timeline-body {
+  padding-top: 0.4rem;
+}
+
+.timeline-body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 0.4rem;
+}
+
+.timeline-body p {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.installation-image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  position: sticky;
+  top: 100px;
+}
+
+.installation-image img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── 4. BENEFITS & SAVINGS ─────────────────────────────────── */
+.benefits-section {
+  padding: 5rem 0;
+  background: var(--color-forest-green);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.benefits-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--color-forest-green) 0%, #1B4332 100%);
+}
+
+.benefits-section .container { position: relative; z-index: 1; }
+
+.benefits-section .section-heading {
+  color: #fff;
+}
+
+.benefits-section .section-heading::after {
+  background: var(--color-solar-yellow);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.benefit-block {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: var(--radius-md);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  backdrop-filter: blur(6px);
+  transition: transform var(--transition-base), background var(--transition-base);
+}
+
+.benefit-block:hover {
+  transform: translateY(-4px);
+  background: rgba(255,255,255,0.14);
+}
+
+.benefit-emoji {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.benefit-block h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-solar-yellow);
+  margin-bottom: 0.6rem;
+}
+
+.benefit-block p {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.6;
+}
+
+.benefits-disclaimer {
+  margin-top: 2rem;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.55);
+  text-align: center;
+  font-style: italic;
+}
+
+/* Progress bars */
+.progress-bars {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.progress-item label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 0.5rem;
+}
+
+.progress-track {
+  height: 8px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(to right, var(--color-solar-yellow), #FFD166);
+  transition: width 1.2s ease;
+}
+
+/* ── 5. EQUIPMENT & QUALITY ────────────────────────────────── */
+.equipment-section {
+  padding: 5rem 0;
+  background: var(--color-surface);
+}
+
+.equipment-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  margin-top: 3rem;
+}
+
+.quality-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.quality-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.quality-check {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--color-fresh-mint);
+  color: var(--color-forest-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.quality-item p {
+  font-size: 0.95rem;
+  color: var(--color-text-primary);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Spec table */
+.spec-table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.spec-table thead th {
+  background: var(--color-forest-green);
+  color: #fff;
+  padding: 0.9rem 1.2rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.spec-table thead th:first-child { border-radius: 0; }
+
+.spec-table tbody tr:nth-child(even) {
+  background: var(--color-surface-alt);
+}
+
+.spec-table tbody tr:hover {
+  background: var(--color-fresh-mint);
+  transition: background var(--transition-fast);
+}
+
+.spec-table td {
+  padding: 0.85rem 1.2rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  vertical-align: middle;
+}
+
+.spec-table td:first-child {
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.spec-table-note {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-top: 0.75rem;
+}
+
+/* ── 6. FAQ + CONSULTATION CTA ─────────────────────────────── */
+.faq-section {
+  padding: 5rem 0;
+  background: var(--color-surface-alt);
+}
+
+.faq-list {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* FAQ classes used by shared components.js */
+.faq-item {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: box-shadow var(--transition-base);
+}
+
+.faq-item:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  text-align: left;
+  gap: 1rem;
+  font-family: var(--font-family);
+}
+
+.faq-question .faq-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--color-fresh-mint);
+  color: var(--color-forest-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: transform var(--transition-base), background var(--transition-base);
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(45deg);
+  background: var(--color-forest-green);
+  color: #fff;
+}
+
+.faq-answer {
+  display: none;
+  padding: 0 1.5rem 1.25rem;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.faq-item.open .faq-answer {
+  display: block;
+}
+
+/* Consultation CTA box */
+.consultation-cta-box {
+  margin-top: 3.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(135deg, var(--color-forest-green), #1B4332);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  color: #fff;
+  box-shadow: var(--shadow-xl);
+}
+
+.consultation-cta-box h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.consultation-cta-box p {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.82);
+  margin-bottom: 1.5rem;
+}
+
+/* ── RESPONSIVE ────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .system-overview-grid { grid-template-columns: repeat(2, 1fr); }
+  .capacity-grid { grid-template-columns: repeat(2, 1fr); }
+  .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+  .progress-bars { grid-template-columns: repeat(2, 1fr); }
+  .installation-layout { grid-template-columns: 1fr; }
+  .installation-image { position: static; }
+  .installation-image img { height: 320px; }
+  .equipment-layout { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .service-hero { background-attachment: scroll; min-height: 60vh; }
+  .service-hero-inner { padding: 5rem 0 3rem; }
+  .service-highlights { flex-direction: column; gap: 0.5rem; }
+  .system-overview-grid { grid-template-columns: 1fr; }
+  .capacity-grid { grid-template-columns: repeat(2, 1fr); }
+  .benefits-grid { grid-template-columns: 1fr; }
+  .progress-bars { grid-template-columns: 1fr; }
+}

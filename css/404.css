@@ -1,0 +1,262 @@
+/* ============================================================
+   404 ERROR PAGE — css/404.css
+   GreenGrid Solar Energy
+   ============================================================ */
+
+/* ── 1. 404 HERO ───────────────────────────────────────────── */
+.error-hero {
+  position: relative;
+  background: linear-gradient(135deg, var(--color-deep-navy) 0%, var(--color-forest-green-dark) 100%);
+  color: #ffffff;
+  padding: 6rem 0 4rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.error-hero-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.error-code {
+  font-size: clamp(6rem, 16vw, 11rem);
+  font-weight: 900;
+  line-height: 0.9;
+  color: var(--color-solar-yellow);
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  letter-spacing: -0.04em;
+  margin-bottom: 1rem;
+}
+
+.error-hero h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.error-hero p {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+}
+
+/* ── 2. FRIENDLY ERROR MESSAGE ─────────────────────────────── */
+.friendly-section {
+  padding: 4.5rem 0;
+  background: var(--color-surface);
+  text-align: center;
+}
+
+.friendly-box {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.friendly-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-top: 2.5rem;
+}
+
+.friendly-card {
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  text-decoration: none;
+  color: var(--color-text-primary);
+  display: block;
+}
+
+.friendly-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-forest-green-light);
+}
+
+.friendly-card-icon {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+/* ── 3. SEARCH INTERFACE ───────────────────────────────────── */
+.search-section {
+  padding: 4.5rem 0;
+  background: var(--color-surface-alt);
+  text-align: center;
+}
+
+.search-box-wrap {
+  max-width: 600px;
+  margin: 2rem auto 0;
+}
+
+.search-form-flex {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.search-input {
+  flex-grow: 1;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--color-forest-green);
+  box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.12);
+}
+
+.suggested-tags {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 1.25rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.tag-pill {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 0.35rem 0.85rem;
+  border-radius: 100px;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.tag-pill:hover {
+  background: var(--color-forest-green);
+  color: #ffffff;
+  border-color: var(--color-forest-green);
+}
+
+/* ── 4. POPULAR LINKS ──────────────────────────────────────── */
+.popular-links-section {
+  padding: 5rem 0;
+  background: var(--color-surface);
+}
+
+.popular-links-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.popular-link-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: var(--color-text-primary);
+  transition: all var(--transition-fast);
+}
+
+.popular-link-card:hover {
+  background: var(--color-surface);
+  border-color: var(--color-forest-green-light);
+  transform: translateX(4px);
+  box-shadow: var(--shadow-sm);
+}
+
+[dir="rtl"] .popular-link-card:hover {
+  transform: translateX(-4px);
+}
+
+.popular-link-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: rgba(45, 106, 79, 0.1);
+  color: var(--color-forest-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  flex-shrink: 0;
+}
+
+[data-theme="dark"] .popular-link-icon {
+  background: rgba(244, 163, 0, 0.15);
+  color: var(--color-solar-yellow);
+}
+
+/* ── 5. FEATURED SOLAR SOLUTION ────────────────────────────── */
+.featured-solution-section {
+  padding: 5rem 0;
+  background: var(--color-surface-alt);
+}
+
+.featured-sol-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  box-shadow: var(--shadow-md);
+}
+
+.featured-sol-content {
+  padding: 3.5rem 3rem;
+}
+
+.featured-sol-img {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+}
+
+/* ── 6. RETURN HOME CTA ────────────────────────────────────── */
+.return-home-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, var(--color-forest-green-dark) 0%, var(--color-deep-navy) 100%);
+  color: #ffffff;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .friendly-cards,
+  .popular-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .featured-sol-card {
+    grid-template-columns: 1fr;
+  }
+  .featured-sol-content {
+    padding: 2.5rem 2rem;
+  }
+  .featured-sol-img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 600px) {
+  .friendly-cards,
+  .popular-links-grid {
+    grid-template-columns: 1fr;
+  }
+  .search-form-flex {
+    flex-direction: column;
+  }
+}
+

@@ -1,0 +1,122 @@
+/* =============================================================
+   GreenGrid Solar Energy — CSS Custom Properties (variables.css)
+   ============================================================= */
+
+:root {
+  /* ── Color Palette ── */
+  --color-forest-green: #2D6A4F;
+  --color-forest-green-dark: #1B4332;
+  --color-forest-green-light: #40916C;
+  --color-solar-yellow: #F4A300;
+  --color-solar-yellow-light: #FFD166;
+  --color-deep-navy: #0D1B2A;
+  --color-deep-navy-light: #1A2F45;
+  --color-fresh-mint: #B7E4C7;
+  --color-warm-white: #FAFAF8;
+  --color-light-gray: #E8EAED;
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #555F6D;
+  --color-text-muted: #8A9299;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #F5F7F5;
+  --color-border: #E2E8E2;
+  --color-shadow: rgba(45, 106, 79, 0.08);
+
+  /* ── Accent / State Colors ── */
+  --color-success: #2D6A4F;
+  --color-error: #E53935;
+  --color-warning: #F4A300;
+  --color-info: #1A73E8;
+
+  /* ── Typography ── */
+  --font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-size-xs:   0.75rem;    /*  12px */
+  --font-size-sm:   0.8125rem;  /*  13px */
+  --font-size-base: 0.9375rem;  /*  15px */
+  --font-size-md:   1rem;       /*  16px */
+  --font-size-lg:   1.0625rem;  /*  17px */
+  --font-size-xl:   1.25rem;    /*  20px */
+  --font-size-2xl:  1.5rem;     /*  24px */
+  --font-size-3xl:  2rem;       /*  32px */
+  --font-size-4xl:  2.5rem;     /*  40px */
+  --font-size-5xl:  3rem;       /*  48px */
+  --font-size-hero: clamp(2.5rem, 5vw, 4.5rem);
+
+  --font-weight-light:    300;
+  --font-weight-regular:  400;
+  --font-weight-medium:   500;
+  --font-weight-semibold: 600;
+  --font-weight-bold:     700;
+  --font-weight-extrabold:800;
+  --font-weight-black:    900;
+
+  --line-height-tight:  1.2;
+  --line-height-snug:   1.4;
+  --line-height-base:   1.6;
+  --line-height-relaxed:1.7;
+  --line-height-loose:  1.8;
+
+  /* ── Spacing Scale ── */
+  --space-1:  0.25rem;   /*  4px */
+  --space-2:  0.5rem;    /*  8px */
+  --space-3:  0.75rem;   /* 12px */
+  --space-4:  1rem;      /* 16px */
+  --space-5:  1.25rem;   /* 20px */
+  --space-6:  1.5rem;    /* 24px */
+  --space-8:  2rem;      /* 32px */
+  --space-10: 2.5rem;    /* 40px */
+  --space-12: 3rem;      /* 48px */
+  --space-16: 4rem;      /* 64px */
+  --space-20: 5rem;      /* 80px */
+  --space-24: 6rem;      /* 96px */
+
+  /* ── Border Radius ── */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 1px 3px var(--color-shadow);
+  --shadow-md: 0 4px 16px var(--color-shadow);
+  --shadow-lg: 0 8px 32px var(--color-shadow);
+  --shadow-xl: 0 16px 48px var(--color-shadow);
+  --shadow-2xl: 0 24px 64px var(--color-shadow);
+
+  /* ── Transitions ── */
+  --transition-fast:   150ms ease;
+  --transition-base:   250ms ease;
+  --transition-slow:   400ms ease;
+  --transition-bounce: 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Layout ── */
+  --container-max: 1200px;
+  --container-pad: 1.5rem;
+  --navbar-height: 72px;
+  --section-pad:   5rem;
+
+  /* ── Z-index Scale ── */
+  --z-below:    -1;
+  --z-base:      0;
+  --z-raised:   10;
+  --z-dropdown: 100;
+  --z-sticky:  1000;
+  --z-modal:   8000;
+  --z-lightbox:9000;
+  --z-toast:   9999;
+}
+
+/* ── Dark Mode Overrides ── */
+[data-theme="dark"] {
+  --color-text-primary:   #F0F4F0;
+  --color-text-secondary: #A8B8A8;
+  --color-text-muted:     #6B7B6B;
+  --color-surface:        #0D1B2A;
+  --color-surface-alt:    #1A2F45;
+  --color-border:         #2A3E2A;
+  --color-shadow:         rgba(0, 0, 0, 0.3);
+  --color-warm-white:     #0D1B2A;
+  --color-light-gray:     #1A2F45;
+}

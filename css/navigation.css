@@ -1,0 +1,371 @@
+/* =============================================================
+   GreenGrid Solar Energy — Navigation Styles (navigation.css)
+   ============================================================= */
+
+/* ══════════════════════════════════════════════
+   NAVBAR
+   ══════════════════════════════════════════════ */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+  background: rgba(250, 250, 248, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--color-border);
+  transition: background var(--transition-base),
+              box-shadow var(--transition-base),
+              border-color var(--transition-base);
+}
+
+[data-theme="dark"] .navbar {
+  background: rgba(13, 27, 42, 0.92);
+}
+
+.navbar.scrolled {
+  box-shadow: var(--shadow-md);
+  border-bottom-color: transparent;
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--navbar-height);
+  gap: 1.5rem;
+}
+
+/* ── Logo ── */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo-text-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.1875rem;
+}
+
+.logo-text {
+  font-size: 1.3125rem;
+  font-weight: var(--font-weight-black);
+  color: var(--color-forest-green);
+  letter-spacing: -0.025em;
+  line-height: 1;
+}
+
+.logo-tagline {
+  font-size: 0.625rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.navbar-logo svg {
+  flex-shrink: 0;
+  transition: transform var(--transition-base);
+}
+
+.navbar-logo:hover svg {
+  transform: rotate(20deg);
+}
+
+/* ── Menu ── */
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
+  flex: 1;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  padding: 0.5rem 0.875rem;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  position: relative;
+  line-height: 1;
+}
+
+.nav-link:hover {
+  color: var(--color-forest-green);
+  background: var(--color-fresh-mint);
+}
+
+.nav-link.active {
+  color: var(--color-forest-green);
+  background: var(--color-fresh-mint);
+  font-weight: var(--font-weight-semibold);
+}
+
+[data-theme="dark"] .nav-link.active,
+[data-theme="dark"] .nav-link:hover {
+  background: rgba(183, 228, 199, 0.12);
+}
+
+/* ── Controls (icons) ── */
+.navbar-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.btn-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  border: 1.5px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-text-primary);
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.btn-icon:hover {
+  background: var(--color-fresh-mint);
+  color: var(--color-forest-green);
+  border-color: var(--color-forest-green);
+  transform: scale(1.05);
+}
+
+/* ── Book Now CTA ── */
+.nav-cta {
+  padding: 0.625rem 1.125rem;
+}
+
+.nav-cta-mobile {
+  display: none;
+}
+
+/* ── RTL / LTR text toggle ── */
+.rtl-toggle {
+  width: auto;
+  min-width: 48px;
+  padding: 0 0.625rem;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.06em;
+}
+
+/* ── Theme Toggle Icons ── */
+[data-theme="light"] .icon-moon { display: none; }
+[data-theme="dark"]  .icon-sun  { display: none; }
+
+/* ── Hamburger ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast);
+}
+
+.hamburger:hover {
+  background: var(--color-fresh-mint);
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2.5px;
+  background: var(--color-text-primary);
+  border-radius: 2px;
+  transition: all var(--transition-base);
+  transform-origin: center;
+}
+
+.hamburger[aria-expanded="true"] span:nth-child(1) {
+  transform: rotate(45deg) translate(5.5px, 5.5px);
+}
+.hamburger[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.hamburger[aria-expanded="true"] span:nth-child(3) {
+  transform: rotate(-45deg) translate(5.5px, -5.5px);
+}
+
+/* ══════════════════════════════════════════════
+   DROPDOWN (for future use)
+   ══════════════════════════════════════════════ */
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown > .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-xl);
+  padding: 0.5rem;
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-base);
+  z-index: var(--z-dropdown);
+}
+
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-item {
+  display: block;
+  padding: 0.625rem 0.875rem;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  font-weight: var(--font-weight-medium);
+}
+
+.dropdown-item:hover {
+  background: var(--color-fresh-mint);
+  color: var(--color-forest-green);
+}
+
+/* ══════════════════════════════════════════════
+   MOBILE MENU
+   ══════════════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar-menu {
+    display: none;
+    position: absolute;
+    top: var(--navbar-height);
+    left: 0;
+    right: 0;
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+    gap: 0.25rem;
+    box-shadow: var(--shadow-lg);
+    justify-content: flex-start;
+  }
+
+  [data-theme="dark"] .navbar-menu {
+    background: var(--color-deep-navy);
+  }
+
+  .navbar-menu.open {
+    display: flex;
+    animation: menuSlideDown 0.25s ease;
+  }
+
+  @keyframes menuSlideDown {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .nav-link {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+  }
+
+  .navbar-menu .btn-nav {
+    margin-top: 0.5rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-cta-mobile {
+    display: inline-flex;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+
+/* ══════════════════════════════════════════════
+   RTL ADJUSTMENTS
+   ══════════════════════════════════════════════ */
+
+[dir="rtl"] .navbar-inner {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .navbar-menu {
+  left: auto;
+}
+
+[dir="rtl"] .dropdown-menu {
+  left: auto;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+[dir="rtl"] .nav-dropdown:hover .dropdown-menu {
+  transform: translateX(50%) translateY(0);
+}
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE ADJUSTMENTS
+   ══════════════════════════════════════════════ */
+
+@media (max-width: 640px) {
+  .navbar-controls .nav-cta {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-tagline {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .rtl-toggle {
+    display: none;
+  }
+
+  .logo-text {
+    font-size: 1.125rem;
+  }
+}

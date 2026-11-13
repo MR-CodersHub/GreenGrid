@@ -1,0 +1,613 @@
+/* ============================================================
+   BLOG DETAILS — css/blog-details.css
+   GreenGrid Solar Energy
+   ============================================================ */
+
+/* ── 1. ARTICLE HERO ───────────────────────────────────────── */
+.article-hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: flex-end;
+  background-image: url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1200');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  overflow: hidden;
+  padding-bottom: 4rem;
+}
+
+.article-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(13,27,42,0.92) 0%, rgba(13,27,42,0.5) 50%, rgba(13,27,42,0.3) 100%);
+  z-index: 1;
+}
+
+.article-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.article-hero-inner {
+  max-width: 820px;
+  padding-top: 6rem;
+}
+
+.article-hero .breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.article-hero .breadcrumb a {
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.article-hero .breadcrumb a:hover { color: var(--color-solar-yellow); }
+
+.article-hero .breadcrumb .breadcrumb-sep { color: rgba(255,255,255,0.35); }
+
+.article-hero .breadcrumb .breadcrumb-current { color: var(--color-solar-yellow); }
+
+.article-hero h1 {
+  font-size: clamp(1.8rem, 4.5vw, 2.9rem);
+  font-weight: 800;
+  line-height: 1.18;
+  color: #fff;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  font-size: 0.84rem;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 1.5rem;
+}
+
+.article-meta .meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.meta-sep {
+  color: rgba(255,255,255,0.3);
+}
+
+.share-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.share-label {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.6);
+  font-weight: 500;
+}
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.85);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none;
+  backdrop-filter: blur(4px);
+  transition: all var(--transition-fast);
+}
+
+.share-btn:hover {
+  background: rgba(255,255,255,0.2);
+  border-color: rgba(255,255,255,0.4);
+  color: #fff;
+}
+
+/* ── 2 & 3. ARTICLE LAYOUT (main + sidebar) ────────────────── */
+.article-section {
+  padding: 5rem 0;
+  background: var(--color-surface);
+}
+
+.article-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+/* ── ARTICLE CONTENT ───────────────────────────────────────── */
+.article-content {
+  font-size: 1rem;
+  color: var(--color-text-primary);
+  line-height: 1.8;
+}
+
+.article-content p {
+  margin-bottom: 1.4rem;
+  color: var(--color-text-secondary);
+}
+
+.article-content h2 {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  border-left: 4px solid var(--color-forest-green);
+}
+
+.article-content ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.4rem;
+}
+
+.article-content ol li {
+  margin-bottom: 0.65rem;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+}
+
+.article-content ol li strong {
+  color: var(--color-text-primary);
+}
+
+/* Pull quote */
+.article-pullquote {
+  border-left: 5px solid var(--color-solar-yellow);
+  margin: 2.5rem 0;
+  padding: 1.25rem 1.75rem;
+  background: var(--color-surface-alt);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.article-pullquote blockquote {
+  font-size: 1.15rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Highlight box */
+.article-highlight {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: var(--color-fresh-mint);
+  border: 1px solid rgba(45,106,79,0.25);
+  border-left: 4px solid var(--color-forest-green);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+}
+
+.highlight-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.article-highlight p {
+  font-size: 0.95rem;
+  color: var(--color-forest-green);
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* ── SIDEBAR ───────────────────────────────────────────────── */
+.article-sidebar {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Table of contents */
+.table-of-contents {
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+
+.toc-heading {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.toc-list a {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid var(--color-border);
+  transition: color var(--transition-fast);
+}
+
+.toc-list a:hover { color: var(--color-forest-green); }
+
+.toc-list a::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-fresh-mint);
+  flex-shrink: 0;
+}
+
+/* Author card */
+.author-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.4rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.author-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-forest-green), var(--color-solar-yellow));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.author-info h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.author-info p {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* Sidebar stat box */
+.sidebar-stat {
+  background: var(--color-forest-green);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  color: #fff;
+}
+
+.sidebar-stat .stat-num {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-solar-yellow);
+  line-height: 1;
+  display: block;
+}
+
+.sidebar-stat p {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.78);
+  margin-top: 0.4rem;
+}
+
+/* Related links in sidebar */
+.sidebar-related {
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+
+.sidebar-related h4 {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.sidebar-related ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.sidebar-related ul li a {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  line-height: 1.4;
+  display: block;
+  transition: color var(--transition-fast);
+}
+
+.sidebar-related ul li a:hover { color: var(--color-forest-green); }
+
+/* Sidebar CTA */
+.sidebar-cta {
+  background: linear-gradient(135deg, var(--color-solar-yellow), #FFD166);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.sidebar-cta h4 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 0.4rem;
+}
+
+.sidebar-cta p {
+  font-size: 0.82rem;
+  color: rgba(0,0,0,0.65);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+/* ── 4. SOLAR DIAGRAM (INFOGRAPHIC) ────────────────────────── */
+.diagram-section {
+  padding: 5rem 0;
+  background: var(--color-surface-alt);
+}
+
+.solar-diagram {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 2rem 1rem;
+}
+
+.diagram-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 0;
+  width: 130px;
+}
+
+.diagram-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 0.85rem;
+  box-shadow: var(--shadow-md);
+  border: 3px solid transparent;
+  transition: transform var(--transition-base);
+}
+
+.diagram-node:hover .diagram-icon { transform: scale(1.1); }
+
+.diagram-icon.sun-icon { background: linear-gradient(135deg, #FFD166, #F4A300); border-color: #F4A300; }
+.diagram-icon.panel-icon { background: linear-gradient(135deg, var(--color-fresh-mint), var(--color-forest-green)); border-color: var(--color-forest-green); }
+.diagram-icon.inverter-icon { background: linear-gradient(135deg, #74B9FF, #0984E3); border-color: #0984E3; }
+.diagram-icon.home-icon { background: linear-gradient(135deg, #FFEAA7, #FDCB6E); border-color: #FDCB6E; }
+.diagram-icon.grid-icon { background: linear-gradient(135deg, #DFE6E9, #B2BEC3); border-color: #B2BEC3; }
+
+.diagram-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.diagram-desc {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+  max-width: 110px;
+}
+
+/* Arrow between nodes */
+.diagram-arrow {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0.4rem;
+  margin-bottom: 2.8rem;
+}
+
+.arrow-line {
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(to right, var(--color-forest-green), var(--color-solar-yellow));
+}
+
+.arrow-head {
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 10px solid var(--color-solar-yellow);
+  margin-left: -1px;
+  margin-top: -6px;
+}
+
+/* Stats strip */
+.diagram-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.diagram-stat {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1rem;
+}
+
+.diagram-stat .stat-val {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--color-forest-green);
+  display: block;
+  line-height: 1;
+}
+
+.diagram-stat p {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin-top: 0.4rem;
+}
+
+.diagram-fine-print {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+/* ── 5. RELATED ARTICLES ───────────────────────────────────── */
+.related-section {
+  padding: 5rem 0;
+  background: var(--color-surface);
+}
+
+.related-articles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-top: 3rem;
+}
+
+/* ── 6. CONSULTATION CTA ───────────────────────────────────── */
+.consult-cta-section {
+  padding: 6rem 0;
+  background: var(--color-deep-navy);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.consult-cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 50% 50%, rgba(244,163,0,0.07) 0%, transparent 65%);
+}
+
+.consult-cta-section .container { position: relative; z-index: 1; }
+
+.consult-cta-section h2 {
+  font-size: clamp(1.75rem, 4vw, 2.6rem);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.85rem;
+}
+
+.consult-cta-section p {
+  font-size: 1.08rem;
+  color: rgba(255,255,255,0.72);
+  max-width: 540px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.65;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.trust-indicators {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.65);
+}
+
+.trust-item .trust-check {
+  color: var(--color-solar-yellow);
+  font-weight: 800;
+}
+
+/* ── RESPONSIVE ────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .article-layout { grid-template-columns: 1fr; }
+  .article-sidebar { position: static; }
+  .related-articles { grid-template-columns: repeat(2, 1fr); }
+  .solar-diagram { justify-content: flex-start; }
+  .diagram-stats { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .article-hero { background-attachment: scroll; min-height: 60vh; }
+  .related-articles { grid-template-columns: 1fr; }
+  .cta-buttons { flex-direction: column; align-items: center; }
+  .solar-diagram { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+  .diagram-arrow { display: none; }
+  .diagram-node { width: 110px; }
+  .diagram-stats { grid-template-columns: 1fr; }
+}
