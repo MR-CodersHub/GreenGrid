@@ -408,7 +408,7 @@
 }
 
 @media (max-width: 400px) {
-  .rtl-toggle {
+  .navbar-controls .rtl-toggle {
     display: none;
   }
 
@@ -416,3 +416,71 @@
     font-size: 1.125rem;
   }
 }
+
+/* ═══════════════════════════════════════
+   STANDALONE MINIMAL HEADER
+   For 404, Maintenance, Coming Soon pages
+   ═══════════════════════════════════════ */
+
+.minimal-header {
+  position: relative;
+  width: 100%;
+  background: var(--color-surface, #ffffff);
+  border-bottom: 1px solid var(--color-border, #e2e8f0);
+  padding: 1.15rem 0;
+  z-index: var(--z-sticky, 100);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+  transition: background var(--transition-base, 250ms ease),
+              border-color var(--transition-base, 250ms ease);
+}
+
+[data-theme="dark"] .minimal-header {
+  background: var(--color-deep-navy, #0D1B2A);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.3);
+}
+
+.minimal-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.minimal-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.minimal-controls .rtl-toggle {
+  display: inline-flex !important;
+}
+
+.minimal-controls .btn-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm, 8px);
+  border: 1.5px solid var(--color-border, #e2e8f0);
+  background: var(--color-surface-alt, #f8fafc);
+  color: var(--color-text-primary, #0D1B2A);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast, 150ms ease);
+}
+
+[data-theme="dark"] .minimal-controls .btn-icon {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+.minimal-controls .btn-icon:hover {
+  background: var(--color-solar-yellow, #F4A300);
+  border-color: var(--color-solar-yellow, #F4A300);
+  color: var(--color-deep-navy, #0D1B2A);
+  transform: translateY(-2px);
+}
+
