@@ -19,6 +19,41 @@
   padding-bottom: 4rem;
 }
 
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('../images/hero-home.jpg');
+  opacity: 0.12;
+  transform: scale(1.02);
+  transition: transform 6s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-section:hover .hero-bg {
+  transform: scale(1);
+}
+
+[data-theme="dark"] .hero-bg {
+  opacity: 0.18;
+}
+
+.hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 40%, transparent 0%, var(--color-bg) 85%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+
 .hero-section::before {
   content: '';
   position: absolute;

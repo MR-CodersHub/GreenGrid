@@ -7,21 +7,37 @@
 .blog-hero {
   position: relative;
   padding: 6rem 0 4rem;
-  background: linear-gradient(135deg, var(--color-deep-navy) 0%, #1A2F45 60%, rgba(45,106,79,0.4) 100%);
+  background-color: var(--color-deep-navy);
   color: #fff;
   overflow: hidden;
 }
 
-.blog-hero::before {
-  content: '';
+.blog-hero-bg {
   position: absolute;
   inset: 0;
-  background-image:
-    radial-gradient(circle at 20% 50%, rgba(244,163,0,0.08) 0%, transparent 60%),
-    radial-gradient(circle at 80% 20%, rgba(45,106,79,0.15) 0%, transparent 50%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('../images/hero-blog.jpg');
+  opacity: 0.42;
+  transform: scale(1.02);
+  transition: transform 6s ease;
+  z-index: 0;
 }
 
-.blog-hero .container { position: relative; z-index: 1; }
+.blog-hero:hover .blog-hero-bg {
+  transform: scale(1);
+}
+
+.blog-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(13, 27, 42, 0.88) 0%, rgba(27, 47, 69, 0.78) 60%, rgba(45, 106, 79, 0.70) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.blog-hero .container { position: relative; z-index: 2; }
 
 .blog-hero h1 {
   font-size: clamp(1.9rem, 4.5vw, 3rem);

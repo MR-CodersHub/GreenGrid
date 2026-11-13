@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="light" dir="ltr">
 <head>
   <meta charset="UTF-8">
@@ -63,128 +63,538 @@
 
   <main id="main-content">
 
-    <!-- SECTION 1: SOLAR ENERGY HERO -->
+    <!-- SECTION 1: SOLAR ENERGY HERO (REDESIGNED) -->
     <section class="hero2" id="hero" aria-label="Solar Energy Hero">
-      <div class="hero2-bg" style="background-image: url('https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=1200');" role="img" aria-label="Rooftop solar panels background"></div>
+      <div class="hero2-bg" style="background-image: url('https://i.pinimg.com/736x/d0/6a/87/d06a87125516361498150c7af5bc3754.jpg'), url('images/hero-home2.jpg');" role="img" aria-label="Rooftop solar panels background"></div>
       <div class="hero2-overlay"></div>
-      <div class="container hero2-content">
-        <span class="hero2-badge"><svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Residential &amp; Commercial Solar Specialists</span>
-        <h1 class="hero2-headline">Smarter Energy for<br>Homes &amp; Businesses</h1>
-        <p class="hero2-subheadline">GreenGrid delivers tailored residential and commercial solar systems — engineered for performance, designed for savings.</p>
-        <div class="hero2-ctas">
-          <a href="service-details.html" class="btn btn-primary btn-lg">Explore Installation Options</a>
-          <a href="contact.html" class="btn btn-outline-light btn-lg">Get a Free Quote</a>
+      <div class="hero2-ambient-glow glow-1" aria-hidden="true"></div>
+      <div class="hero2-ambient-glow glow-2" aria-hidden="true"></div>
+
+      <div class="container hero2-container">
+        <div class="hero2-grid">
+
+          <!-- Left Column: Primary Pitch & CTAs -->
+          <div class="hero2-text-col">
+            <div class="hero2-badge-wrap">
+              <span class="hero2-badge">
+                <span class="hero2-pulse-dot" aria-hidden="true"></span>
+                <span>Next-Gen Solar Architecture</span>
+                <span class="hero2-badge-divider" aria-hidden="true">•</span>
+                <span class="hero2-badge-tag">Residential &amp; Commercial</span>
+              </span>
+            </div>
+
+            <h1 class="hero2-headline">
+              Smarter Solar Energy for <br>
+              <span class="hero2-gradient-text">Homes &amp; Businesses</span>
+            </h1>
+
+            <p class="hero2-subheadline">
+              Engineered with premium Tier-1 monocrystalline panels and smart cloud monitoring. Slash utility rates by up to 85% with zero upfront capital on qualified California &amp; Pacific NW properties.
+            </p>
+
+            <div class="hero2-ctas">
+              <a href="contact.html" class="btn btn-hero2-primary btn-lg">
+                <span>Request Free Assessment</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+              <a href="pricing.html" class="btn btn-hero2-glass btn-lg">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                <span>Calculate Your Savings</span>
+              </a>
+            </div>
+
+            <!-- Social Proof Micro-row -->
+            <div class="hero2-proof-strip">
+              <div class="hero2-rating-stars" aria-label="5 star rating">
+                <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+              </div>
+              <div class="hero2-proof-text">
+                <strong>4.9/5 Rating</strong> from 500+ installed systems
+              </div>
+              <span class="hero2-proof-dot" aria-hidden="true">•</span>
+              <div class="hero2-cert-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>NABCEP Certified Installers</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Glassmorphic Live Solar Dashboard Card -->
+          <div class="hero2-card-col">
+            <div class="hero2-glass-card">
+              <!-- Card Header -->
+              <div class="hero2-glass-header">
+                <div class="hero2-glass-title-wrap">
+                  <span class="hero2-live-indicator"><span class="pulse-ring"></span><span class="pulse-core"></span></span>
+                  <div>
+                    <h3 class="hero2-glass-title">Live Solar Generation</h3>
+                    <p class="hero2-glass-subtitle">Typical 9.6 kW Residential System</p>
+                  </div>
+                </div>
+                <div class="hero2-glass-status-tag">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Grid Connected</span>
+                </div>
+              </div>
+
+              <!-- Live Energy Metrics Grid -->
+              <div class="hero2-metrics-grid">
+                <div class="hero2-metric-box">
+                  <div class="metric-icon-wrap yellow">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                  </div>
+                  <div class="metric-info">
+                    <span class="metric-val">10.4 kW</span>
+                    <span class="metric-lbl">Peak Solar Power</span>
+                  </div>
+                </div>
+
+                <div class="hero2-metric-box">
+                  <div class="metric-icon-wrap green">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                  </div>
+                  <div class="metric-info">
+                    <span class="metric-val">$2,450</span>
+                    <span class="metric-lbl">Avg. Annual Savings</span>
+                  </div>
+                </div>
+
+                <div class="hero2-metric-box">
+                  <div class="metric-icon-wrap teal">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                  </div>
+                  <div class="metric-info">
+                    <span class="metric-val">99.2%</span>
+                    <span class="metric-lbl">Uptime &amp; Efficiency</span>
+                  </div>
+                </div>
+
+                <div class="hero2-metric-box">
+                  <div class="metric-icon-wrap blue">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  </div>
+                  <div class="metric-info">
+                    <span class="metric-val">25 Yrs</span>
+                    <span class="metric-lbl">Warranty Guaranteed</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick Mini Estimator Banner inside Card -->
+              <div class="hero2-card-action-box">
+                <div class="action-box-text">
+                  <strong>Ready to eliminate your electric bill?</strong>
+                  <span>Compare custom residential &amp; commercial configurations.</span>
+                </div>
+                <a href="service-details.html" class="btn-card-action">
+                  <span>Explore Systems</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+              </div>
+
+              <!-- Bottom Feature Tags -->
+              <div class="hero2-card-footer">
+                <span class="card-footer-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Tier 1 Monocrystalline</span>
+                <span class="card-footer-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Battery Ready</span>
+                <span class="card-footer-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 24/7 Monitoring</span>
+              </div>
+            </div>
+          </div>
+
         </div>
+
+        <!-- Integrated Hero Bottom Trust Strip (inside Section 1) -->
+        <div class="hero2-bottom-bar">
+          <div class="hero2-bottom-item">
+            <span class="hero2-bottom-num">500+</span>
+            <span class="hero2-bottom-lbl">Completed Installations</span>
+          </div>
+          <div class="hero2-bottom-divider" aria-hidden="true"></div>
+          <div class="hero2-bottom-item">
+            <span class="hero2-bottom-num">10 MW+</span>
+            <span class="hero2-bottom-lbl">Installed Clean Power</span>
+          </div>
+          <div class="hero2-bottom-divider" aria-hidden="true"></div>
+          <div class="hero2-bottom-item">
+            <span class="hero2-bottom-num">25 Years</span>
+            <span class="hero2-bottom-lbl">Comprehensive Warranty</span>
+          </div>
+          <div class="hero2-bottom-divider" aria-hidden="true"></div>
+          <div class="hero2-bottom-item">
+            <span class="hero2-bottom-num">$1.8M+</span>
+            <span class="hero2-bottom-lbl">Customer Electric Savings</span>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <!-- SECTION 2: RESIDENTIAL SOLAR SOLUTIONS -->
+    <!-- SECTION 2: RESIDENTIAL SOLAR SOLUTIONS (REDESIGNED) -->
     <section class="section residential-section" id="residential" aria-label="Residential Solar Solutions">
       <div class="container">
-        <div class="split-layout">
-          <div class="split-image reveal">
-            <img src="https://i.pinimg.com/1200x/2d/18/39/2d1839d6a42da0e9870316197270d706.jpg" alt="Green sustainable home with solar panels" width="960" height="640" loading="lazy" class="rounded-img">
+
+        <!-- Section Top Header -->
+        <div class="solution-header text-center reveal">
+          <div class="solution-pill-tag home">
+            <svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <span>Residential Solar Architecture</span>
           </div>
-          <div class="split-content reveal">
-            <div class="section-label">For Homeowners</div>
-            <h2 class="section-title">Residential Solar Solutions</h2>
-            <p class="section-desc">Turn your home into an energy-generating powerhouse. Our residential solar systems are designed to fit your roof, your usage patterns, and your budget — delivering real savings from day one.</p>
-            <ul class="feature-list">
-              <li class="feature-item">
-                <span class="feature-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                </span>
-                <div>
-                  <strong>Rooftop Solar Systems</strong>
-                  <p>High-efficiency panels tailored to your rooftop's size, angle, and sun exposure.</p>
-                </div>
-              </li>
-              <li class="feature-item">
-                <span class="feature-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-                </span>
-                <div>
-                  <strong>Household Energy Needs Assessment</strong>
-                  <p>We analyse your consumption data and design a system that covers your real needs.</p>
-                </div>
-              </li>
-              <li class="feature-item">
-                <span class="feature-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="6" width="22" height="13" rx="2"/><path d="M23 13H1M1 10h22"/></svg>
-                </span>
-                <div>
-                  <strong>Solar Battery Storage</strong>
-                  <p>Store excess solar energy and use it at night or during outages for true energy independence.</p>
-                </div>
-              </li>
-              <li class="feature-item">
-                <span class="feature-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-                </span>
-                <div>
-                  <strong>Customised Installation Options</strong>
-                  <p>Flexible financing, roof types, and timelines — we work around your schedule and home structure.</p>
-                </div>
-              </li>
-            </ul>
-            <a href="service-details.html" class="btn btn-primary mt-4">Learn About Residential Solar</a>
-          </div>
+          <div class="section-label">For Homeowners</div>
+          <h2 class="section-title">Turn Your Rooftop into an Independent Power Station</h2>
+          <p class="section-desc">Custom-engineered rooftop photovoltaic arrays designed for maximum self-consumption, emergency battery resilience, and permanent relief from rising utility rates.</p>
         </div>
+
+        <div class="solution-showcase-grid">
+
+          <!-- Left: Image Showcase with Floating Glass Widgets & Extra Contents -->
+          <div class="showcase-visual reveal">
+
+            <!-- Top Extra Content Bar -->
+            <div class="visual-top-bar">
+              <span class="top-bar-rating">
+                <span class="stars">★★★★★</span>
+                <span><strong>4.9/5 Rating</strong> (320+ Installs)</span>
+              </span>
+              <span class="top-bar-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Zero Outage Guarantee</span>
+              </span>
+            </div>
+
+            <!-- Media Container with Floating Badges -->
+            <div class="visual-media-wrap">
+              <img
+                src="https://i.pinimg.com/1200x/2d/18/39/2d1839d6a42da0e9870316197270d706.jpg"
+                alt="Modern eco-friendly home with sleek rooftop solar panels"
+                width="960"
+                height="640"
+                loading="lazy"
+                class="showcase-img"
+                referrerpolicy="no-referrer"
+                onerror="this.onerror=null;this.src='images/home2-residential.jpg';"
+              >
+
+              <!-- Floating Glass Widget 1: Top Right (Offset) -->
+              <div class="floating-glass-pill top-right">
+                <span class="pill-icon-glow green">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                <div>
+                  <strong>100% Net Zero</strong>
+                  <span>Utility Bill Offset</span>
+                </div>
+              </div>
+
+              <!-- Floating Glass Widget 2: Bottom Left (Savings) -->
+              <div class="floating-glass-pill bottom-left">
+                <span class="pill-icon-glow yellow">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </span>
+                <div>
+                  <strong>$2,450 / Year</strong>
+                  <span>Avg. Household Savings</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Extra Content: 3-Stat Benchmark Bar -->
+            <div class="visual-stats-row">
+              <div class="v-stat-box">
+                <span class="v-stat-val">$0</span>
+                <span class="v-stat-lbl">Down Payment</span>
+              </div>
+              <div class="v-stat-box">
+                <span class="v-stat-val">22.8%</span>
+                <span class="v-stat-lbl">Cell Efficiency</span>
+              </div>
+              <div class="v-stat-box">
+                <span class="v-stat-val">&lt; 4.2 Yrs</span>
+                <span class="v-stat-lbl">Typical Payback</span>
+              </div>
+            </div>
+
+            <!-- Bottom Extra Content: 3-Step Rapid Workflow -->
+            <div class="visual-process-card">
+              <div class="process-card-header">
+                <span>Fast-Track Home Installation</span>
+                <span class="top-bar-badge">3 Simple Steps</span>
+              </div>
+              <div class="process-steps-list">
+                <div class="process-step-item">
+                  <span class="step-num-pill">1</span>
+                  <div class="step-text">
+                    <strong>Site Audit</strong>
+                    <span>LIDAR shade &amp; roof inspection</span>
+                  </div>
+                </div>
+                <div class="process-step-item">
+                  <span class="step-num-pill">2</span>
+                  <div class="step-text">
+                    <strong>1-Day Install</strong>
+                    <span>Certified master electricians</span>
+                  </div>
+                </div>
+                <div class="process-step-item">
+                  <span class="step-num-pill">3</span>
+                  <div class="step-text">
+                    <strong>Start Saving</strong>
+                    <span>Grid interconnection live</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Trust Micro-Specs below image -->
+            <div class="showcase-trust-strip">
+              <span class="trust-tag"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 25-Year Guarantee</span>
+              <span class="trust-tag"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Battery Ready</span>
+              <span class="trust-tag"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Zero Down</span>
+            </div>
+          </div>
+
+          <!-- Right: 4 Rich Interactive Solution Cards -->
+          <div class="showcase-cards-col reveal">
+            <div class="solution-feature-card">
+              <div class="feature-icon-box yellow">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+              </div>
+              <div class="feature-body">
+                <h3 class="feature-title">High-Efficiency Rooftop Arrays</h3>
+                <p class="feature-desc">Tier-1 all-black monocrystalline panels with up to 22.8% cell conversion efficiency, engineered to deliver exceptional output even during low-light cloudy mornings.</p>
+                <span class="feature-meta"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Custom roof tilt &amp; azimuth shade optimization</span>
+              </div>
+            </div>
+
+            <div class="solution-feature-card">
+              <div class="feature-icon-box green">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="1" y="6" width="22" height="13" rx="2"/><path d="M23 13H1M1 10h22"/></svg>
+              </div>
+              <div class="feature-body">
+                <h3 class="feature-title">Solar Battery Storage &amp; Resilience</h3>
+                <p class="feature-desc">Store surplus daytime solar electricity and deploy it during costly peak tariff hours or unexpected utility blackouts with seamless 10ms automatic transfer.</p>
+                <span class="feature-meta"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Tesla Powerwall &amp; Enphase IQ compatible</span>
+              </div>
+            </div>
+
+            <div class="solution-feature-card">
+              <div class="feature-icon-box teal">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+              </div>
+              <div class="feature-body">
+                <h3 class="feature-title">Smart Real-Time Mobile Telemetry</h3>
+                <p class="feature-desc">Monitor live power production, household consumption, and utility export credits from our intuitive mobile app with automated system health alerts.</p>
+                <span class="feature-meta"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 24/7 cloud diagnostics &amp; remote firmware updates</span>
+              </div>
+            </div>
+
+            <div class="solution-feature-card">
+              <div class="feature-icon-box blue">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+              </div>
+              <div class="feature-body">
+                <h3 class="feature-title">Zero-Down Flexible Financing</h3>
+                <p class="feature-desc">Choose from $0-down solar loans, power purchase agreements (PPA), or cash purchase with full qualification support for the 30% Federal Clean Energy Credit.</p>
+                <span class="feature-meta"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Day-one monthly bill reductions guaranteed</span>
+              </div>
+            </div>
+
+            <!-- CTA Row -->
+            <div class="solution-action-row">
+              <a href="service-details.html" class="btn btn-primary btn-lg">
+                <span>Explore Residential Systems</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+              <a href="pricing.html" class="btn btn-secondary btn-lg">Compare Pricing Packages</a>
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </section>
 
-    <!-- SECTION 3: COMMERCIAL SOLAR SOLUTIONS -->
+    <!-- SECTION 3: COMMERCIAL SOLAR SOLUTIONS (REDESIGNED) -->
     <section class="section commercial-section section-alt" id="commercial" aria-label="Commercial Solar Solutions">
       <div class="container">
-        <div class="split-layout split-reverse">
-          <div class="split-content reveal">
-            <div class="section-label">For Businesses</div>
-            <h2 class="section-title">Commercial Solar Solutions</h2>
-            <p class="section-desc">Reduce operational costs and demonstrate your sustainability commitment. GreenGrid engineers scalable solar systems for businesses of every size — from small offices to large industrial facilities.</p>
-            <ul class="feature-list">
-              <li class="feature-item">
-                <span class="feature-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-5 7 5v14M9 21V11h6v10"/></svg>
-                </span>
-                <div>
-                  <strong>Office Buildings &amp; Corporate Campuses</strong>
-                  <p>Large-scale rooftop and carport solar installations for corporate energy needs.</p>
-                </div>
-              </li>
-              <li class="feature-item">
-                <span class="feature-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-                </span>
-                <div>
-                  <strong>Retail Spaces &amp; Shopping Centers</strong>
-                  <p>Canopy and rooftop systems that cut energy costs while enhancing your brand's green image.</p>
-                </div>
-              </li>
-              <li class="feature-item">
-                <span class="feature-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                </span>
-                <div>
-                  <strong>Industrial Facilities &amp; Warehouses</strong>
-                  <p>High-capacity systems designed for the heavy energy demands of manufacturing and logistics.</p>
-                </div>
-              </li>
-              <li class="feature-item">
-                <span class="feature-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                </span>
-                <div>
-                  <strong>Business Energy Optimisation</strong>
-                  <p>Intelligent monitoring and analytics to maximise ROI on your commercial solar investment.</p>
-                </div>
-              </li>
-            </ul>
-            <a href="services.html" class="btn btn-primary mt-4">Explore Commercial Solutions</a>
+
+        <!-- Section Top Header -->
+        <div class="solution-header text-center reveal">
+          <div class="solution-pill-tag business">
+            <svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></svg>
+            <span>Commercial &amp; Industrial Solar</span>
           </div>
-          <div class="split-image reveal">
-            <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=1200" alt="Commercial solar building with rooftop panels" loading="lazy" class="rounded-img">
-          </div>
+          <div class="section-label">For Businesses</div>
+          <h2 class="section-title">Scalable Clean Energy to Slash OpEx &amp; Elevate ESG Value</h2>
+          <p class="section-desc">Turn underutilized commercial rooftops, distribution facilities, and carports into high-yield energy assets that insulate your enterprise against grid price volatility.</p>
         </div>
+
+        <div class="solution-showcase-grid reverse">
+
+          <!-- Left: 4 Rich Enterprise Solution Cards -->
+          <div class="showcase-cards-col reveal">
+            <div class="solution-feature-card">
+              <div class="feature-icon-box blue">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 21h18M5 21V7l7-5 7 5v14M9 21V11h6v10"/></svg>
+              </div>
+              <div class="feature-body">
+                <h3 class="feature-title">Corporate Campuses &amp; Office Parks</h3>
+                <p class="feature-desc">Custom rooftop and architectural solar canopies engineered for high commercial power loads, boosting building NABERS ratings and enterprise sustainability certifications.</p>
+                <span class="feature-meta"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Rapid payback with minimal business interruption</span>
+              </div>
+            </div>
+
+            <div class="solution-feature-card">
+              <div class="feature-icon-box yellow">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <div class="feature-body">
+                <h3 class="feature-title">Industrial Warehouses &amp; Logistics Hubs</h3>
+                <p class="feature-desc">High-capacity multi-kilowatt and megawatt arrays built for manufacturing plants, refrigeration facilities, and logistics centers requiring nonstop heavy baseload power.</p>
+                <span class="feature-meta"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Ballasted racking for membrane and metal roofs</span>
+              </div>
+            </div>
+
+            <div class="solution-feature-card">
+              <div class="feature-icon-box green">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <div class="feature-body">
+                <h3 class="feature-title">Peak Demand Surcharge Shaving</h3>
+                <p class="feature-desc">Intelligent commercial BESS battery integration eliminates crippling peak tariff spikes, shaving top-tier kW surcharges with automated microgrid energy dispatch.</p>
+                <span class="feature-meta"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Reduces utility demand charges by up to 45%</span>
+              </div>
+            </div>
+
+            <div class="solution-feature-card">
+              <div class="feature-icon-box teal">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <div class="feature-body">
+                <h3 class="feature-title">Tax Incentives &amp; Accelerated Depreciation</h3>
+                <p class="feature-desc">Take immediate advantage of the 30% Federal ITC, MACRS 100% bonus depreciation, and local utility rebate programs to expedite capital expenditure amortization.</p>
+                <span class="feature-meta"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Typical 3 to 5-year full payback cycle</span>
+              </div>
+            </div>
+
+            <!-- CTA Row -->
+            <div class="solution-action-row">
+              <a href="services.html" class="btn btn-primary btn-lg">
+                <span>Explore Commercial Solutions</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+              <a href="contact.html" class="btn btn-secondary btn-lg">Request Enterprise Audit</a>
+            </div>
+          </div>
+
+          <!-- Right: Visual Media Showcase with Rich Extra Content -->
+          <div class="showcase-visual reveal">
+
+            <!-- Top Extra Content Bar -->
+            <div class="visual-top-bar">
+              <span class="top-bar-rating">
+                <span class="stars">★★★★★</span>
+                <span><strong>Tier-1 Certified</strong> Commercial Solar</span>
+              </span>
+              <span class="top-bar-badge gold">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Peak Surcharge Defense</span>
+              </span>
+            </div>
+
+            <!-- Media Container with Floating Badges -->
+            <div class="visual-media-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=1200"
+                alt="Large scale commercial solar installation on corporate building"
+                width="960"
+                height="640"
+                loading="lazy"
+                class="showcase-img"
+                referrerpolicy="no-referrer"
+                onerror="this.onerror=null;this.src='images/home2-commercial.jpg';"
+              >
+
+              <!-- Floating Glass Widget 1: Top Left (Payback) -->
+              <div class="floating-glass-pill top-left">
+                <span class="pill-icon-glow green">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                </span>
+                <div>
+                  <strong>3 - 5 Years</strong>
+                  <span>Average Capex Payback</span>
+                </div>
+              </div>
+
+              <!-- Floating Glass Widget 2: Bottom Right (CO2) -->
+              <div class="floating-glass-pill bottom-right">
+                <span class="pill-icon-glow teal">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                </span>
+                <div>
+                  <strong>850+ Metric Tons</strong>
+                  <span>Annual CO₂ Abatement</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Extra Content: 3-Stat Financial Impact Bar -->
+            <div class="visual-stats-row">
+              <div class="v-stat-box">
+                <span class="v-stat-val">30%</span>
+                <span class="v-stat-lbl">Federal ITC Credit</span>
+              </div>
+              <div class="v-stat-box">
+                <span class="v-stat-val">Up to 45%</span>
+                <span class="v-stat-lbl">Demand Charge Cut</span>
+              </div>
+              <div class="v-stat-box">
+                <span class="v-stat-val">100%</span>
+                <span class="v-stat-lbl">MACRS Year-1</span>
+              </div>
+            </div>
+
+            <!-- Bottom Extra Content: 3-Step Enterprise Deployment -->
+            <div class="visual-process-card">
+              <div class="process-card-header">
+                <span>Turnkey Enterprise Deployment</span>
+                <span class="top-bar-badge gold">Zero Downtime</span>
+              </div>
+              <div class="process-steps-list">
+                <div class="process-step-item">
+                  <span class="step-num-pill">1</span>
+                  <div class="step-text">
+                    <strong>Tariff Modeling</strong>
+                    <span>Interval billing data analysis</span>
+                  </div>
+                </div>
+                <div class="process-step-item">
+                  <span class="step-num-pill">2</span>
+                  <div class="step-text">
+                    <strong>Engineering</strong>
+                    <span>Structural PE stamps &amp; PPA</span>
+                  </div>
+                </div>
+                <div class="process-step-item">
+                  <span class="step-num-pill">3</span>
+                  <div class="step-text">
+                    <strong>SCADA Live</strong>
+                    <span>Automated microgrid dispatch</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Corporate Metrics Strip -->
+            <div class="showcase-trust-strip">
+              <span class="trust-tag"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Up to 40% OpEx Cut</span>
+              <span class="trust-tag"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Megawatt Scale</span>
+              <span class="trust-tag"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> SCADA Compliant</span>
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </section>
 
