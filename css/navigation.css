@@ -794,8 +794,8 @@ body.nav-menu-open {
 }
 
 @media (max-width: 380px) {
-  .navbar-controls .rtl-toggle {
-    display: none;
+  .navbar-controls {
+    gap: 0.4rem;
   }
 
   .navbar-menu {
@@ -821,6 +821,27 @@ body.nav-menu-open {
 }
 
 @media (max-width: 340px) {
+  .navbar-controls {
+    gap: 0.3rem;
+  }
+
+  .btn-icon,
+  .rtl-toggle,
+  .hamburger {
+    width: 34px !important;
+    min-width: 34px !important;
+    height: 34px !important;
+  }
+
+  .navbar-logo-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .logo-text {
+    font-size: 1.15rem;
+  }
+
   .navbar-menu {
     padding: 0.65rem 0.55rem 1.15rem !important;
     gap: 0.3rem !important;
