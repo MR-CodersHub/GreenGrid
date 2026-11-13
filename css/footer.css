@@ -33,14 +33,19 @@
 }
 
 .footer-logo-icon {
-  width: 36px;
-  height: 36px;
-  background: rgba(45, 106, 79, 0.25);
-  border: 1px solid rgba(64, 145, 108, 0.35);
-  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+}
+
+.footer-logo-wrap svg {
+  flex-shrink: 0;
+  transition: transform var(--transition-base);
+}
+
+.footer-logo-wrap:hover svg {
+  transform: rotate(20deg);
 }
 
 .footer-logo-text {
