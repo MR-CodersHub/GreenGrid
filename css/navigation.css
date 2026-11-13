@@ -218,16 +218,20 @@
   display: none;
 }
 
-/* ── RTL / LTR text toggle ── */
+/* ── RTL / LTR text toggle (same size as theme toggle) ── */
 .rtl-toggle {
-  width: auto;
-  min-width: 48px;
+  width: 38px;
+  min-width: 38px;
   height: 38px;
-  padding: 0 0.75rem;
-  border-radius: 9999px;
-  font-size: var(--font-size-xs, 0.75rem);
+  padding: 0;
+  border-radius: 50%;
+  font-size: 0.725rem;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 /* ── Theme Toggle Icons ── */
