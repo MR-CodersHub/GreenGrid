@@ -108,15 +108,42 @@
 }
 
 /* White Outline */
-.btn-outline-white {
+.btn-outline-white,
+.btn-outline-light {
   background: transparent;
   color: #ffffff;
-  border-color: rgba(255,255,255,0.6);
+  border-color: rgba(255,255,255,0.7);
 }
-.btn-outline-white:hover {
+.btn-outline-white:hover,
+.btn-outline-light:hover {
   background: #ffffff;
   color: var(--color-forest-green);
   border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Light & Outline aliases */
+.btn-light {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.7);
+  font-weight: var(--font-weight-semibold);
+}
+.btn-light:hover {
+  background: #ffffff;
+  color: var(--color-deep-navy);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-forest-green);
+  border-color: var(--color-forest-green);
+}
+.btn-outline:hover {
+  background: var(--color-forest-green);
+  color: #ffffff;
   transform: translateY(-2px);
 }
 

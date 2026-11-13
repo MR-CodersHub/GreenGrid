@@ -144,21 +144,25 @@
 }
 
 .legal-tag {
-  display: inline-block;
-  font-size: 0.78rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--color-forest-green, #1b4332);
   background: rgba(45, 106, 79, 0.12);
-  padding: 0.3rem 0.85rem;
+  border: 1px solid rgba(45, 106, 79, 0.25);
+  padding: 0.35rem 0.95rem;
   border-radius: 50px;
-  margin-bottom: 1rem;
+  margin-bottom: 1.15rem;
 }
 
 [data-theme="dark"] .legal-tag {
   color: #74c69d;
   background: rgba(82, 183, 136, 0.18);
+  border-color: rgba(82, 183, 136, 0.35);
 }
 
 .legal-heading {
@@ -427,7 +431,66 @@
 
 .legal-cta-actions {
   display: flex;
-  gap: 1rem;
+  gap: 1.15rem;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
+
+/* Ensure buttons and phone numbers are high-contrast and crystal clear */
+.legal-cta-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.legal-cta-actions .btn-solar {
+  background: var(--color-solar-yellow, #F4A300);
+  color: var(--color-deep-navy, #0D1B2A);
+  border: 2px solid var(--color-solar-yellow, #F4A300);
+  box-shadow: 0 8px 24px rgba(244, 163, 0, 0.35);
+}
+
+.legal-cta-actions .btn-solar:hover {
+  background: #ffb703;
+  border-color: #ffb703;
+  color: #0D1B2A;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(244, 163, 0, 0.45);
+}
+
+.legal-cta-actions .btn-outline-white,
+.legal-cta-actions .btn-light,
+.legal-cta-actions .btn-outline,
+.legal-phone-btn {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  border: 2px solid rgba(255, 255, 255, 0.75) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(4px);
+}
+
+.legal-cta-actions .btn-outline-white:hover,
+.legal-cta-actions .btn-light:hover,
+.legal-cta-actions .btn-outline:hover,
+.legal-phone-btn:hover {
+  background: #ffffff !important;
+  color: var(--color-deep-navy, #0D1B2A) !important;
+  border-color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.25);
+}
+
+.legal-phone-btn svg {
+  color: var(--color-solar-yellow, #F4A300);
+  transition: color 0.2s;
+  flex-shrink: 0;
+}
+
+.legal-phone-btn:hover svg {
+  color: var(--color-deep-navy, #0D1B2A);
+}
+
