@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
   <meta name="description" content="GreenGrid Solar Energy pricing — transparent, flexible solar packages for homes and businesses. View residential and commercial plans.">
   <title>Pricing | GreenGrid Solar Energy</title>
   <!-- Favicon -->
@@ -61,25 +62,160 @@
 
   <main id="main-content">
 
-    <!-- Section 1: Pricing Hero -->
-    <section class="pricing-hero" aria-label="Pricing hero">
-      <div class="pricing-hero-bg" style="background-image: url('https://i.pinimg.com/236x/d0/f9/2e/d0f92e6bf4ff52c8d49446de2fca298e.jpg'), url('../images/hero-pricing.jpg');" role="img" aria-label="Solar pricing hero background"></div>
+    <!-- ════════════════════════════════════════════════════
+         SECTION 1 — PRICING HERO (REDESIGNED)
+    ════════════════════════════════════════════════════ -->
+    <section class="pricing-hero" id="pricing-hero" aria-label="Solar investment & pricing hero">
+      <div class="pricing-hero-bg" style="background-image: url('https://i.pinimg.com/1200x/d0/f9/2e/d0f92e6bf4ff52c8d49446de2fca298e.jpg'), url('../images/hero-pricing.jpg');" role="img" aria-label="Solar pricing hero background"></div>
       <div class="pricing-hero-overlay"></div>
-      <div class="container pricing-hero-inner">
-        <h1 class="pricing-hero-title">Transparent, Customizable<br>Solar Pricing</h1>
-        <p class="pricing-hero-sub">GreenGrid offers flexible packages designed for homes and businesses. All prices below are sample ranges — contact us for an accurate quote tailored to your property and energy needs.</p>
-        <div class="pricing-disclaimer" role="note" aria-label="Pricing disclaimer">
-          <span class="disclaimer-icon"><svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
-          <div>
-            <strong>Pricing Disclaimer:</strong> All prices, system capacities, and package details shown are sample figures for illustration purposes only. Actual costs vary based on your location, property, energy usage, chosen equipment, and local regulations. Request a free, personalized quote for accurate pricing.
+      <div class="pricing-ambient-glow pricing-glow-left" aria-hidden="true"></div>
+      <div class="pricing-ambient-glow pricing-glow-right" aria-hidden="true"></div>
+
+      <div class="container pricing-hero-container">
+
+        <!-- Top Breadcrumbs & Value Proposition Badge -->
+        <div class="pricing-hero-top">
+          <nav class="breadcrumb pricing-breadcrumb" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a>
+            <span class="breadcrumb-sep" aria-hidden="true">›</span>
+            <span aria-current="page">Pricing &amp; Investment Plans</span>
+          </nav>
+
+          <div class="pricing-badge-wrap">
+            <span class="pricing-hero-badge">
+              <span class="badge-pulse-dot" aria-hidden="true"></span>
+              <span>Federal ITC Eligible</span>
+              <span class="badge-divider" aria-hidden="true">•</span>
+              <span class="badge-highlight">Claim Up to 30% Tax Credit</span>
+            </span>
           </div>
         </div>
-        <div class="pricing-toggle-wrap">
-          <div class="pricing-toggle" role="group" aria-label="Select customer type">
-            <button class="pricing-toggle-btn active" id="showResidential" aria-pressed="true"><svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Residential</button>
-            <button class="pricing-toggle-btn" id="showCommercial" aria-pressed="false"><svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></svg> Commercial</button>
+
+        <!-- 2-Column Split Content Layout -->
+        <div class="pricing-hero-grid">
+
+          <!-- Left Column: Title, Sub, Toggle Switcher & Value Props -->
+          <div class="pricing-hero-content">
+            <h1 class="pricing-hero-title">
+              Transparent, Turnkey <br>
+              <span class="gradient-text">Solar Investments</span>
+            </h1>
+            <p class="pricing-hero-sub">
+              Engineering-grade solar installations customized to your roof geometry and consumption profile. Tier-1 hardware, utility permits, installation, and 25-year performance coverage included.
+            </p>
+
+            <!-- Segmented Category Switcher -->
+            <div class="pricing-toggle-wrap">
+              <span class="pricing-toggle-label">Select Package Category:</span>
+              <div class="pricing-toggle" role="group" aria-label="Select customer type">
+                <button class="pricing-toggle-btn active" id="showResidential" aria-pressed="true">
+                  <svg class="toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9 22 9 12 15 12 15 22"/>
+                  </svg>
+                  <span>Residential Solar</span>
+                  <span class="toggle-pill-tag">3–10 kW</span>
+                </button>
+                <button class="pricing-toggle-btn" id="showCommercial" aria-pressed="false">
+                  <svg class="toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
+                    <path d="M9 22v-4h6v4"/>
+                    <path d="M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/>
+                  </svg>
+                  <span>Commercial Solar</span>
+                  <span class="toggle-pill-tag">25–100+ kW</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Guarantee Badges Row -->
+            <div class="pricing-guarantees-row">
+              <div class="guarantee-chip">
+                <svg class="chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>Zero Hidden Fees</span>
+              </div>
+              <div class="guarantee-chip">
+                <svg class="chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                <span>25-Yr Performance Warranty</span>
+              </div>
+              <div class="guarantee-chip">
+                <svg class="chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg>
+                <span>$0 Upfront Financing</span>
+              </div>
+            </div>
+
+            <!-- Pricing Disclaimer Banner -->
+            <div class="pricing-disclaimer" role="note" aria-label="Pricing disclaimer">
+              <span class="disclaimer-icon">
+                <svg class="emoji-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="12" y1="16" x2="12" y2="12"/>
+                  <line x1="12" y1="8" x2="12.01" y2="8"/>
+                </svg>
+              </span>
+              <div class="disclaimer-text">
+                <strong>Transparent Pricing Notice:</strong> Package figures are sample engineering models. Exact equipment sizing and rebates are calculated during your free 3D site audit.
+              </div>
+            </div>
+
           </div>
+
+          <!-- Right Column: Interactive Solar Financial Snapshot Card -->
+          <div class="pricing-hero-card-col">
+            <div class="pricing-hero-card">
+              <div class="hero-card-header">
+                <div class="hero-card-status">
+                  <span class="status-indicator"></span>
+                  <span>Model Benchmark 2026</span>
+                </div>
+                <span class="hero-card-tag">Typical 6 kW Home</span>
+              </div>
+
+              <div class="hero-card-headline">
+                <span class="card-metric-label">Estimated 25-Year Net Savings</span>
+                <div class="card-metric-value">$42,650<span class="card-metric-sub">avg.</span></div>
+              </div>
+
+              <div class="hero-card-stats-grid">
+                <div class="hero-card-stat">
+                  <div class="stat-number">30%</div>
+                  <div class="stat-title">Federal ITC Credit</div>
+                  <div class="stat-desc">Direct deduction from federal taxes</div>
+                </div>
+                <div class="hero-card-stat">
+                  <div class="stat-number">5.4 Yrs</div>
+                  <div class="stat-title">Break-Even Timeline</div>
+                  <div class="stat-desc">Accelerated ROI on CA grid rates</div>
+                </div>
+                <div class="hero-card-stat">
+                  <div class="stat-number">92%</div>
+                  <div class="stat-title">Utility Offset</div>
+                  <div class="stat-desc">Typical monthly kWh replacement</div>
+                </div>
+                <div class="hero-card-stat">
+                  <div class="stat-number">$0</div>
+                  <div class="stat-title">Down Payment</div>
+                  <div class="stat-desc">Zero out-of-pocket setup options</div>
+                </div>
+              </div>
+
+              <div class="hero-card-footer">
+                <a href="contact.html" class="btn btn-primary btn-block hero-card-cta">
+                  <span>Get Your Free 3D Site Assessment</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <div class="hero-card-trust">
+                  <div class="stars-row" aria-label="5 out of 5 stars">
+                    ★★★★★
+                  </div>
+                  <span>4.9/5 satisfaction from 1,400+ installations across California</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
+
       </div>
     </section>
 
