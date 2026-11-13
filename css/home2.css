@@ -528,7 +528,7 @@
     gap: 3rem;
   }
   .hero2-headline {
-    font-size: 2.8rem;
+    font-size: clamp(2rem, 3.8vw, 2.8rem);
   }
   .hero2-card-col {
     max-width: 600px;
@@ -544,7 +544,7 @@
     padding-bottom: 3.5rem;
   }
   .hero2-headline {
-    font-size: 2.2rem;
+    font-size: clamp(1.65rem, 1.3rem + 2vw, 2.2rem);
   }
   .hero2-ctas {
     flex-direction: column;
@@ -566,6 +566,28 @@
   }
   .hero2-bottom-divider {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero2-headline {
+    font-size: clamp(1.4rem, 1.15rem + 1.8vw, 1.85rem);
+  }
+  .hero2-subhead {
+    font-size: 0.95rem;
+  }
+  .hero2-bottom-bar {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero2-headline {
+    font-size: clamp(1.25rem, 1.05rem + 1.5vw, 1.55rem);
+  }
+  .hero2-subhead {
+    font-size: 0.875rem;
   }
 }
 

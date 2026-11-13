@@ -352,7 +352,7 @@
 }
 
 .section-header h2 {
-  font-size: clamp(1.8rem, 3vw, 2.75rem);
+  font-size: clamp(1.45rem, 1.2rem + 1.8vw, 2.5rem);
   font-weight: var(--font-weight-extrabold);
   color: var(--color-text-primary);
   margin-bottom: 1rem;
@@ -612,7 +612,7 @@
 }
 
 .hero-headline {
-  font-size: clamp(2.5rem, 5vw, 4.25rem);
+  font-size: clamp(1.75rem, 1.35rem + 2.5vw, 3.85rem);
   font-weight: var(--font-weight-black);
   line-height: 1.1;
   letter-spacing: -0.03em;

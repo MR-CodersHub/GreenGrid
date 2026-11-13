@@ -28,19 +28,19 @@
   --color-warning: #F4A300;
   --color-info: #1A73E8;
 
-  /* ── Typography ── */
+  /* ── Typography (Fluid & Responsive per Viewport) ── */
   --font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
-  --font-size-xs:   0.75rem;    /*  12px */
-  --font-size-sm:   0.8125rem;  /*  13px */
-  --font-size-base: 0.9375rem;  /*  15px */
-  --font-size-md:   1rem;       /*  16px */
-  --font-size-lg:   1.0625rem;  /*  17px */
-  --font-size-xl:   1.25rem;    /*  20px */
-  --font-size-2xl:  1.5rem;     /*  24px */
-  --font-size-3xl:  2rem;       /*  32px */
-  --font-size-4xl:  2.5rem;     /*  40px */
-  --font-size-5xl:  3rem;       /*  48px */
-  --font-size-hero: clamp(2.5rem, 5vw, 4.5rem);
+  --font-size-xs:   clamp(0.7rem, 0.65rem + 0.25vw, 0.75rem);    /* 11.2px - 12px */
+  --font-size-sm:   clamp(0.75rem, 0.7rem + 0.3vw, 0.8125rem);    /* 12px - 13px */
+  --font-size-base: clamp(0.875rem, 0.825rem + 0.35vw, 0.9375rem);/* 14px - 15px */
+  --font-size-md:   clamp(0.9375rem, 0.875rem + 0.4vw, 1rem);     /* 15px - 16px */
+  --font-size-lg:   clamp(1rem, 0.95rem + 0.5vw, 1.0625rem);      /* 16px - 17px */
+  --font-size-xl:   clamp(1.1rem, 1.025rem + 0.65vw, 1.25rem);    /* 17.6px - 20px */
+  --font-size-2xl:  clamp(1.25rem, 1.15rem + 1vw, 1.5rem);        /* 20px - 24px */
+  --font-size-3xl:  clamp(1.45rem, 1.3rem + 1.5vw, 2rem);         /* 23px - 32px */
+  --font-size-4xl:  clamp(1.75rem, 1.5rem + 2vw, 2.5rem);         /* 28px - 40px */
+  --font-size-5xl:  clamp(2.1rem, 1.75rem + 2.5vw, 3rem);         /* 33.6px - 48px */
+  --font-size-hero: clamp(1.85rem, 1.45rem + 3.2vw, 4.25rem);
 
   --font-weight-light:    300;
   --font-weight-regular:  400;
