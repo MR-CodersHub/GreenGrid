@@ -279,34 +279,50 @@
 .author-card {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: 1.4rem;
+  border-radius: var(--radius-lg, 16px);
+  padding: 1.75rem 1.25rem;
   display: flex;
-  gap: 1rem;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  box-shadow: var(--shadow-sm);
 }
 
 .author-avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-forest-green), var(--color-solar-yellow));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  flex-shrink: 0;
+  width: 64px !important;
+  height: 64px !important;
+  min-width: 64px !important;
+  min-height: 64px !important;
+  max-width: 64px !important;
+  max-height: 64px !important;
+  border-radius: 50% !important;
+  aspect-ratio: 1 / 1 !important;
+  flex-shrink: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 60%, #F4A300 100%);
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  margin: 0 auto 0.5rem auto;
+  box-shadow: 0 4px 14px rgba(27, 67, 50, 0.25);
+  border: 2px solid rgba(82, 183, 136, 0.4);
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .author-info h4 {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: var(--color-text-primary);
   margin-bottom: 0.25rem;
 }
 
 .author-info p {
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   color: var(--color-text-muted);
   line-height: 1.5;
 }

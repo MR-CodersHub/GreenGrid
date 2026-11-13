@@ -695,7 +695,7 @@
     // 8. Update Author Card in Sidebar
     var authorCard = document.querySelector('.author-card');
     if (authorCard) {
-      var initialsEl = authorCard.querySelector('div[style*="border-radius: 50%"]');
+      var initialsEl = authorCard.querySelector('.author-avatar, div[style*="border-radius: 50%"]');
       if (initialsEl) initialsEl.textContent = article.authorInitials || 'GG';
       var nameEl = authorCard.querySelector('h5');
       if (nameEl) nameEl.textContent = article.author;
