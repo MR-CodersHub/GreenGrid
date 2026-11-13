@@ -161,11 +161,11 @@
             <span class="countdown-unit">Hours</span>
           </div>
           <div class="countdown-box">
-            <span class="countdown-number" id="cdMinutes">45</span>
+            <span class="countdown-number" id="cdMinutes">44</span>
             <span class="countdown-unit">Minutes</span>
           </div>
           <div class="countdown-box">
-            <span class="countdown-number" id="cdSeconds">18</span>
+            <span class="countdown-number" id="cdSeconds">51</span>
             <span class="countdown-unit">Seconds</span>
           </div>
         </div>
@@ -227,23 +227,44 @@
   <!-- Live Countdown Script -->
   <script>
     (function() {
-      var targetDate = new Date().getTime() + (2 * 3600 * 1000) + (45 * 60 * 1000);
+      var storageKey = 'greengrid_maint_target';
+      var stored = sessionStorage.getItem(storageKey);
+      var targetDate;
+      var now = new Date().getTime();
+
+      // If stored target is valid in the future, use it; otherwise set 2h 44m from now
+      if (stored && parseInt(stored, 10) > now) {
+        targetDate = parseInt(stored, 10);
+      } else {
+        targetDate = now + (2 * 3600 * 1000) + (44 * 60 * 1000) + (51 * 1000);
+        sessionStorage.setItem(storageKey, targetDate);
+      }
+
       function updateCd() {
-        var now = new Date().getTime();
-        var diff = targetDate - now;
-        if (diff <= 0) return;
+        var current = new Date().getTime();
+        var diff = targetDate - current;
+        if (diff <= 0) diff = 0;
+
+        var d = Math.floor(diff / (1000 * 60 * 60 * 24));
         var h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         var m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
         var s = Math.floor((diff % (1000 * 60)) / 1000);
+
+        var elD = document.getElementById('cdDays');
         var elH = document.getElementById('cdHours');
         var elM = document.getElementById('cdMinutes');
         var elS = document.getElementById('cdSeconds');
+
+        if (elD) elD.textContent = d < 10 ? '0' + d : d;
         if (elH) elH.textContent = h < 10 ? '0' + h : h;
         if (elM) elM.textContent = m < 10 ? '0' + m : m;
         if (elS) elS.textContent = s < 10 ? '0' + s : s;
       }
+
+      updateCd();
       setInterval(updateCd, 1000);
     })();
   </script>
 </body>
 </html>
+
