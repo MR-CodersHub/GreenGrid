@@ -141,7 +141,12 @@
               <div class="author-avatar" style="width: 64px; height: 64px; min-width: 64px; min-height: 64px; max-width: 64px; max-height: 64px; border-radius: 50%; aspect-ratio: 1 / 1; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.4rem; margin: 0 auto 0.75rem; background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 60%, #F4A300 100%); color: #ffffff; box-shadow: 0 4px 14px rgba(27, 67, 50, 0.25); border: 2px solid rgba(82, 183, 136, 0.4); overflow: hidden; box-sizing: border-box;">GG</div>
               <h5 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.25rem;">GreenGrid Editorial</h5>
               <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 1rem; line-height: 1.5;">Renewable Energy Specialists &amp; Field Engineers</p>
-              <a href="contact.html" class="btn btn-secondary btn-sm" style="font-size: 0.825rem; padding: 0.5rem 1rem;">Ask an Engineer</a>
+              <a href="#ask-engineer-modal" id="askEngineerBtn" class="btn btn-secondary btn-sm ask-engineer-btn" role="button" aria-haspopup="dialog" aria-label="Ask an Engineer a question">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right: 0.35rem;">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+                <span>Ask an Engineer</span>
+              </a>
             </div>
           </aside>
         </div>
@@ -469,6 +474,48 @@
   <button class="back-to-top" id="backToTop" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></button>
   <div class="toast-container" id="toastContainer" aria-live="polite"></div>
   <div class="lightbox-overlay" id="lightbox" role="dialog" aria-modal="true"><button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button><img class="lightbox-img" id="lightboxImg" src="" alt=""></div>
+
+  <!-- Interactive Ask an Engineer Modal -->
+  <div class="ask-engineer-modal-overlay" id="askEngineerModal" role="dialog" aria-modal="true" aria-labelledby="askEngineerModalTitle" hidden>
+    <div class="ask-engineer-modal-backdrop" id="askEngineerModalBackdrop"></div>
+    <div class="ask-engineer-modal-content">
+      <button class="ask-modal-close" id="askEngineerModalClose" aria-label="Close dialog">&times;</button>
+      
+      <div class="ask-modal-header">
+        <div class="ask-modal-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </div>
+        <div>
+          <h3 id="askEngineerModalTitle" class="ask-modal-title">Ask an Engineer</h3>
+          <p class="ask-modal-subtitle">Submit your technical question directly to <strong id="askModalAuthorName">Dr. Elena Vance</strong>.</p>
+        </div>
+      </div>
+
+      <form id="askEngineerForm" class="ask-modal-form" novalidate>
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label for="askName" class="form-label" style="font-size: 0.85rem; font-weight: 600; margin-bottom: 0.35rem; display: block;">Your Name <span style="color: #e63946;">*</span></label>
+          <input type="text" id="askName" name="name" class="form-input" placeholder="e.g. Alex Morgan" required style="width: 100%; padding: 0.65rem 0.9rem; border-radius: 8px; border: 1px solid var(--color-border); font-size: 0.9rem; background: var(--color-surface); color: var(--color-text-primary);">
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label for="askEmail" class="form-label" style="font-size: 0.85rem; font-weight: 600; margin-bottom: 0.35rem; display: block;">Email Address <span style="color: #e63946;">*</span></label>
+          <input type="email" id="askEmail" name="email" class="form-input" placeholder="e.g. alex@example.com" required style="width: 100%; padding: 0.65rem 0.9rem; border-radius: 8px; border: 1px solid var(--color-border); font-size: 0.9rem; background: var(--color-surface); color: var(--color-text-primary);">
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label for="askQuestion" class="form-label" style="font-size: 0.85rem; font-weight: 600; margin-bottom: 0.35rem; display: block;">Your Question / System Requirement <span style="color: #e63946;">*</span></label>
+          <textarea id="askQuestion" name="question" rows="3" class="form-input" placeholder="e.g. Can you explain the derate factor on high-temperature metal roofs?" required style="width: 100%; padding: 0.65rem 0.9rem; border-radius: 8px; border: 1px solid var(--color-border); font-size: 0.9rem; background: var(--color-surface); color: var(--color-text-primary); resize: vertical; min-height: 80px;"></textarea>
+        </div>
+
+        <div class="ask-modal-actions" style="display: flex; gap: 0.75rem; margin-top: 1.25rem;">
+          <button type="submit" class="btn btn-primary" style="flex: 1; padding: 0.75rem 1.25rem; font-weight: 700; border-radius: 8px;">Send Question</button>
+          <button type="button" class="btn btn-outline" id="askEngineerModalCancel" style="padding: 0.75rem 1.25rem; border-radius: 8px;">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
   <script src="../js/theme.js"></script>
   <script src="../js/navigation.js"></script>

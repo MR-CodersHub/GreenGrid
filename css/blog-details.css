@@ -618,6 +618,165 @@
   .diagram-stats { grid-template-columns: 1fr; }
 }
 
+/* ── Ask an Engineer Button & Modal Styles ── */
+.ask-engineer-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  width: 100% !important;
+  max-width: 220px !important;
+  min-height: 42px !important;
+  padding: 0.65rem 1.25rem !important;
+  font-size: 0.88rem !important;
+  font-weight: 600 !important;
+  border-radius: var(--radius-md, 10px) !important;
+  background: var(--color-forest-green, #1b4332) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  transition: all 0.25s ease !important;
+  box-shadow: 0 4px 12px rgba(27, 67, 50, 0.2) !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  box-sizing: border-box !important;
+}
+
+.ask-engineer-btn:hover {
+  background: var(--color-forest-green-dark, #0d2818) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(27, 67, 50, 0.35) !important;
+  color: var(--color-solar-yellow, #F4A300) !important;
+}
+
+.ask-engineer-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .ask-engineer-btn {
+    max-width: 100% !important;
+    width: 100% !important;
+    min-height: 46px !important;
+    font-size: 0.95rem !important;
+  }
+}
+
+/* Modal Overlay & Card */
+.ask-engineer-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.ask-engineer-modal-overlay[hidden] {
+  display: none !important;
+}
+
+.ask-engineer-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(13, 27, 42, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 1;
+}
+
+.ask-engineer-modal-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 500px;
+  background: var(--color-surface, #ffffff);
+  border: 1.5px solid var(--color-border, #e5e7eb);
+  border-radius: var(--radius-lg, 16px);
+  padding: 2.25rem 2rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4), 0 0 30px rgba(45, 106, 79, 0.2);
+  color: var(--color-text-primary, #111827);
+  animation: modal-pop 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modal-pop {
+  from { opacity: 0; transform: scale(0.95) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.ask-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  background: transparent;
+  border: none;
+  font-size: 1.75rem;
+  line-height: 1;
+  color: var(--color-text-muted, #6b7280);
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0.25rem;
+}
+
+.ask-modal-close:hover {
+  color: #e63946;
+}
+
+.ask-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--color-border, #e5e7eb);
+}
+
+.ask-modal-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(45, 106, 79, 0.15);
+  color: var(--color-forest-green, #1b4332);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ask-modal-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin: 0 0 0.25rem 0;
+  color: var(--color-text-primary, #111827);
+}
+
+.ask-modal-subtitle {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary, #4b5563);
+  margin: 0;
+  line-height: 1.4;
+}
+
+[data-theme="dark"] .ask-engineer-modal-content {
+  background: #132233;
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #f3f4f6;
+}
+
+[data-theme="dark"] .ask-modal-icon {
+  background: rgba(82, 183, 136, 0.2);
+  color: #74c69d;
+}
+
+[data-theme="dark"] .ask-modal-title {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .ask-modal-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+}
+
 @media (max-width: 640px) {
   .article-hero { background-attachment: scroll; min-height: 60vh; }
   .related-articles { grid-template-columns: 1fr; }
@@ -626,4 +785,163 @@
   .diagram-arrow { display: none; }
   .diagram-node { width: 110px; }
   .diagram-stats { grid-template-columns: 1fr; }
+}
+
+/* ── Ask an Engineer Button & Modal Styles ── */
+.ask-engineer-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  width: 100% !important;
+  max-width: 220px !important;
+  min-height: 42px !important;
+  padding: 0.65rem 1.25rem !important;
+  font-size: 0.88rem !important;
+  font-weight: 600 !important;
+  border-radius: var(--radius-md, 10px) !important;
+  background: var(--color-forest-green, #1b4332) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  transition: all 0.25s ease !important;
+  box-shadow: 0 4px 12px rgba(27, 67, 50, 0.2) !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  box-sizing: border-box !important;
+}
+
+.ask-engineer-btn:hover {
+  background: var(--color-forest-green-dark, #0d2818) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(27, 67, 50, 0.35) !important;
+  color: var(--color-solar-yellow, #F4A300) !important;
+}
+
+.ask-engineer-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .ask-engineer-btn {
+    max-width: 100% !important;
+    width: 100% !important;
+    min-height: 46px !important;
+    font-size: 0.95rem !important;
+  }
+}
+
+/* Modal Overlay & Card */
+.ask-engineer-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.ask-engineer-modal-overlay[hidden] {
+  display: none !important;
+}
+
+.ask-engineer-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(13, 27, 42, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 1;
+}
+
+.ask-engineer-modal-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 500px;
+  background: var(--color-surface, #ffffff);
+  border: 1.5px solid var(--color-border, #e5e7eb);
+  border-radius: var(--radius-lg, 16px);
+  padding: 2.25rem 2rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4), 0 0 30px rgba(45, 106, 79, 0.2);
+  color: var(--color-text-primary, #111827);
+  animation: modal-pop 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modal-pop {
+  from { opacity: 0; transform: scale(0.95) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.ask-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  background: transparent;
+  border: none;
+  font-size: 1.75rem;
+  line-height: 1;
+  color: var(--color-text-muted, #6b7280);
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0.25rem;
+}
+
+.ask-modal-close:hover {
+  color: #e63946;
+}
+
+.ask-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--color-border, #e5e7eb);
+}
+
+.ask-modal-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(45, 106, 79, 0.15);
+  color: var(--color-forest-green, #1b4332);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ask-modal-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin: 0 0 0.25rem 0;
+  color: var(--color-text-primary, #111827);
+}
+
+.ask-modal-subtitle {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary, #4b5563);
+  margin: 0;
+  line-height: 1.4;
+}
+
+[data-theme="dark"] .ask-engineer-modal-content {
+  background: #132233;
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #f3f4f6;
+}
+
+[data-theme="dark"] .ask-modal-icon {
+  background: rgba(82, 183, 136, 0.2);
+  color: #74c69d;
+}
+
+[data-theme="dark"] .ask-modal-title {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .ask-modal-subtitle {
+  color: rgba(255, 255, 255, 0.7);
 }

@@ -701,6 +701,8 @@
       if (nameEl) nameEl.textContent = article.author;
       var roleEl = authorCard.querySelector('p');
       if (roleEl) roleEl.textContent = article.authorRole;
+      var modalAuthorName = document.getElementById('askModalAuthorName');
+      if (modalAuthorName) modalAuthorName.textContent = article.author || 'Dr. Elena Vance';
     }
 
     // 9. Update Main Content Section (Section 3)
@@ -782,9 +784,80 @@
     }
   }
 
+  function initAskEngineerModal() {
+    var btn = document.getElementById('askEngineerBtn');
+    var modal = document.getElementById('askEngineerModal');
+    var backdrop = document.getElementById('askEngineerModalBackdrop');
+    var closeBtn = document.getElementById('askEngineerModalClose');
+    var cancelBtn = document.getElementById('askEngineerModalCancel');
+    var form = document.getElementById('askEngineerForm');
+
+    if (!btn || !modal) return;
+
+    function openModal(e) {
+      if (e) e.preventDefault();
+      modal.removeAttribute('hidden');
+      document.body.style.overflow = 'hidden';
+      var nameInput = document.getElementById('askName');
+      if (nameInput) {
+        setTimeout(function() {
+          nameInput.focus();
+        }, 50);
+      }
+    }
+
+    function closeModal() {
+      modal.setAttribute('hidden', '');
+      document.body.style.overflow = '';
+      if (btn) btn.focus();
+    }
+
+    btn.addEventListener('click', openModal);
+    if (backdrop) backdrop.addEventListener('click', closeModal);
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (cancelBtn) cancelBtn.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && !modal.hasAttribute('hidden')) {
+        closeModal();
+      }
+    });
+
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var nameInput = document.getElementById('askName');
+        var emailInput = document.getElementById('askEmail');
+        var questionInput = document.getElementById('askQuestion');
+
+        if (!nameInput.value.trim() || !emailInput.value.trim() || !questionInput.value.trim()) {
+          if (window.GreenGrid && window.GreenGrid.showToast) {
+            window.GreenGrid.showToast('Please fill out all required fields before sending.', 'error');
+          } else {
+            alert('Please fill out all required fields.');
+          }
+          return;
+        }
+
+        var authorEl = document.getElementById('askModalAuthorName');
+        var engineerName = authorEl ? authorEl.textContent : 'our solar engineering team';
+
+        form.reset();
+        closeModal();
+
+        if (window.GreenGrid && window.GreenGrid.showToast) {
+          window.GreenGrid.showToast('Your question has been forwarded to ' + engineerName + '! An engineer will reply within 1 business day.', 'success');
+        } else {
+          alert('Your question has been forwarded to ' + engineerName + '!');
+        }
+      });
+    }
+  }
+
   document.addEventListener('DOMContentLoaded', function() {
     var currentId = getQueryParam('id') || 'residential-guide';
     renderArticle(currentId);
+    initAskEngineerModal();
   });
 
   window.addEventListener('popstate', function() {
